@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>mySUNI</title>
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <script src="../../js/Chart.min.js"></script>
+    <script src="../../js/ui.js"></script>
+</head>
+
+<body style="overflow: hidden;">
+
+    <!-- layer -->
+    <section class="popWrap full">
+        <div class="popBox">
+            <div class="popTitle">
+                <p>학습 이수 시간</p>
+                <a href="#" class="btnClose">닫기</a>
+            </div>
+            <div class="popCont">
+                <ul class="filterList accordion">
+                    <li class="open">
+                        <div class="viewBox">
+                            <a href="#" class="anch">
+                                <strong>mySUNI (40h 50m)</strong>
+                                <i class="ico arrow"></i>
+                            </a>
+                            <div class="line">
+                                <p class="subText">
+                                    mySUNI College에서 학습한 시간
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sub" style="display: none;">
+                            <ul class="ltList">
+                                <li class="ty1">
+                                    <dl class="ltClass">
+                                        <dt>AI</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty2">
+                                    <dl class="ltClass">
+                                        <dt>DT</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty3">
+                                    <dl class="ltClass">
+                                        <dt>행복</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty4">
+                                    <dl class="ltClass">
+                                        <dt>SV</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty5">
+                                    <dl class="ltClass">
+                                        <dt>혁신디자인</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty6">
+                                    <dl class="ltClass">
+                                        <dt>Global</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty7">
+                                    <dl class="ltClass">
+                                        <dt>Leadership</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty8">
+                                    <dl class="ltClass">
+                                        <dt>Management</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty9">
+                                    <dl class="ltClass">
+                                        <dt>반도체</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty10">
+                                    <dl class="ltClass">
+                                        <dt>에너지 솔루션</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty11">
+                                    <dl class="ltClass">
+                                        <dt>SK아카데미</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty12">
+                                    <dl class="ltClass">
+                                        <dt>SK 경영</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty13">
+                                    <dl class="ltClass">
+                                        <dt>Life Style</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="viewBox">
+                            <a href="#" class="anch">
+                                <strong>My Company (16h 00m)</strong>
+                                <i class="ico arrow"></i>
+                            </a>
+                            <div class="line">
+                                <p class="subText">
+                                    각 사에서 학습한 시간과 개인학습 등록으로 인정받은 시간
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sub" style="display: none;">
+                            <ul class="ltList">
+                                <li>
+                                    <dl class="ltClass">
+                                        <dt>관계사 학습시간</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl class="ltClass">
+                                        <dt>개인 학습시간</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="viewBox">
+                            <a href="#" class="anch">
+                                <strong>강의시간 (20h 40m)</strong>
+                                <i class="ico arrow"></i>
+                            </a>
+                            <div class="line">
+                                <p class="subText">
+                                    mySUNI College와 각사에서 강의를 통해 인정받은 시간
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sub" style="display: none;">
+                            <ul class="ltList">
+                                <li class="ty1">
+                                    <dl class="ltClass">
+                                        <dt>AI</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty2">
+                                    <dl class="ltClass">
+                                        <dt>DT</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty3">
+                                    <dl class="ltClass">
+                                        <dt>행복</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty4">
+                                    <dl class="ltClass">
+                                        <dt>SV</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty5">
+                                    <dl class="ltClass">
+                                        <dt>혁신디자인</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty6">
+                                    <dl class="ltClass">
+                                        <dt>Global</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty7">
+                                    <dl class="ltClass">
+                                        <dt>Leadership</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty8">
+                                    <dl class="ltClass">
+                                        <dt>Management</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty9">
+                                    <dl class="ltClass">
+                                        <dt>반도체</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty10">
+                                    <dl class="ltClass">
+                                        <dt>에너지 솔루션</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty11">
+                                    <dl class="ltClass">
+                                        <dt>SK아카데미</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty12">
+                                    <dl class="ltClass">
+                                        <dt>SK 경영</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                                <li class="ty13">
+                                    <dl class="ltClass">
+                                        <dt>Life Style</dt>
+                                        <dd>10h 30m</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="BtmBtn floating">
+                <div class="btnGroup">
+                    <button type="button" class="btnOrange">확인</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //layer -->
+
+</body>
+
+</html>

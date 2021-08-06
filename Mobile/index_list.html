@@ -1,0 +1,3615 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ko">
+
+<head>
+    
+	<meta http-equiv="Content-Type" content="txt/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<title>SUNI INDEX</title>
+	<script>
+		$(document).ready(function () {
+			// 배포날짜 단위 설정 [배포일] 기준과 date 가 맞으면 
+			var dist = "11/01"; // 1차 배포
+			var dist2 = "11/07"; // 2차 배포
+			var dist3 = "11/11"; // 3차 배포
+			var next = "11/15"; // 다음 배포 리스트
+			$('.tbl_sample td').each(function () {
+				if ($(this).text() == dist) {
+					$(this).closest('tr').addClass('active');
+				}
+				if ($(this).text() == dist2) {
+					$(this).closest('tr').addClass('active2');
+				}
+				if ($(this).text() == dist3) {
+					$(this).closest('tr').addClass('active3');
+				}
+				if ($(this).text() == next) {
+					$(this).closest('tr').addClass('ing');
+				}
+			})
+		})
+	</script>
+	<style>
+		html,
+		body,
+		div,
+		span,
+		applet,
+		object,
+		iframe,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		blockquote,
+		pre,
+		a,
+		abbr,
+		acronym,
+		address,
+		big,
+		cite,
+		code,
+		del,
+		dfn,
+		em,
+		img,
+		ins,
+		kbd,
+		q,
+		s,
+		samp,
+		small,
+		strike,
+		strong,
+		sub,
+		sup,
+		tt,
+		var,
+		b,
+		u,
+		i,
+		center,
+		fieldset,
+		form,
+		label,
+		legend,
+		article,
+		aside,
+		canvas,
+		details,
+		embed,
+		figure,
+		figcaption,
+		footer,
+		header,
+		hgroup,
+		menu,
+		nav,
+		output,
+		ruby,
+		section,
+		summary,
+		time,
+		mark,
+		audio,
+		video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+		}
+
+		body {
+			font-size: 12px;
+			font-family: "Malgun Gothic", arial, dotum, gulim;
+			color: #333;
+			padding: 0;
+			margin: 20px;
+			line-height: 1.3em;
+			min-height: 100%;
+		}
+
+		/* 배포 텍스트 css */
+		/*
+.tbl_row.active td:last-of-type::before{
+	content:'(1차배포)';
+	color:red;
+}
+.tbl_row.active2 td:last-of-type::before{
+	content:'(2차배포)';
+	color:red;
+}
+.tbl_row.active3 td:last-of-type::before{
+	content:'(3차배포)';
+	color:red;
+}
+*/
+		.tbl_row.ing td:last-of-type::before {
+			content: '검수요청예정파일';
+			color: brown;
+		}
+
+		.talign_center {
+			text-align: center !important;
+		}
+
+		.page_title {
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -moz-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: end;
+			-ms-flex-align: end;
+			-webkit-align-items: flex-end;
+			-moz-align-items: flex-end;
+			align-items: flex-end;
+			height: 60px;
+			box-sizing: border-box;
+			border-bottom: 2px solid #23282F;
+		}
+
+		.page_title .left_area {
+			-webkit-box-flex: auto;
+			-webkit-flex: auto;
+			-moz-box-flex: auto;
+			-moz-flex: auto;
+			-ms-flex: auto;
+			flex: auto;
+			padding-bottom: 12px;
+		}
+
+		.page_title .title {
+			font-size: 28px;
+			color: #000;
+			line-height: 1.3;
+			cursor: pointer;
+		}
+
+		.tbl_horiz,
+		.tbl_vert {
+			margin-top: 20px;
+			border-top: 1px solid #D8D8D8;
+		}
+
+		.tbl_horiz>table,
+		.tbl_vert>table {
+			width: 100%;
+			table-layout: fixed;
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		.tbl_horiz.tbl_line .tbl_row,
+		.tbl_vert.tbl_line .tbl_row {
+			border-right: 1px solid #D8D8D8;
+		}
+
+		.tbl_horiz .tbl_row {
+			border-bottom: 1px solid #D8D8D8;
+		}
+
+		.tbl_horiz.tbl_line .tbl_head,
+		.tbl_horiz.tbl_line .tbl_data,
+		.tbl_vert.tbl_line .tbl_head,
+		.tbl_vert.tbl_line .tbl_data {
+			border-left: 1px solid #D8D8D8;
+		}
+
+		.tbl_horiz thead .tbl_head {
+			background-color: #e5e5e5;
+		}
+
+		.tbl_horiz thead .tbl_head,
+		.tbl_horiz thead .tbl_data {
+			font-size: 12px;
+			line-height: 1.33em;
+			color: #2F2F2F;
+			font-weight: bold;
+			border-bottom: 1px solid #D8D8D8;
+		}
+
+		.tbl_horiz .tbl_head {
+			text-align: left;
+			height: 30px;
+			box-sizing: border-box;
+			padding: 3px 15px;
+			background-color: #EAEAEA;
+		}
+
+		.tbl_sample .tbl_row .tbl_data {
+			word-break: break-all;
+		}
+
+		.tbl_horiz.tbl_line .tbl_head,
+		.tbl_horiz.tbl_line .tbl_data,
+		.tbl_vert.tbl_line .tbl_head,
+		.tbl_vert.tbl_line .tbl_data {
+			border-left: 1px solid #D8D8D8;
+		}
+
+		.tbl_horiz .tbl_data {
+			text-align: left;
+			box-sizing: border-box;
+			height: 30px;
+			padding: 3px 10px;
+		}
+
+		.tbl_horiz .tbl_data,
+		.tbl_vert .tbl_data {
+			font-size: 12px;
+			line-height: 1.33em;
+			color: #2F2F2F;
+		}
+
+		.tbl_sample .tbl_row .tbl_data a {
+			color: #DF4523;
+		}
+		.tbl_sample .tbl_row .tbl_data a.complete {
+			color: #00c357;
+		}
+
+		.tbl_sample .tbl_row .tbl_data a:hover {
+			font-weight: bold;
+		}
+
+		.tbl_horiz .tbl_data>*,
+		.tbl_vert .tbl_data>* {
+			vertical-align: middle;
+		}
+
+		a:visited,
+		a:active {
+			text-decoration: none;
+			background-color: transparent;
+		}
+
+		a:link,
+		a:visited,
+		a:active {
+			font-family: inherit;
+			color: inherit;
+			text-decoration: none;
+		}
+
+		.tbl_sample .tbl_row .tbl_data:last-child {}
+
+		.tbl_horiz .tbl_head,
+		.tbl_vert .tbl_head {
+			font-size: 12px;
+			line-height: 1.33em;
+			color: #2F2F2F;
+		}
+
+		thead .tbl_row .tbl_head {
+			text-align: center;
+			background-color: #bcbcbc;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="lay_contents">
+		<div class="page_title">
+			<div class="left_area">
+				<span class="title">SUNI Mobile INDEX</span>
+			</div>
+		</div>
+		<div class="page_container">
+			<div class="tbl_horiz tbl_line tbl_sample">
+				<table>
+					<colgroup>
+						<col width="100">
+						<col width="*">
+						<col width="*">
+						<col width="200">
+						<col width="100">
+						<col width="*">
+					</colgroup>
+					<thead>
+						<tr class="tbl_row">
+							<th class="tbl_head">대분류</th>
+							<th class="tbl_head">소분류</th>
+							<th class="tbl_head">화면아이디</th>
+							<th class="tbl_head">고도화 여부(최종 배포일)</th>
+							<th class="tbl_head">작업자</th>
+							<th class="tbl_head">기타</th>
+						</tr>
+					</thead>
+					<tbody>
+                        <tr class="tbl_row">
+							<th class="tbl_head">Event</th>
+							<td class="tbl_data">event > 7월 출석 이벤트</td>
+							<td class="tbl_data">
+								<a href="./dist/html/event/event.html" target="ifrhowl">EV_JU_01</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">event종료 > 7월 출석 이벤트</td>
+							<td class="tbl_data">
+								<a href="./dist/html/event/event_done.html" target="ifrhowl">EV_JU_02_END</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						
+
+						<!--------------------- Emoji --------------------->
+						<tr class="tbl_row">
+							<th class="tbl_head">Comment 이모티콘</th>
+							<td class="tbl_data">이모티콘</td>
+							<td class="tbl_data">
+								<a href="./dist/html/emoji/MO_EMO_on.html" target="ifrhowl" class="complete">MO_EMO_on</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<!-- Common -->
+						<tr class="tbl_row">
+							<th class="tbl_head">Common</th>
+							<td class="tbl_data">Element</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/element.html" target="ifrhowl">element</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cards</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/card.html" target="ifrhowl">card</a>
+							</td>
+							<td class="tbl_data">Y (6/9)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">하단 (floating)버튼</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/floating_btn.html" target="ifrhowl">floating_btn</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Main header sticky</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_01_01.html" target="ifrhowl">CO_01_01</a>
+							</td>
+							<td class="tbl_data">Y (6/12)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Main header sticky new</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_01_01_case.html" target="ifrhowl">CO_01_01_case</a>
+							</td>
+							<td class="tbl_data">Y (6/12)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">GNB메뉴에 신규항목이 존재할 경우 GNB버튼 아이콘 변경</td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">List header sticky</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_01_02.html" target="ifrhowl">CO_01_02</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Detail header sticky</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_01_03.html" target="ifrhowl">CO_01_03</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Toolbar</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_01_01.html" target="ifrhowl">CO_01_01</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">CO_01_01 에서 제공</td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">전체보기</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_01_01.html" target="ifrhowl">CO_02_01</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">CO_01_01 에서 제공</td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">POP UP <br>Full Popup Wireframe</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_03_p01.html" target="ifrhowl">CO_03_p01</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">POP UP <br>Confirm Wireframe</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_03_p02.html" target="ifrhowl">CO_03_p02</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">POP UP <br>Alert Wireframe</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_03_p03.html" target="ifrhowl">CO_03_p03</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Layer POP UP <br>호출 예시</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_03_case.html" target="ifrhowl">CO_03_case</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">
+								레이어 팝업 호출 시 컨텐츠 내용 길이에 따른 위치 변경을 위한 예시 페이지<br><br>
+								해당페이지 안에 예시 샘플 소스 및 해당 페이지 설명이 되어있습니다.<br><br>
+								호출에 대한 설명은 스크립트 부분에 주석으로 처리되어 있습니다.
+							</td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Comment > 전체 케이스 포함</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_04_01.html" target="ifrhowl">CO_04_01</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Comment > 댓글 작성 필드</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_04_02.html" target="ifrhowl">CO_04_02</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<!-- <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Comment > Comment 입력 팝업</td>
+							<td class="tbl_data">
+								CO_04_01_P01
+							</td>
+							<td class="tbl_data">12/06</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr> -->
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Comment > 입력창 케이스</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_04_03_case1.html" target="ifrhowl">CO_04_03_case1</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Comment > 사람 태그</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_04_03_case2.html" target="ifrhowl">CO_04_03_case2</a>,
+								<a href="./dist/html/common/CO_04_03_case3.html" target="ifrhowl">CO_04_03_case3</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">사람태그 활성화 / 비활성화</td>
+						</tr>
+
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Comment > 코멘트 없음</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_04_04.html" target="ifrhowl">CO_04_04</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">College Gate page</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_05_01.html" target="ifrhowl">CO_05_01</a>
+							</td>
+							<td class="tbl_data">Y (7/7)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Category > AI</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_05_02.html" target="ifrhowl">CO_05_02</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Category > 채널 리스트 전체 보기 및 필터 팝업</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_05_02_P01.html" target="ifrhowl">CO_05_02_P01</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Category > List Sorting 팝업</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_05_02_P02.html" target="ifrhowl">CO_05_02_P02</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Category > 특정 채널 필터한 경우</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_05_02_01.html" target="ifrhowl">CO_05_02_01</a>
+							</td>
+							<td class="tbl_data">Y (6/9)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Category > 특정 채널 전체 보기</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_05_03.html" target="ifrhowl">CO_05_03</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Category > 특정 채널 전체 보기 > 필터 팝업</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_05_03_P01.html" target="ifrhowl">CO_05_03_P01</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Component > Loading > Content Update</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_06_01.html" target="ifrhowl">CO_06_01</a>
+							</td>
+							<td class="tbl_data">Y (6/9)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">404</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_07_01.html" target="ifrhowl">CO_07_01</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">시스템 점검</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_07_02.html" target="ifrhowl">CO_07_02</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<!-- blink -->
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+						<!--// blink -->
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+
+						<!--------------------- 코스 --------------------->
+						<tr class="tbl_row">
+							<th class="tbl_head">Course</th>
+							<td class="tbl_data">Contents (단일코스)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/course/MO-LM-MA-10.html" target="ifrhowl" class="complete">MO-LM-MA-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">오문석</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Overview</td>
+							<td class="tbl_data">
+								<a href="./dist/html/course/MO-LM-MA-20.html" target="ifrhowl" class="complete">MO-LM-MA-20</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">오문석</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Overview_학습이어하기</td>
+							<td class="tbl_data">
+								<a href="./dist/html/course/MO-LM-MA-21.html" target="ifrhowl" class="complete">MO-LM-MA-21</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">오문석</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Overview_선수과정 有</td>
+							<td class="tbl_data">
+								<a href="./dist/html/course/MO-LM-MA-22.html" target="ifrhowl" class="complete">MO-LM-MA-22</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">오문석</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head">Course in Course(Program)</th>
+							<td class="tbl_data">Contents</td>
+							<td class="tbl_data">
+								<a href="./dist/html/course/MO-LM-MA-30.html" target="ifrhowl" class="complete">MO-LM-MA-30</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">오문석</td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="5"></td>
+						</tr>
+						
+						<!--------------------- 큐브 --------------------->
+						<tr class="tbl_row">
+							<th class="tbl_head">Cube</th>
+							<td class="tbl_data">Video_Overview (Embedded)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-VI-10.html" target="ifrhowl" class="complete">MO-LM-VI-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">김유진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Video_Overview (외부 URL)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-VI-11.html" target="ifrhowl" class="complete">MO-LM-VI-11</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">김유진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Video_Commentes</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-VI-20.html" target="ifrhowl" class="complete">MO-LM-VI-20</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">김유진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Video_Transcript</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-VI-30.html" target="ifrhowl" class="complete">MO-LM-VI-30</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Audio_Overview</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-AU-10.html" target="ifrhowl" class="complete">MO-LM-AU-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">김유진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Documents_Overview</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-DO-10.html" target="ifrhowl" class="complete">MO-LM-DO-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">김유진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Documents_Viewer</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-DO-11.html" target="ifrhowl">MO-LM-DO-11</a>
+							</td>
+							<td class="tbl_data">기획서에 페이지 없음</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Webpage_Overview</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-WE-10.html" target="ifrhowl" class="complete">MO-LM-WE-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">김유진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Classroom_차수정보</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-CL-10.html" target="ifrhowl" class="complete">MO-LM-CL-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">김유진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Classroom_차수세부내용</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-CL-11.html" target="ifrhowl" class="complete">MO-LM-CL-11</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">김유진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Classroom_차수선택</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-CL-12.html" target="ifrhowl" class="complete">MO-LM-CL-12</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">김유진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Classroom_Overview</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-CL-20.html" target="ifrhowl" class="complete">MO-LM-CL-20</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">김유진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">E-Learning_차수정보</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-EL-10.html" target="ifrhowl" class="complete">MO-LM-EL-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">김유진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Task_Posts</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-TA-10.html" target="ifrhowl" class="complete">MO-LM-TA-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">오문석</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Task_Posts (학습전)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-TA-10_before.html" target="ifrhowl" class="complete">MO-LM-TA-10 (학습전)</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Task_Posts (학습중)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-TA-10_ing.html" target="ifrhowl" class="complete">MO-LM-TA-10 (학습중)</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Task_Create Post</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-TA-20.html" target="ifrhowl" class="complete">MO-LM-TA-20</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">오문석</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Task_Post</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-TA-30.html" target="ifrhowl" class="complete">MO-LM-TA-30</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">오문석</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Task_Post (핀해제)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-TA-30_pinOff.html" target="ifrhowl" class="complete">MO-LM-TA-30(핀해제)</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Task_Post (핀고정)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-TA-30_pinOn.html" target="ifrhowl" class="complete">MO-LM-TA-30(핀고정)</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Task_My Post 상세</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-TA-40.html" target="ifrhowl" class="complete">MO-LM-TA-40</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">오문석</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Task_Overview</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-TA-50.html" target="ifrhowl" class="complete">MO-LM-TA-50</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">오문석</td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Task _학습안내 알럿</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-TA-60.html" target="ifrhowl" class="complete">MO-LM-TA-60</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cohort</td>
+							<td class="tbl_data">
+								<a href="./dist/html/cube/MO-LM-CO-10.html" target="ifrhowl" class="complete">MO-LM-CO-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">오문석</td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+
+						<!--------------------- Test --------------------->
+						<tr class="tbl_row">
+							<th class="tbl_head">Test</th>
+							<td class="tbl_data">Test 응시 안내 페이지</td>
+							<td class="tbl_data">
+								<a href="./dist/html/test/MO-LM-TE-05.html" target="ifrhowl" class="complete">MO-LM-TE-05</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Test 상세 (최초 Test 시)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/test/MO-LM-TE-10.html" target="ifrhowl" class="complete">MO-LM-TE-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">오문석</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Test - 결과보기(이수)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/test/MO-LM-TE-15.html" target="ifrhowl" class="complete">MO-LM-TE-15</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Test - 결과보기(이수) - 과정 설문참여 버튼</td>
+							<td class="tbl_data">
+								<a href="./dist/html/test/MO-LM-TE-16.html" target="ifrhowl" class="complete">MO-LM-TE-16</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Test 결과</td>
+							<td class="tbl_data">
+								<a href="./dist/html/test/MO-LM-TE-20.html" target="ifrhowl" class="complete">MO-LM-TE-20</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">오문석</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Test - 결과보기(미이수) - 재응시</td>
+							<td class="tbl_data">
+								<a href="./dist/html/test/MO-LM-TE-25.html" target="ifrhowl" class="complete">MO-LM-TE-25</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Test - 결과보기(미이수) - 재응시 - 과정설문조사참여</td>
+							<td class="tbl_data">
+								<a href="./dist/html/test/MO-LM-TE-26.html" target="ifrhowl" class="complete">MO-LM-TE-26</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Test - 결과보기(미이수) - 재응시 불가 안내</td>
+							<td class="tbl_data">
+								<a href="./dist/html/test/MO-LM-TE-27.html" target="ifrhowl" class="complete">MO-LM-TE-27</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Test - 결과보기(채점중)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/test/MO-LM-TE-30.html" target="ifrhowl" class="complete">MO-LM-TE-30</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Test - 결과보기(채점중) - 과정설문조사참여</td>
+							<td class="tbl_data">
+								<a href="./dist/html/test/MO-LM-TE-31.html" target="ifrhowl" class="complete">MO-LM-TE-31</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+
+						<!--------------------- Survey --------------------->
+						<tr class="tbl_row">
+							<th class="tbl_head">Survey</th>
+							<td class="tbl_data">Survey 상세</td>
+							<td class="tbl_data">
+								<a href="./dist/html/survey/MO-LM-SU-10.html" target="ifrhowl" class="complete">MO-LM-SU-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="5"></td>
+						</tr>
+
+						<!--------------------- Report --------------------->
+						<tr class="tbl_row">
+							<th class="tbl_head">Report</th>
+							<td class="tbl_data">Report 상세 (최초 과제 제출 시)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/report/MO-LM-RE-10.html" target="ifrhowl" class="complete">MO-LM-RE-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Report 상세 (담당자 의견 확인)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/report/MO-LM-RE-20.html" target="ifrhowl" class="complete">MO-LM-RE-20</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Report 결과</td>
+							<td class="tbl_data">
+								<a href="./dist/html/report/MO-LM-RE-30.html" target="ifrhowl" class="complete">MO-LM-RE-30</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="5"></td>
+						</tr>
+
+						<!--------------------- 토론하기 --------------------->
+						<tr class="tbl_row">
+							<th class="tbl_head">토론하기</th>
+							<td class="tbl_data">토론하기 상세</td>
+							<td class="tbl_data">
+								<a href="./dist/html/debate/MO-LM-DI-10.html" target="ifrhowl" class="complete">MO-LM-DI-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+
+						<!--------------------- My Learning  --------------------->
+						<tr class="tbl_row">
+							<th class="tbl_head">My Learning</th>
+							<td class="tbl_data">학습중</td>
+							<td class="tbl_data">
+								<a href="./dist/html/mylearning/MO-LM-ML-10.html" target="ifrhowl" class="complete">MO-LM-ML-10</a>
+							</td>
+							<td class="tbl_data">완료</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">j : ML-01-01</td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">학습중_List Filter (코스만보기)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/mylearning/MO-LM-ML-11.html" target="ifrhowl" class="complete">MO-LM-ML-11</a>
+							</td>
+							<td class="tbl_data">완료</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">j : SE-01-01-P01</td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">학습중_List Filter (전체보기)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/mylearning/MO-LM-ML-12.html" target="ifrhowl" class="complete">MO-LM-ML-12</a>
+							</td>
+							<td class="tbl_data">완료</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">j : SE-01-01-P01</td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">개인학습 완료</td>
+							<td class="tbl_data">
+								<a href="./dist/html/mylearning/MO-LM-ML-20.html" target="ifrhowl" class="complete">MO-LM-ML-20</a>
+							</td>
+							<td class="tbl_data">완료</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">j : AP-01-01-03</td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">개인학습 완료_상세</td>
+							<td class="tbl_data">
+								<a href="./dist/html/mylearning/MO-LM-ML-21.html" target="ifrhowl" class="complete">MO-LM-ML-21 </a>
+							</td>
+							<td class="tbl_data">완료</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">ML-01-09-01</td>
+						</tr>
+
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+
+
+						<!--------------------- 승인관리 --------------------->
+						<tr class="tbl_row">
+							<th class="tbl_head">승인관리</th>
+							<td class="tbl_data">유료과정_승인요청 list</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approve/MO-LM-AP-10.html" target="ifrhowl" class="complete">MO-LM-AP-10</a>
+							</td>
+							<td class="tbl_data">완료</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">j : AP-01-01-03</td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">유료과정_결제 반려</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approve/MO-LM-AP-11.html" target="ifrhowl" class="complete">MO-LM-AP-11</a>
+							</td>
+							<td class="tbl_data">완료</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">j : AP-01-01-01-P02</td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">유료과정_결제 승인</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approve/MO-LM-AP-12.html" target="ifrhowl" class="complete">MO-LM-AP-12</a>
+							</td>
+							<td class="tbl_data">완료</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">j : AP-01-01-01-P03</td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">유료과정_반려 list</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approve/MO-LM-AP-20.html" target="ifrhowl" class="complete">MO-LM-AP-20</a>
+							</td>
+							<td class="tbl_data">완료</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">j : AP-01-01-03</td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">유료과정_승인 list</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approve/MO-LM-AP-30.html" target="ifrhowl" class="complete">MO-LM-AP-30</a>
+							</td>
+							<td class="tbl_data">완료</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">j : AP-01-01-03</td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">개인학습_list</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approve/MO-LM-AP-40.html" target="ifrhowl" class="complete">MO-LM-AP-40</a>
+							</td>
+							<td class="tbl_data">완료</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">j : AP-01-01-03</td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">개인학습 상세 (승인대기)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approve/MO-LM-AP-50.html" target="ifrhowl" class="complete">MO-LM-AP-50</a>
+							</td>
+							<td class="tbl_data">완료</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">개인학습 상세 (승인, 반려)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approve/MO-LM-AP-60.html" target="ifrhowl" class="complete">MO-LM-AP-60</a>
+							</td>
+							<td class="tbl_data">완료</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head">Login</th>
+							<td class="tbl_data">Login 입력 전/후</td>
+							<td class="tbl_data">
+								<a href="./dist/html/login/LO-01-01.html" target="ifrhowl">LO-01-01</a>
+								<a href="./dist/html/login/LO-01-01-case.html" target="ifrhowl">LO-01-01-case</a>
+							</td>
+							<td class="tbl_data">Y (7/6)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">비밀번호 초기화 인증번호 발송 전/후</td>
+							<td class="tbl_data">
+								<a href="./dist/html/login/LO-02-01.html" target="ifrhowl">LO-02-01</a>
+								<a href="./dist/html/login/LO-02-01-case.html" target="ifrhowl">LO-02-01-case</a>
+							</td>
+							<td class="tbl_data">Y (7/6)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">비밀번호 재설정(구화면)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/login/LO-02-02-old.html" target="ifrhowl">LO-02-02-old</a>
+							</td>
+							<td class="tbl_data">Y (7/6)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">비밀번호 재설정</td>
+							<td class="tbl_data">
+								<a href="./dist/html/login/LO-02-02.html" target="ifrhowl">LO-02-02</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">비밀번호 재설정(비밀번호 불일치)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/login/LO-02-02-case.html" target="ifrhowl">LO-02-02-case</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">비밀번호 재설정 완료</td>
+							<td class="tbl_data">
+								<a href="./dist/html/login/LO-03-01.html" target="ifrhowl">LO-03-01</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<!-- blink -->
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+						<!--// blink -->
+
+						<!-- 외부사용자 REGI-->
+						<tr class="tbl_row">
+							<th class="tbl_head">siginup-extra</th>
+							<td class="tbl_data">외부사용자 가입</td>
+							<td class="tbl_data">
+								<a href="./dist/html/siginup-extra/REG-20-10.html" target="ifrhowl">REG-20-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">외부사용자 가입 loader</td>
+							<td class="tbl_data">
+								<a href="./dist/html/siginup-extra/REG-20-20.html" target="ifrhowl">REG-20-20</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">외부사용자 가입 alert-불일치</td>
+							<td class="tbl_data">
+								<a href="./dist/html/siginup-extra/REG-20-30.html" target="ifrhowl">REG-20-30</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">외부사용자 가입 alert-완료</td>
+							<td class="tbl_data">
+								<a href="./dist/html/siginup-extra/REG-20-31.html" target="ifrhowl">REG-20-30</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">외부사용자 가입 개인정보 수집동의</td>
+							<td class="tbl_data">
+								<a href="./dist/html/siginup-extra/REG-30-10.html" target="ifrhowl">REG-30-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">외부사용자 가입 개인정보 수집동의</td>
+							<td class="tbl_data">
+								<a href="./dist/html/siginup-extra/REG-30-20.html" target="ifrhowl">REG-30-20</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">외부사용자 가입 =>홈페이지 회원가입 및 관리 및 mySUNI 콘텐츠/서비스 제공</td>
+							<td class="tbl_data">
+								<a href="./dist/html/siginup-extra/REG-30-21.html" target="ifrhowl">REG-30-20</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">외부사용자 가입 =>개인 맞춤형 특화 컨텐츠 제공</td>
+							<td class="tbl_data">
+								<a href="./dist/html/siginup-extra/REG-30-22.html" target="ifrhowl">REG-30-20</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">외부사용자 회원가입 양식</td>
+							<td class="tbl_data">
+								<a href="./dist/html/siginup-extra/REG-40-10.html" target="ifrhowl">REG-40-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">외부사용자 회원가입 양식(소속 직접입력)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/siginup-extra/REG-40-11.html" target="ifrhowl">REG-40-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">외부사용자 회원가입 완료화면</td>
+							<td class="tbl_data">
+								<a href="./dist/html/siginup-extra/REG-50-10.html" target="ifrhowl">REG-50-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">외부사용자 비밀번호 변경화면</td>
+							<td class="tbl_data">
+								<a href="./dist/html/siginup-extra/REG-70-10.html" target="ifrhowl">REG-70-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<!-- blink -->
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="5"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head">InterestSetting</th>
+							<td class="tbl_data">로그인 후 개인화 항목 설정 1단계</td>
+							<td class="tbl_data">
+								<a href="./dist/html/interest/LOG-10-10.html" target="ifrhowl">LOG-10-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">로그인 후 개인화 항목 설정 1단계/2단계 공통 alert</td>
+							<td class="tbl_data">
+								<a href="./dist/html/interest/LOG-10-11.html" target="ifrhowl">LOG-10-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">로그인 후 개인화 항목 설정 1단계/2단계 공통 alert</td>
+							<td class="tbl_data">
+								<a href="./dist/html/interest/LOG-10-12.html" target="ifrhowl">LOG-10-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">로그인 후 개인화 항목 설정 2단계</td>
+							<td class="tbl_data">
+								<a href="./dist/html/interest/LOG-20-10.html" target="ifrhowl">LOG-20-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">로그인 후 개인화 항목 설정 3단계</td>
+							<td class="tbl_data">
+								<a href="./dist/html/interest/LOG-30-10.html" target="ifrhowl">LOG-30-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">로그인 후 개인화 항목 설정 3단계 = 관심분야 선택전</td>
+							<td class="tbl_data">
+								<a href="./dist/html/interest/LOG-30-11.html" target="ifrhowl">LOG-30-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">로그인 후 개인화 항목 설정 3단계 = 관심분야 3개이하 선택시</td>
+							<td class="tbl_data">
+								<a href="./dist/html/interest/LOG-30-12.html" target="ifrhowl">LOG-30-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">로그인 후 개인화 항목 설정 4단계</td>
+							<td class="tbl_data">
+								<a href="./dist/html/interest/LOG-40-10.html" target="ifrhowl">LOG-40-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">로그인 후 개인화 항목 설정 4단계 - alert 학습유형 미선택시</td>
+							<td class="tbl_data">
+								<a href="./dist/html/interest/LOG-40-11.html" target="ifrhowl">LOG-40-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">로그인 후 개인화 항목 설정 4단계 - alert 학습선호 미선택시</td>
+							<td class="tbl_data">
+								<a href="./dist/html/interest/LOG-40-12.html" target="ifrhowl">LOG-40-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">로그인 후 개인화 항목 설정 4단계 - alert 선호시간 미선택시</td>
+							<td class="tbl_data">
+								<a href="./dist/html/interest/LOG-40-13.html" target="ifrhowl">LOG-40-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">로그인 후 개인화 항목 설정 4단계 - alert 교육목적 미선택시</td>
+							<td class="tbl_data">
+								<a href="./dist/html/interest/LOG-40-14.html" target="ifrhowl">LOG-40-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">로그인 후 개인화 항목 설정 4단계 - alert 교육목적 최대3개선택안내</td>
+							<td class="tbl_data">
+								<a href="./dist/html/interest/LOG-40-15.html" target="ifrhowl">LOG-40-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">로그인 후 개인화 항목 설정 개인정보동의 작업 안내</td>
+							<td class="tbl_data">
+								<a href="./dist/html/interest/LOG-50-10.html" target="ifrhowl">LOG-50-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<!-- blink -->
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+						<!--App 다운로드 페이지  -->
+						<tr class="tbl_row">
+							<th class="tbl_head">App 다운로드 페이지 </th>
+							<td class="tbl_data">[Android] APP 다운로드 페이지 메인</td>
+							<td class="tbl_data">
+								<a href="./dist/html/download/MO-LM-DL-10.html" target="ifrhowl">MO-LM-DL-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">[Android] APP 다운로드 페이지 STEP 01</td>
+							<td class="tbl_data">
+								<a href="./dist/html/download/MO-LM-DL-11.html" target="ifrhowl">MO-LM-DL-11</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">[Android] APP 다운로드 페이지 STEP 02</td>
+							<td class="tbl_data">
+								<a href="./dist/html/download/MO-LM-DL-12.html" target="ifrhowl">MO-LM-DL-12</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">[Android] APP 다운로드 페이지 STEP 03</td>
+							<td class="tbl_data">
+								<a href="./dist/html/download/MO-LM-DL-13.html" target="ifrhowl">MO-LM-DL-13</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">[iOS] APP 다운로드 페이지 메인</td>
+							<td class="tbl_data">
+								<a href="./dist/html/download/MO-LM-DL-20.html" target="ifrhowl">MO-LM-DL-20</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">[iOS] APP 다운로드 페이지 STEP 01</td>
+							<td class="tbl_data">
+								<a href="./dist/html/download/MO-LM-DL-21.html" target="ifrhowl">MO-LM-DL-21</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">[iOS] APP 다운로드 페이지 STEP 02</td>
+							<td class="tbl_data">
+								<a href="./dist/html/download/MO-LM-DL-22.html" target="ifrhowl">MO-LM-DL-22</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">[iOS] APP 다운로드 페이지 STEP 03</td>
+							<td class="tbl_data">
+								<a href="./dist/html/download/MO-LM-DL-23.html" target="ifrhowl">MO-LM-DL-23</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">[iOS] APP 다운로드 페이지 STEP 04</td>
+							<td class="tbl_data">
+								<a href="./dist/html/download/MO-LM-DL-24.html" target="ifrhowl">MO-LM-DL-24</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">[iOS] APP 다운로드 페이지 STEP 05</td>
+							<td class="tbl_data">
+								<a href="./dist/html/download/MO-LM-DL-25.html" target="ifrhowl">MO-LM-DL-25</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">장은진</td>
+							<td class="tbl_data"></td>
+						</tr>
+
+
+						<!-- blink -->
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+						<!--// blink -->
+                        <tr class="tbl_row">
+							<th class="tbl_head">외부교육 개인정보 연동팝업</th>
+							<td class="tbl_data">Mobile > LMS > 외부강의 Overview > 신청하기 > 외부교육 개인정보 제공 동의 팝업창</td>
+							<td class="tbl_data">
+								<a href="./dist/html/personalInfo/MO-LM-IF-10.html" target="ifrhowl">MO-LM-IF-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Mobile > LMS > 외부강의 Overview > 신청하기 > 외부교육 개인정보 제공 동의 팝업창 (동의여부 미선택)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/personalInfo/MO-LM-IF-11.html" target="ifrhowl">MO-LM-IF-11</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <!-- blink -->
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+						<!--// blink -->
+
+                        <tr class="tbl_row">
+							<th class="tbl_head">loginLMS-IOS</th>
+							<td class="tbl_data">My Page > 간편로그인 안내 alert > iOS</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSIos/MO-LM-SL-10.html" target="ifrhowl">MO-LM-SL-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 안내 alert > iOS</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSIos/MO-LM-SL-11.html" target="ifrhowl">MO-LM-SL-11</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > iOS</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSIos/MO-LM-SL-20.html" target="ifrhowl">MO-LM-SL-20</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > iOS</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSIos/MO-LM-SL-31.html" target="ifrhowl">MO-LM-SL-31</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > iOS</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSIos/MO-LM-SL-31-1.html" target="ifrhowl">MO-LM-SL-31-1</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > iOS</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSIos/MO-LM-SL-34.html" target="ifrhowl">MO-LM-SL-34</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > iOS</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSIos/MO-LM-SL-34-1.html" target="ifrhowl">MO-LM-SL-34-1</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > iOS</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSIos/MO-LM-SL-36.html" target="ifrhowl">MO-LM-SL-36</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > iOS</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSIos/MO-LM-MA-60.html" target="ifrhowl">MO-LM-MA-60</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+
+                        <tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+						<!--// blink -->
+
+                        <tr class="tbl_row">
+							<th class="tbl_head">loginLMS-A</th>
+							<td class="tbl_data">My Page > 간편로그인</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MY-01-01.html" target="ifrhowl">MY-01-01</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 > logout 확인 alert</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MY-01-02.html" target="ifrhowl">MY-01-02</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 안내 alert > Android</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-10.html" target="ifrhowl">MO-LM-SL-10</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 > 간편 로그인 화면 > PIN 번호</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-11.html" target="ifrhowl">MO-LM-SL-11</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 > 간편 로그인 화면 > 패턴</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-12.html" target="ifrhowl">MO-LM-SL-12</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 > 간편 로그인 화면 > 지문</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-13.html" target="ifrhowl">MO-LM-SL-13</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 > 간편 로그인 5회 초과한 경우</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-15.html" target="ifrhowl">MO-LM-SL-15</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+                        
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > Android </td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-20.html" target="ifrhowl">MO-LM-SL-20</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">간편로그인설정_pin번호</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-30.html" target="ifrhowl">MO-LM-SL-30</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">간편로그인설정_pin번호 등록</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-31.html" target="ifrhowl">MO-LM-SL-31</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">간편로그인설정_pin번호 재입력</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-32.html" target="ifrhowl">MO-LM-SL-32</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">간편로그인설정_pin번호 유효성 체크 alert</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-33.html" target="ifrhowl">MO-LM-SL-33</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">간편로그인설정_pin번호 유효성 체크 alert 2</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-33-1.html" target="ifrhowl">MO-LM-SL-33-1</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">간편로그인설정_pin번호 변경</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-34.html" target="ifrhowl">MO-LM-SL-34</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">간편로그인설정_pin번호 변경 입력</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-35.html" target="ifrhowl">MO-LM-SL-35</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">간편로그인설정_pin번호 변경 재입력</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-36.html" target="ifrhowl">MO-LM-SL-36</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > 패턴</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-40.html" target="ifrhowl">MO-LM-SL-40</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > 패턴 등록</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-41.html" target="ifrhowl">MO-LM-SL-41</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > 패턴 재입력</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-42.html" target="ifrhowl">MO-LM-SL-42</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > 패턴 유효성 체크 alert</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-43.html" target="ifrhowl">MO-LM-SL-43</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > 패턴 유효성 체크 alert-1</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-43-1.html" target="ifrhowl">MO-LM-SL-43-1</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > PIN 번호 변경</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-44.html" target="ifrhowl">MO-LM-SL-44</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > PIN 번호 변경 입력</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-45.html" target="ifrhowl">MO-LM-SL-45</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > PIN 번호 변경 재입력</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-46.html" target="ifrhowl">MO-LM-SL-46</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > 지문</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-50.html" target="ifrhowl">MO-LM-SL-50</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > 지문 등록</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-51.html" target="ifrhowl">MO-LM-SL-51</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > 지문 등록 완료 </td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-51-1.html" target="ifrhowl">MO-LM-SL-51-1</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+                        <tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Page > 간편로그인 설정 > 지문 불일치 확인</td>
+							<td class="tbl_data">
+								<a href="./dist/html/loginLMSAndroid/MO-LM-SL-52.html" target="ifrhowl">MO-LM-SL-52</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+
+						<!-- blink -->
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+						<!--// blink -->
+
+						<tr class="tbl_row">
+							<th class="tbl_head">Main</th>
+							<td class="tbl_data">Main</td>
+							<td class="tbl_data">
+								<a href="./dist/html/main/MA-01-01.html" target="ifrhowl">MA-01-01</a>,
+								<a href="./dist/html/main/MA-01-04.html" target="ifrhowl">MA-01-04</a>
+							</td>
+							<td class="tbl_data">Y (7/20)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th> 
+							<td class="tbl_data">Main > 신규 학습 과정 전체보기</td>
+							<td class="tbl_data">
+								<a href="./dist/html/main/MA-01-02.html" target="ifrhowl">MA-01-02</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Main > 인기 학습 과정 전체보기</td>
+							<td class="tbl_data">
+								<a href="./dist/html/main/MA-01-03.html" target="ifrhowl">MA-01-03</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Main > 권장 학습 과정 전체보기</td>
+							<td class="tbl_data">
+								<a href="./dist/html/main/MA-01-05.html" target="ifrhowl">MA-01-05</a>
+							</td>
+							<td class="tbl_data">Y (7/10)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="5"></td>
+						</tr>
+
+						<!-- Learning -->
+						<tr class="tbl_row">
+							<th class="tbl_head">Learning</th>
+							<td class="tbl_data">card > 기본 유형 카드 </td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-00-01.html" target="ifrhowl">ML-00-01</a>
+							</td>
+							<td class="tbl_data">Y (6/9)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">card > 코스 카드</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-00-02.html" target="ifrhowl">ML-00-02</a>
+							</td>
+							<td class="tbl_data">Y (6/9)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">card > 클래스 카드</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-00-03.html" target="ifrhowl">ML-00-03</a>
+							</td>
+							<td class="tbl_data">Y (6/9)</td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">card > 코스 상세, 코스 내 큐브 카드</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-00-04.html" target="ifrhowl">ML-00-04</a>
+							</td>
+							<td class="tbl_data">Y (6/9)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Test/Report/Survey UI Case 정의</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-00-05.html" target="ifrhowl">ML-00-05</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Learning Detail > 학습중</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-01-01.html" target="ifrhowl">ML-01-01</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Learning Detail > 관심목록</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-01-02.html" target="ifrhowl">ML-01-02</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Learning Detail > 권장과정</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-01-03.html" target="ifrhowl">ML-01-03</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Learning Detail > 학습예정</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-01-04.html" target="ifrhowl">ML-01-04</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Learning Detail > 학습완료</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-01-05.html" target="ifrhowl">ML-01-05</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Learning Detail > My Stamp</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-01-06.html" target="ifrhowl">ML-01-06</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Learning Detail > 취소/미이수</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-01-07.html" target="ifrhowl">ML-01-07</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Learning Detail > 리스트 없음 (공통)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-01-08.html" target="ifrhowl">ML-01-08</a>
+							</td>
+							<td class="tbl_data">Y (7/23)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Learning Detail > 리스트 없음 (In progress)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-01-08-case.html" target="ifrhowl">ML-01-08-case</a>
+							</td>
+							<td class="tbl_data">Y (7/6)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Learning Detail > 개인학습 완료 > list</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-01-09.html" target="ifrhowl">ML-01-09</a>
+							</td>
+							<td class="tbl_data">Y (7/23)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Learning Detail > 개인학습 완료 > Detail</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-01-09-01.html" target="ifrhowl">ML-01-09-01</a>
+							</td>
+							<td class="tbl_data">Y (7/23)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Learning Detail > List Filter</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-01-p01.html" target="ifrhowl">ML-01-p01</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cube 상세 > Floating_button 케이스</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/floating_btn.html" target="ifrhowl">floating_btn</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cube 상세 > Short Cut UI(toggle포함)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/common/CO_01_03.html" target="ifrhowl">CO_01_03</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">CO_01_03 에서 제공</td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cube 상세 > Tool tip 공통</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-01.html" target="ifrhowl">ML-02-01</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cube 상세 > classroom (Overview)<br>강좌소개 펼침 포함 (공통)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-01.html" target="ifrhowl">ML-02-01</a>
+							</td>
+							<td class="tbl_data">Y (6/16)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">_Mod 파일 리스트에서 삭제 (아래 동일)</td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cube 상세 > classroom (Comment)<br>코멘트 공통 (별점 등록전후 포함)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-02.html" target="ifrhowl">ML-02-02</a>
+								<a href="./dist/html/learning/ML-02-03.html" target="ifrhowl">ML-02-03</a>
+							</td>
+							<td class="tbl_data">Y (6/16)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data"><del>Cube 상세 > 별점 등록 팝업</del></td>
+							<td class="tbl_data">
+								<del><a href="./dist/html/learning/ML-02-p01.html" target="ifrhowl">ML-02-p01</a></del>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">삭제</td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cube 상세 > 차수가 있는 classroom(Overview)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-04.html" target="ifrhowl">ML-02-04</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cube 상세 > e-Learning (Overview)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-05.html" target="ifrhowl">ML-02-05</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cube 상세 > 차수가 있는 e-Learning (Overview)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-06.html" target="ifrhowl">ML-02-06</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cube 상세 > Video - Embedded (Overview)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-07.html" target="ifrhowl">ML-02-07</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cube 상세 > Video – 외부 URL (Overview)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-08.html" target="ifrhowl">ML-02-08</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cube 상세 > Audio - Embedded (Overview)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-09.html" target="ifrhowl">ML-02-09</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cube 상세 > Audio – 외부 URL (Overview)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-10.html" target="ifrhowl">ML-02-10</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cube 상세 > Webpage (Overview)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-11.html" target="ifrhowl">ML-02-11</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cube 상세 > Document (Overview)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-12.html" target="ifrhowl">ML-02-12</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cube 상세 > Experiential (Overview)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-13.html" target="ifrhowl">ML-02-13</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data"><del>Cube 상세 > Test (Overview)</del></td>
+							<td class="tbl_data">
+								<del><a href="./dist/html/learning/ML-02-14.html" target="ifrhowl">ML-02-14</a></del>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">삭제</td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cube 상세 > 차수 정보 자세히 보기 팝업</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-p02.html" target="ifrhowl">ML-02-p02</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cube 상세 > 차수 정보 선택 팝업</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-p03.html" target="ifrhowl">ML-02-p03</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cube 상세 > 참고자료 Download 팝업</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-p04.html" target="ifrhowl">ML-02-p04</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Cube 상세 > Report 팝업</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-p05.html" target="ifrhowl">ML-02-p05</a> /
+								<a href="./dist/html/learning/ML-02-p05-case.html" target="ifrhowl">ML-02-p05-case</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Home > Learning Card > Detail (LinkedIn 안내)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-p06.html" target="ifrhowl">ML-02-p06</a>
+							</td>
+							<td class="tbl_data">Y (5/18)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Home > Learning Card > 승인자 설정</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-p07.html" target="ifrhowl">ML-02-p07</a>
+							</td>
+							<td class="tbl_data">Y (4/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Home > Learning Card > Test Popup</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-p08.html" target="ifrhowl">ML-02-p08</a>
+							</td>
+							<td class="tbl_data">Y (4/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Home > Learning Card > Survey Popup</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-p09.html" target="ifrhowl">ML-02-p09</a>
+							</td>
+							<td class="tbl_data">Y (4/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Contents Area > Overview Tab > Test / Report / Survey > Test & Report
+								응시 안내 Popup</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-p10.html" target="ifrhowl">ML-02-p10</a>
+							</td>
+							<td class="tbl_data">Y (4/29)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Etc > 코세라 안내 팝업</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-p11.html" target="ifrhowl">ML-02-p11</a>
+							</td>
+							<td class="tbl_data">Y (5/18)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">course list > 선수과정 제공</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-p12.html" target="ifrhowl">ML-02-p12</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">승인자검색 > 구성원검색 > Default</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-P13_01_01.html" target="ifrhowl">ML-02-P13_01_01</a>
+							</td>
+							<td class="tbl_data">Y (8/3)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">승인자검색 > 구성원검색 > 검색입력필드 Focus In</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-P13_01_02.html" target="ifrhowl">ML-02-P13_01_02</a>
+							</td>
+							<td class="tbl_data">Y (8/3)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">승인자검색 > 구성원검색 > 검색입력필드 Focus In 검색어 자동완성 기능 </td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-P13_01_02_case1.html"
+									target="ifrhowl">ML-02-P13_01_02_case1</a>
+							</td>
+							<td class="tbl_data">Y (8/3)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">승인자검색 > 구성원검색 > 최근검색어 없음</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-P13_01_02_case2.html"
+									target="ifrhowl">ML-02-P13_01_02_case2</a>
+							</td>
+							<td class="tbl_data">Y (8/3)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">승인자검색 > 구성원검색 > 검색 결과 > 검색 결과가 있을 경우(이름/부서/HP case)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-P13_01_03_01.html"
+									target="ifrhowl">ML-02-P13_01_03_01</a>
+								<a href="./dist/html/learning/ML-02-P13_01_03_01_case1.html"
+									target="ifrhowl">ML-02-P13_01_03_01_case1</a>
+								<a href="./dist/html/learning/ML-02-P13_01_03_01_case2.html"
+									target="ifrhowl">ML-02-P13_01_03_01_case2</a>
+							</td>
+							<td class="tbl_data">Y (8/3)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">승인자검색 > 구성원검색 > 검색 결과 > 승인자 정보 Popup</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-P13_01_03_01_P01.html"
+									target="ifrhowl">ML-02-P13_01_03_01_P01</a>
+							</td>
+							<td class="tbl_data">Y (8/3)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">승인자검색 > 구성원검색 > 검색 결과 > 검색 결과가 없을 경우(공통)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-P13_01_03_02.html"
+									target="ifrhowl">ML-02-P13_01_03_02</a>
+							</td>
+							<td class="tbl_data">Y (8/3)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">승인자검색 > 조직도 > Default</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-P13_02_01.html" target="ifrhowl">ML-02-P13_02_01</a>
+							</td>
+							<td class="tbl_data">Y (8/3)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">승인자검색 > 조직도 > 조직도 Tree</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-02-P13_02_02.html" target="ifrhowl">ML-02-P13_02_02</a>
+							</td>
+							<td class="tbl_data">Y (8/3)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Course 상세 > List</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-03-01.html" target="ifrhowl">ML-03-01</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Course 상세 > Overview</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-03-02-01.html" target="ifrhowl">ML-03-02-01</a>
+							</td>
+							<td class="tbl_data">Y (7/20)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Course 상세 > Overview 선수과정 있음</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-03-02-02.html" target="ifrhowl">ML-03-02-02</a>
+							</td>
+							<td class="tbl_data">Y (7/20)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Course 상세 > Overview 수강신청</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-03-02-03.html" target="ifrhowl">ML-03-02-03</a>
+							</td>
+							<td class="tbl_data">Y (7/20)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Course 상세 > Overview 수강신청, 선수과정</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-03-02-04.html" target="ifrhowl">ML-03-02-04</a>
+							</td>
+							<td class="tbl_data">Y (7/20)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Course 상세 > Comment</td>
+							<td class="tbl_data">
+								<a href="./dist/html/learning/ML-03-03.html" target="ifrhowl">ML-03-03</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+
+						<!-- blink -->
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+						<!--// blink -->
+
+						<tr class="tbl_row">
+							<th class="tbl_head">My Page</th>
+							<td class="tbl_data">My Page</td>
+							<td class="tbl_data">
+								<a href="./dist/html/mypage/MY-01-01.html" target="ifrhowl">MY-01-01</a>
+							</td>
+							<td class="tbl_data">Y (7/3)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">학습대기중, 학습시간, 완료학습, 획득 Stamp 없는 경우</td>
+							<td class="tbl_data">
+								<a href="./dist/html/mypage/MY-01-02.html" target="ifrhowl">MY-01-02</a>
+							</td>
+							<td class="tbl_data">Y (7/3)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">학습시간 상세보기 팝업</td>
+							<td class="tbl_data">
+								<a href="./dist/html/mypage/MY-01-01-P01.html" target="ifrhowl">MY-01-01-P01</a>
+							</td>
+							<td class="tbl_data">Y (7/7)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<!-- blink -->
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="5"></td>
+						</tr>
+						<!--// blink -->
+
+						<tr class="tbl_row">
+							<th class="tbl_head">Community</th>
+							<td class="tbl_data">Community learning 상세 > 가입하지 않은 경우 (overview)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/community/CM-01-01.html" target="ifrhowl">CM-01-01</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data">_Mod 파일 삭제 (아래 동일)</td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Community learning 상세 > 가입한 종료이전 일 경우 > Community_리스트 있음</td>
+							<td class="tbl_data">
+								<a href="./dist/html/community/CM-01-02-01.html" target="ifrhowl">CM-01-02-01</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Community learning 상세 > 가입한 종료이전 일 경우 > Community_리스트 없음</td>
+							<td class="tbl_data">
+								<a href="./dist/html/community/CM-01-02-02.html" target="ifrhowl">CM-01-02-02</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Community learning 상세 > 가입한 종료이전 일 경우 > My Post_리스트 있음</td>
+							<td class="tbl_data">
+								<a href="./dist/html/community/CM-01-02-03.html" target="ifrhowl">CM-01-02-03</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Community learning 상세 > 가입한 종료이전 일 경우 > My Post_리스트 없음</td>
+							<td class="tbl_data">
+								<a href="./dist/html/community/CM-01-02-04.html" target="ifrhowl">CM-01-02-04</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Community learning 상세 > 가입한 종료이전 일 경우 > Overview</td>
+							<td class="tbl_data">
+								<a href="./dist/html/community/CM-01-02.html" target="ifrhowl">CM-01-02</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Community learning 상세 > 가입한 종료되었을 경우</td>
+							<td class="tbl_data">
+								<a href="./dist/html/community/CM-01-03.html" target="ifrhowl">CM-01-03</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Community learning 상세 > 게시글 상세</td>
+							<td class="tbl_data">
+								<a href="./dist/html/community/CM-01-04.html" target="ifrhowl">CM-01-04</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Community learning 상세 > 게시글 상세 > 코멘트 없음</td>
+							<td class="tbl_data">
+								<a href="./dist/html/community/CM-01-04_case.html" target="ifrhowl">CM-01-04_case</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Community List > List > 내역 있음</td>
+							<td class="tbl_data">
+								<a href="./dist/html/community/CM-02-01-01.html" target="ifrhowl">CM-02-01-01</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Community List > List > 내역 없음</td>
+							<td class="tbl_data">
+								<a href="./dist/html/community/CM-02-01-02.html" target="ifrhowl">CM-02-01-02</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Community List > Card 최신글 3개 있을 시</td>
+							<td class="tbl_data">
+								<a href="./dist/html/community/CM-02-01-C01.html" target="ifrhowl">CM-02-01-C01</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Community List > Card 최신글 없을 시</td>
+							<td class="tbl_data">
+								<a href="./dist/html/community/CM-02-01-C02.html" target="ifrhowl">CM-02-01-C02</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Feed > List > 내역 있음</td>
+							<td class="tbl_data">
+								<a href="./dist/html/community/CM-02-02-01.html" target="ifrhowl">CM-02-02-01</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Feed > List > 내역 없음</td>
+							<td class="tbl_data">
+								<a href="./dist/html/community/CM-02-02-02.html" target="ifrhowl">CM-02-02-02</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Feed > Card > Cube or Course > 대댓글 등록 시</td>
+							<td class="tbl_data">
+								<a href="./dist/html/community/CM-02-02-C01.html" target="ifrhowl">CM-02-02-C01</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Feed > Card > Community > 게시글 내 응답글 등록 시</td>
+							<td class="tbl_data">
+								<a href="./dist/html/community/CM-02-02-C02.html" target="ifrhowl">CM-02-02-C02</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Feed > Card > Community > 게시글 내 댓글 등록 시</td>
+							<td class="tbl_data">
+								<a href="./dist/html/community/CM-02-02-C03.html" target="ifrhowl">CM-02-02-C03</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Feed > Card > Community > 대댓글 등록 시</td>
+							<td class="tbl_data">
+								<a href="./dist/html/community/CM-02-02-C04.html" target="ifrhowl">CM-02-02-C04</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<!-- blink -->
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+						<!--// blink -->
+
+						<tr class="tbl_row">
+							<th class="tbl_head">Recommend</th>
+							<td class="tbl_data">Default</td>
+							<td class="tbl_data">
+								<a href="./dist/html/recommend/RC-01-01.html" target="ifrhowl">RC-01-01</a>
+							</td>
+							<td class="tbl_data">Y (6/9)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">카드 없을 경우</td>
+							<td class="tbl_data">
+								<a href="./dist/html/recommend/RC-01-02.html" target="ifrhowl">RC-01-02</a>
+							</td>
+							<td class="tbl_data">Y (6/9)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">관심채널 보기 팝업</td>
+							<td class="tbl_data">
+								<a href="./dist/html/recommend/RC-01-p01.html" target="ifrhowl">RC-01-p01</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">추천 리스트 all</td>
+							<td class="tbl_data">
+								<a href="./dist/html/recommend/RC-02-01.html" target="ifrhowl">RC-02-01</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data"><del>채널변경팝업</del> List Filter팝업</td>
+							<td class="tbl_data">
+								<a href="./dist/html/recommend/RC-02-p01.html" target="ifrhowl">RC-02-p01</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">List sorting팝업</td>
+							<td class="tbl_data">
+								<a href="./dist/html/recommend/RC-02-p02.html" target="ifrhowl">RC-02-p02</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">추천 리스트 all > 없는 경우</td>
+							<td class="tbl_data">
+								<a href="./dist/html/recommend/RC-02-02.html" target="ifrhowl">RC-02-02</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<!-- blink -->
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="5"></td>
+						</tr>
+						<!--// blink -->
+
+						<tr class="tbl_row">
+							<th class="tbl_head">Search</th>
+							<td class="tbl_data">검색어 입력 후 진입 한 경우</td>
+							<td class="tbl_data">
+								<a href="./dist/html/search/SE-01-01.html" target="ifrhowl">SE-01-01</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">검색 메뉴로 진입 한 경우</td>
+							<td class="tbl_data">
+								<a href="./dist/html/search/SE-02-01.html" target="ifrhowl">SE-02-01</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">검색 결과 없는 경우</td>
+							<td class="tbl_data">
+								<a href="./dist/html/search/SE-01-02.html" target="ifrhowl">SE-01-02</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">List Filter > 기본, 선택 후</td>
+							<td class="tbl_data">
+								<a href="./dist/html/search/SE-01-01-P01.html" target="ifrhowl">SE-01-01-P01</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">상세 검색 결과 있는 경우</td>
+							<td class="tbl_data">
+								<a href="./dist/html/search/SE-01-03.html" target="ifrhowl">SE-01-03</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">상세 검색 결과 없는 경우</td>
+							<td class="tbl_data">
+								<a href="./dist/html/search/SE-01-04.html" target="ifrhowl">SE-01-04</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">상세 검색 결과 없는 경우 - 수강신청 가능 학습과정 없는 경우</td>
+							<td class="tbl_data">
+								<a href="./dist/html/search/SE-01-05.html" target="ifrhowl">SE-01-05</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">List 정렬조건 선택 팝업</td>
+							<td class="tbl_data">
+								<a href="./dist/html/search/SE-01-01-P02.html" target="ifrhowl">SE-01-01-P02</a>
+							</td>
+							<td class="tbl_data">Y (8/14)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="5"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head">Support</th>
+							<td class="tbl_data">Notice > List > 내역 있음</td>
+							<td class="tbl_data">
+								<a href="./dist/html/support/SU-01-01-01.html" target="ifrhowl">SU-01-01-01</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Notice > List > 내역 없음</td>
+							<td class="tbl_data">
+								<a href="./dist/html/support/SU-01-01-02.html" target="ifrhowl">SU-01-01-02</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Notice > Detail</td>
+							<td class="tbl_data">
+								<a href="./dist/html/support/SU-01-02.html" target="ifrhowl">SU-01-02</a>
+							</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="6"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head">Certification</th>
+							<td class="tbl_data">Badge</td>
+							<td class="tbl_data">
+								<a href="./dist/html/certification/badge.html" target="ifrhowl">badge</a>
+								<a href="./dist/html/certification/badge_typeC.html" target="ifrhowl">badge_typeC</a>
+								<a href="./dist/html/certification/badge_typeNew.html" target="ifrhowl">badge_typeNew</a>
+							</td>
+							<td class="tbl_data">Y (8/19)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Badge List</td>
+							<td class="tbl_data">
+								<a href="./dist/html/certification/CT-01-01.html" target="ifrhowl">CT-01-01</a>
+								<a href="./dist/html/certification/CT-01-01_typeNew.html"
+									target="ifrhowl">CT-01-01_typeNew</a>
+							</td>
+							<td class="tbl_data">Y (7/20)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Badge List 리스트 없는 case</td>
+							<td class="tbl_data">
+								<a href="./dist/html/certification/CT-01-02.html" target="ifrhowl">CT-01-02</a>
+							</td>
+							<td class="tbl_data">Y (7/7)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Badge List > List Filter</td>
+							<td class="tbl_data">
+								<a href="./dist/html/certification/CT-01-01-P01.html" target="ifrhowl">CT-01-01-P01</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Badge List > detail</td>
+							<td class="tbl_data">
+								<a href="./dist/html/certification/CT-01-01-01.html" target="ifrhowl">CT-01-01-01</a>
+								<a href="./dist/html/certification/CT-01-01-01_typeNew.html"
+									target="ifrhowl">CT-01-01-01_typeNew</a>
+							</td>
+							<td class="tbl_data">Y (8/10)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Status & Function Area</td>
+							<td class="tbl_data">
+								<a href="./dist/html/certification/CT-01-01-01-case.html"
+									target="ifrhowl">CT-01-01-01-case</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Badge List > detail > 뱃지 자동 발급 완료 안내 팝업</td>
+							<td class="tbl_data">
+								<a href="./dist/html/certification/CT-01-01-01-P01.html"
+									target="ifrhowl">CT-01-01-01-P01</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">Badge List > detail > 도전 취소 확인 팝업</td>
+							<td class="tbl_data">
+								<a href="./dist/html/certification/CT-01-01-01-P02.html"
+									target="ifrhowl">CT-01-01-01-P02</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">도전중 Badge > 리스트</td>
+							<td class="tbl_data">
+								<a href="./dist/html/certification/CT-02-01.html" target="ifrhowl">CT-02-01</a>
+								<a href="./dist/html/certification/CT-02-01_typeNew.html"
+									target="ifrhowl">CT-02-01_typeNew</a>
+							</td>
+							<td class="tbl_data">Y (7/20)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">도전중 Badge > 수동발급 리스트 case > 수동발급 불가 알림 팝업</td>
+							<td class="tbl_data">
+								<a href="./dist/html/certification/CT-02-01-P01.html" target="ifrhowl">CT-02-01-P01</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">도전중 Badge > 리스트 없는 case</td>
+							<td class="tbl_data">
+								<a href="./dist/html/certification/CT-02-02.html" target="ifrhowl">CT-02-02</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Badge > 리스트</td>
+							<td class="tbl_data">
+								<a href="./dist/html/certification/CT-03-01.html" target="ifrhowl">CT-03-01</a>
+								<a href="./dist/html/certification/CT-03-01_typeNew.html"
+									target="ifrhowl">CT-03-01_typeNew</a>
+							</td>
+							<td class="tbl_data">Y (7/20)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">My Badge > 리스트 없는 case</td>
+							<td class="tbl_data">
+								<a href="./dist/html/certification/CT-03-02.html" target="ifrhowl">CT-03-02</a>
+							</td>
+							<td class="tbl_data">Y (6/26)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<td class="tbl_data tbl_empty" colspan="5"></td>
+						</tr>
+
+						<tr class="tbl_row">
+							<th class="tbl_head">승인관리</th>
+							<td class="tbl_data">유료과정 > list > 승인대기</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approval/AP-01-01-01.html" target="ifrhowl">AP-01-01-01</a>
+							</td>
+							<td class="tbl_data">Y (7/23)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">유료과정 > list > Filter popup</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approval/AP-01-01-01-P01.html" target="ifrhowl">AP-01-01-01-P01</a>
+							</td>
+							<td class="tbl_data">Y (7/23)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">유료과정 > list > 결제 승인 Popup</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approval/AP-01-01-01-P02.html" target="ifrhowl">AP-01-01-01-P02</a>
+							</td>
+							<td class="tbl_data">Y (7/23)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">유료과정 > list > 결제 반려 Popup</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approval/AP-01-01-01-P03.html" target="ifrhowl">AP-01-01-01-P03</a>
+							</td>
+							<td class="tbl_data">Y (7/23)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">유료과정 > list > 반려</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approval/AP-01-01-02.html" target="ifrhowl">AP-01-01-02</a>
+							</td>
+							<td class="tbl_data">Y (7/23)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">유료과정 > list > 승인</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approval/AP-01-01-03.html" target="ifrhowl">AP-01-01-03</a>
+							</td>
+							<td class="tbl_data">Y (7/23)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">유료과정 > List > 내역이 없을 경우(공통)</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approval/AP-01-01-04.html" target="ifrhowl">AP-01-01-04</a>
+							</td>
+							<td class="tbl_data">Y (7/23)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">유료과정 > Detail > 승인대기 시</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approval/AP-01-02-01.html" target="ifrhowl">AP-01-02-01</a>
+							</td>
+							<td class="tbl_data">Y (7/23)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">유료과정 > Detail > 승인 혹은 반려 시</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approval/AP-01-02-02.html" target="ifrhowl">AP-01-02-02</a>
+							</td>
+							<td class="tbl_data">Y (7/23)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">개인학습 > List > 내역이 있는 경우</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approval/AP-02-01-01.html" target="ifrhowl">AP-02-01-01</a>
+							</td>
+							<td class="tbl_data">Y (7/23)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">개인학습 > List > Filter Popup</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approval/AP-02-01-01-P01.html" target="ifrhowl">AP-02-01-01-P01</a>
+							</td>
+							<td class="tbl_data">Y (7/23)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">개인학습 > List > 내역이 없을 경우</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approval/AP-02-01-02.html" target="ifrhowl">AP-02-01-02</a>
+							</td>
+							<td class="tbl_data">Y (7/23)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">개인학습 > Detail</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approval/AP-02-02.html" target="ifrhowl">AP-02-02</a>
+							</td>
+							<td class="tbl_data">Y (7/23)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+						<tr class="tbl_row">
+							<th class="tbl_head"></th>
+							<td class="tbl_data">개인학습 > Detail > 반려 popup</td>
+							<td class="tbl_data">
+								<a href="./dist/html/approval/AP-02-02-P01.html" target="ifrhowl">AP-02-02-P01</a>
+							</td>
+							<td class="tbl_data">Y (7/23)</td>
+							<td class="tbl_data"></td>
+							<td class="tbl_data"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

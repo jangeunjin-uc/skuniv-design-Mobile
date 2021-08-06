@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="232" height="232" viewBox="0 0 232 232">
+    <defs>
+        <filter id="ji83a6dhia" width="109.1%" height="109.1%" x="-4.5%" y="-3.6%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="3"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.8 0 0 0 0 0.831372549 0 0 0 0 0.905882353 0 0 0 1 0"/>
+        </filter>
+        <circle id="hamyeq4bab" cx="110" cy="110" r="110"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g>
+                        <g transform="translate(-737 -345) translate(153 345) translate(584) translate(6 4)">
+                            <g>
+                                <use fill="#000" filter="url(#ji83a6dhia)" xlink:href="#hamyeq4bab"/>
+                                <use fill="#61C1BE" xlink:href="#hamyeq4bab"/>
+                            </g>
+                            <path fill="#3BA29F" d="M220 110c0 60.751-49.249 110-110 110S0 170.751 0 110z"/>
+                            <circle cx="110" cy="110" r="94" fill="#FFF"/>
+                            <circle cx="110" cy="110" r="88" stroke="#61C1BE"/>
+                        </g>
+                        <g fill="#222">
+                            <path d="M0 0H150V1H0zM0 2H150V3H0zM11 43H137V44H11zM11 45H137V46H11z" transform="translate(-737 -345) translate(153 345) translate(584) translate(6 4) translate(35 114)"/>
+                        </g>
+                    </g>
+                    <g fill="#61C1BE" fill-rule="nonzero">
+                        <path d="M7 11.214L2.886 13.377 3.671 8.796.343 5.551 4.943 4.883 7 .714 9.057 4.883 13.657 5.551 10.329 8.796 11.114 13.377zM24 11.214L19.886 13.377 20.671 8.796 17.343 5.551 21.943 4.883 24 .714 26.057 4.883 30.657 5.551 27.329 8.796 28.114 13.377z" transform="translate(-737 -345) translate(153 345) translate(584) translate(101 174)"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

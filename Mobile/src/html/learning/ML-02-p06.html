@@ -1,0 +1,85 @@
+@@include("head.html")
+<body style="overflow: hidden;">
+@@include('listheader.html',{
+	"title" : "Learning"
+})
+<!-- .content -->
+<section class="content">
+</section>
+<!-- // .content -->
+
+<!-- layer -->
+<section class="popWrap full">
+	<div class="popBox bgBlue">
+		<div class="popTitle">
+			<p>LinkedIn 최초 접속 시 학습 방법안내</p>
+			<a href="#" class="btnClose">닫기</a>
+		</div>
+		<div class="popCont">
+            <div class="linkedin-cont">
+                <ul class="txt-box">
+                    <li>
+                        <div class="text1"><span class="num">1.</span> Linkedin 과정을 처음 학습하는 경우, 아래와 같이 기존에 개인이 보유하고 있는 ‘Linkedin 계정’과 연동하여 사용할 것인지를 확인하는 화면이 보여집니다.</div>
+                    </li>
+                    <li>
+                        <div class="text1"><span class="num">2.</span> 기존에 개인이 보유하고 있는 ‘Linkedin 계정’과 ‘mySUNI 계정’을 연결하지 않고 학습하고 싶은 경우,</div>
+                        <div class="text2">아래 표시된</span> <span class="red bold">①</span>, <span class="red bold">②</span>번을 순서대로 선택하시면, ‘mySUNI계정’으로 학습이 가능합니다.</div>
+                        <div class="text2"><span class="red">최초 연결 이후에는 학습할 때 마다 별도 로그인 할 필요가 없습니다.</span></div>
+                    </li>
+                    <li>
+                        <div class="text1"><span class="num">3.</span> 기존에 개인이 보유하고 있는 ‘Linkedin 계정’과 ‘mySUNI 계정’을 연결하여 학습하고 싶은 경우</div>
+                        <div class="text2">아래 표시된 <span class="red bold">③</span>번을 선택 후 개인이 보유한 Linkedin 계정의 ID/PW를 입력하면 됩니다.</div>
+                        <div class="text2">LinkedIn 과정을 <span class="red">학습할 때 마다 개인 계정을 입력</span>하면, 학습이력이 <span class="red">LinkedIn profile에 통합 관리</span>됩니다.</div>
+                    </li>
+                </ul>
+                <div class="img-box">
+                    <ul>
+                        <li>
+                            <div class="title">개인계정과의 연동을 확인하는 팝업</div>
+                            <div class="img"><img src="../../img/popup_img_linkedin_02.png" alt="" /></div>
+                        </li>
+                        <li>
+                            <div class="title">재확인하는 팝업</div>
+                            <div class="img"><img src="../../img/popup_img_linkedin_02_copy.png" alt="" /></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+		</div>
+		<div class="BtmBtn floating">
+			<div class="btnGroup popupClose">
+				<div class="left">
+                    <div>
+                        <span class="inpD">
+                            <label>
+                                <input type="checkbox">
+                                <span class="txt">오늘 하루 보지않기</span>
+                                <i class="ico checkBox"></i>
+                            </label>
+                        </span>
+                    </div>
+                </div>
+                <div class="right">
+                    <button class="button close">Close</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //layer -->
+
+<script>
+
+if(fXGetCookie('linkedin')){ 
+    $('.popWrap').addClass('hide');
+}
+$('.popWrap .popupClose .right button').bind('click', function(){
+    if($('.popWrap .popupClose .left input[type=checkbox]').prop('checked')){ // 오늘 하루 보지 않기 선택시
+        fXSetCookie('linkedin', true, 1);
+    }
+    $('.popWrap').addClass('hide');
+})
+</script>
+
+</body>
+</html>

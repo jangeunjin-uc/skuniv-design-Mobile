@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>mySUNI</title>
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <script src="../../js/Chart.min.js"></script>
+    <script src="../../js/ui.js"></script>
+</head>
+
+<body class="white">
+    <!-- content -->
+    <section class="content full">
+        <div class="interest-area">
+            <div class="logo on">
+                <img src="../../img/logo_gnb_login_90px.svg" alt="mySUNI" />
+                <div class="setting-num">
+                    <span>1</span>
+                    <span>2</span>
+                    <span class="on">3</span>
+                    <span>4</span>
+                </div>
+            </div>
+            <div class="form-wrap partlst">
+                <div class="img-top">
+                    <img src="../../img/img_career_m.png" />
+                    <div class="setting-msg">
+                        <strong>관심 분야</strong>
+                        <span>여러분의 관심사에 대해 꼼꼼하게 선택해주세요.<br/>최소 3개 이상으로 조금이라도 관심을 가지고 있는<br/>주제는 모두 선택을 해주세요. </span>
+                    </div>
+                </div>
+                <form>
+                    <div class="part-wrap">
+                        <ul class="accordion">
+                            <li class="open">
+                                <div class="viewBox">
+                                    <a href="#" class="anch">
+                                        <strong>공통분야</strong>
+                                        <span class="p_num">5</span>
+                                        <i class="ico arrow"></i>
+                                    </a>
+                                </div>
+                                <div class="sub">
+                                    <div class="inner-btn">
+                                        <button type="button" class="blueLine">SKI계열 Biz. 이해</button>
+                                        <button type="button" class="blueLine">Deep Change</button>
+                                        <button type="button" class="blueLine">직무역량</button>
+                                        <button type="button" class="blueLine">Trend View</button>
+                                        <button type="button" class="blueLine">SKI계열 Leadership</button>
+                                    </div>
+                                    <div class="pageList">
+                                        <a href="#" class="active">1</a>
+                                        <a href="#">2</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="open">
+                                <div class="viewBox">
+                                    <a href="#" class="anch">
+                                        <strong>선택 관심 분야</strong>
+                                        <span class="p_num">5</span>
+                                        <i class="ico arrow"></i>
+                                    </a>
+                                </div>
+                                <div class="sub" style="display: none;">
+                                    <div class="inner-top">
+                                        <span>최소 3개 이상으로 여러 개를 중복 선택 가능합니다.</span>
+                                        <i class="ico btn_reset"></i>
+                                    </div>
+                                    <div class="inner-btn">
+                                        <button type="button" class="blueLine d_btn">Cloud Engineer Track <i class="ico icon_channel_delete"></i> </button>
+                                        <button type="button" class="blueLine d_btn">AI Trend Watch <i class="ico icon_channel_delete"></i></button>
+                                        <button type="button" class="blueLine d_btn">AI Biz. Implementation <i class="ico icon_channel_delete"></i></button>
+                                        <button type="button" class="blueLine d_btn">Trend View <i class="ico icon_channel_delete"></i></button>
+                                        <button type="button" class="blueLine d_btn">Executive AI/DT <i class="ico icon_channel_delete"></i></button>
+                                    </div>
+                                    <div class="pageList">
+                                        <a href="#" class="active">1</a>
+                                        <a href="#">2</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="chnl-wrap">
+                        <strong class="chl-tit">Channel list</strong>
+                        <ul class="accordion introList">
+                            <li class="open">
+                                <div class="viewBox">
+                                    <a href="#" class="anch">
+                                        <strong>AI</strong>
+                                        <i class="ico arrow"></i>
+                                    </a>
+                                </div>
+                                <ul class="sub" style="display: none;">
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">Executive AI/DT</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">AI/DT Literacy</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">AI Biz. Implementation</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">Technologies</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="viewBox">
+                                    <a href="#" class="anch">
+                                        <strong>DT</strong>
+                                        <i class="ico arrow"></i>
+                                    </a>
+                                </div>
+                                <ul class="sub" style="display: none;">
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">Executive AI/DT</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">AI/DT Literacy</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">AI Biz. Implementation</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">Technologies</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="viewBox">
+                                    <a href="#" class="anch">
+                                        <strong>행복</strong>
+                                        <i class="ico arrow"></i>
+                                    </a>
+                                </div>
+                                <ul class="sub" style="display: none;">
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">Executive AI/DT</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">AI/DT Literacy</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">AI Biz. Implementation</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">Technologies</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="viewBox">
+                                    <a href="#" class="anch">
+                                        <strong>SV</strong>
+                                        <i class="ico arrow"></i>
+                                    </a>
+                                </div>
+                                <ul class="sub" style="display: none;">
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">Executive AI/DT</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">AI/DT Literacy</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">AI Biz. Implementation</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">Technologies</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="viewBox">
+                                    <a href="#" class="anch">
+                                        <strong>혁신디자인</strong>
+                                        <i class="ico arrow"></i>
+                                    </a>
+                                </div>
+                                <ul class="sub" style="display: none;">
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">Executive AI/DT</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">AI/DT Literacy</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">AI Biz. Implementation</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">Technologies</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="viewBox">
+                                    <a href="#" class="anch">
+                                        <strong>Global</strong>
+                                        <i class="ico arrow"></i>
+                                    </a>
+                                </div>
+                                <ul class="sub" style="display: none;">
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">Executive AI/DT</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">AI/DT Literacy</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">AI Biz. Implementation</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">Technologies</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="viewBox">
+                                    <a href="#" class="anch">
+                                        <strong>Leadership</strong>
+                                        <i class="ico arrow"></i>
+                                    </a>
+                                </div>
+                                <ul class="sub" style="display: none;">
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">Executive AI/DT</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">AI/DT Literacy</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">AI Biz. Implementation</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <span class="txt">Technologies</span>
+                                        <input type="checkbox">
+                                        <i class="ico checkBox"></i>
+                                        </label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <div class="BtmBtn floating">
+                <div class="btnGroup">
+                    <button type="button" class="btnBlack">이전</button>
+                    <button disabled type="button" class="btnOrange">다음</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- content -->
+
+</body>
+
+</html>

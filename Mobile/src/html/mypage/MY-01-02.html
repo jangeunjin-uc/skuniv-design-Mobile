@@ -1,0 +1,76 @@
+@@include("head.html")
+<body>
+@@include('listheader.html',{
+	"title" : "My page",
+	"link" : "../main/MA-01-01.html"
+})
+<!-- .content -->
+<section class="content">
+	<div class="porfile">
+		<div class="year">
+			<select name="" id="" class="selectbox">
+				<option value="">2022</option>
+				<option value="">2021</option>
+				<option value="" selected="selected">2020</option>
+			</select>
+		</div>
+		<div class="thumb">
+			<img src="../../img/profile_110.jpg" alt="">
+		</div>
+		<div class="name">
+			<strong>김유니</strong>
+		</div>
+		<div class="subDetail">
+			<span>SK C&amp;C</span>
+			<span>플랫폼 사업 1팀</span>
+		</div>
+	</div>
+
+	<div class="learnTotal">
+		<div class="inner">
+			<dl class="ltTit">
+				<dt>총 학습시간</dt>
+				<dd><span>학습대기중</span></dd>
+			</dl>
+
+			<div class="recView">
+				<div class="view-course">
+					<a href="../recommend/RC-01-01.html" target="_blank">
+						<span class="name">김유니 Adolph Blaine Charles David Earl Frederick Jack Gerald Hube</span>
+						<span class="fix">님에게 추천하는 학습 과정 보기 <i class="ico arrow blue"></i></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="linkListWrap">
+		<ul class="linkList">
+			<li>
+				<a href="../learning/ML-01-05.html" target="_blank">학습완료 <strong class="disabled">0개</strong></a>
+			</li>
+			<li>
+				<a href="../certification/CT-01-01.html" target="_blank">My Badge <strong class="disabled">0개</strong></a>
+			</li>
+			<li>
+				<a href="../learning/ML-01-06.html" target="_blank">My Stamp <strong class="disabled">0개</strong></a>
+			</li>
+			<li>
+				<label for="switch">PUSH 알림 허용</label>
+				<div class="switch">
+					<input type="checkbox" name="" id="switch" class="switchCheckbox" >
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
+<!-- // .content -->
+@@include('toolbar.html', {
+	"ty1": "",
+	"ty2": "",
+	"ty3": "",
+	"ty4": "",
+	"ty5": " on"
+})
+</body>
+</html>

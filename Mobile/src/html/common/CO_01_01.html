@@ -1,0 +1,20 @@
+@@include("head.html")
+<body>
+@@include('notice.html')
+@@include('header.html')
+
+<!-- .content -->
+<section class="content">
+	<div style="height:600px; line-height:600px; background:#ddd; text-align:center; color:#000;">content</div>
+</section>
+<!-- // .content -->
+
+@@include('toolbar.html', {
+	"ty1": " on",
+	"ty2": " new",
+	"ty3": " on new",
+	"ty4": "",
+	"ty5": ""
+})
+</body>
+</html>

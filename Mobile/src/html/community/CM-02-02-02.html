@@ -1,0 +1,35 @@
+@@include("head.html")
+<body>
+@@include('listheader.html',{
+	"title" : "Community",
+	"link" : "../main/MA-01-01.html"
+})
+<!-- .content -->
+<section class="content">
+	
+	<div class="tabBox">
+		<div class="menuWrap">
+			<div class="menu">
+				<a href="../community/CM-02-01-01.html" target="_blank">List<span class="count">+59</span></a>
+				<a href="../community/CM-02-02-01.html" target="_blank" class="active">My Feed<span class="count">+30</span></a>
+			</div>
+		</div>
+	</div>
+
+<div class="emptyBox">
+	<i class="icon ico noCont"></i>
+	<p class="txt">등록된 My Feed 내역이 없습니다.</p>
+</div>
+
+</section>
+<!-- // .content -->
+
+@@include('toolbar.html', {
+	"ty1": "",
+	"ty2": "",
+	"ty3": " on",
+	"ty4": "",
+	"ty5": ""
+})
+</body>
+</html>

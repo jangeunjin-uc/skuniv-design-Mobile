@@ -1,0 +1,113 @@
+/* 장은진 */
+/*common*/
+.popCont .pop-q-form-inner .title_text{position:relative; padding-bottom:60px}
+.popCont .pop-q-form-inner .title_text:after{content:''; display:block; position:absolute; bottom:30px; left:-15px; right:-15px; height:1px; background-color:#ebebeb}
+.popCont .pop-q-form-inner .title_text h3{color:#222; font-size:22px; font-weight:700; letter-spacing:-.4px}
+.popCont .pop-q-form-inner .title_text p{margin-top:10px; color:#222; font-size:12px; line-height:19px; letter-spacing:-.2px;}
+.popCont .pop-q-form-inner .title_text p span{display:inline-block; position:relative; color:#666}
+.popCont .pop-q-form-inner .title_text p strong{display:inline-block; padding-left:3px; color:#4c4c4c;font-weight:700}
+.popCont .pop-q-form-inner .title_text p strong+span{margin-left:12.5px}
+.popCont .pop-q-form-inner .title_text p strong+span:before{content:''; display:inline-block; position:absolute; top:5px; bottom:5px; left:-6.25px; width:1px; background-color:#ddd;}
+
+
+.popCont .pop-q-form-inner .statusBox{padding-bottom:5px;}
+.sv_status{display:inline-block; min-width: 30px; padding:2px 6px; border-radius:2px; border-width:1px; border-style:solid; text-align:center; line-height:1.5; font-size:10px; font-weight: bold}
+.black{border-color:#666; color:#555}
+.blue{border-color:#5772C7; color:#5772C7}
+.red{border-color:#e1002a; color:#e1002a}
+
+.cmntArea .txtCont b{display:inline-block; margin-right:3px; color:#51aaff} /*common div.reply 만 제외함*/
+.birthDay .inputBox.date .inp {padding:0 46px 0 0; background:#fff url(../img/icon_date_40_px.svg) right 7px center no-repeat; background-size:20px auto}
+.birthDay .inputBox.date:before {display:none}
+.birthDay .inputBox.date:after{content:''; position:absolute; top:0; right:35px; height:100%; border-right:1px solid #6c788f}
+.birthDay .inputBox.date .dateLabel {display:block; overflow:hidden; position:absolute; top:2px; left:2px; width:-webkit-calc(100% - 39px); width:calc(100% - 39px); height:-webkit-calc(100% - 4px); height:calc(100% - 4px); padding: 0 35px 0 0; border-radius:4px; text-align:left; line-height:31px; color:#a8b5cd; font-size:14px; text-indent:10px; letter-spacing:-0.29px}
+.birthDay .inputBox.date .dateLabel > span {display:block; height:100%; background:#fff}
+
+/*test*/
+.question-wrap.pop-test .inpD label .txt{overflow:auto; margin-top:0; white-space:inherit;}
+.question-wrap.pop-test li .q .image-box{display:block; overflow:hidden; width:100%; height:150px; margin-top:20px}
+.question-wrap.pop-test li .q .image-box img{vertical-align:top}
+.question-wrap.pop-test>li{padding-bottom:10px}
+.question-wrap.test-check-on .q{position:relative}
+.question-wrap.test-check-on .q span.redpen-check{display:block; z-index: 2; position:absolute; top:-10px; left:-10px; width:64px; height: 80px; background-repeat:no-repeat; background-size:cover}
+.question-wrap.test-check-on .q span.redpen-check.chk-incorrect{background-image:url('../img/img-test-incorrect.png');}
+.question-wrap.test-check-on .q span.redpen-check.chk-correct{background-image:url('../img/img-test-correct.png');}
+
+/*pop-servey*/
+.question-wrap.pop-servey>li{padding-bottom:10px}
+.question-wrap.pop-servey li .a .radio_yn{display:inline-block;}
+.question-wrap.pop-servey li .a .radio_yn .radio-switch{display:inline-block; position:relative; width:180px; height:40px; padding:0; border:2px solid #dae0eb; border-radius:40px}
+.question-wrap.pop-servey li .a .radio_yn .radio-switch input{width:0; height:0}
+.question-wrap.pop-servey li .a .radio_yn .radio-switch .slider{position:absolute; left:0; right:0; top:0; bottom:0; background-color:#fff; border-radius:20px; cursor:pointer;}
+.question-wrap.pop-servey li .a .radio_yn .radio-switch .slider::before{content:''; position:absolute; right:5%; top:50%; width:90px; height:40px;background-color:initial; border-radius:20px; transform:translate(11px, -50%); border:2px solid #3e8ae9}
+.question-wrap.pop-servey li .a .radio_yn .radio-switch.init .slider::before{content:''; position:absolute; right:auto; top:50%; width:24px; height:24px; background:url('../img/btn_radio_selected.svg') no-repeat 50%/24px !important; border-radius:50%; transform:translate(79px, -50%); border:none}
+.question-wrap.pop-servey li .a .radio_yn .radio-toggle.checked .radio-switch .slider::before{transform:translate(-78px, -50%)}
+.question-wrap.pop-servey li .a .radio_yn .radio-switch-text{position:absolute; width:180px; height:40px; font-size:14px}
+.question-wrap.pop-servey li .a .radio_yn .radio-switch-text:before{content:'YES'; position:absolute; top:10px;left:32.5px;color:#444}
+.question-wrap.pop-servey li .a .radio_yn .radio-switch-text:after{content:'NO'; position:absolute; top:10px;right:34.5px;color:#444}
+.question-wrap.pop-servey li .a .sub_a{padding:10px 20px 15px; border:1px solid #ddd; background:#f7f7f7}
+.question-wrap.pop-servey li .a .sub_a+.sub_a {border-top:0}
+.question-wrap.pop-servey li .a .sub_a:last-child{margin-bottom:20px}
+.question-wrap.pop-servey li .a .sub_a p{position:relative; margin:20px 0; padding-left:4px; color:#222; font-size:14px; letter-spacing:-.3px}
+.question-wrap.pop-servey li .a .sub_a p:before{content:''; display:inline-block; position:absolute; top:50%; left:0; width:3px; height:3px; border-radius:50%; background-color:#6c788f; transform:translateY(-50%)}
+.question-wrap.pop-servey li .a .radioBttn{margin-bottom:20px}
+
+/*report*/
+.popCont.pop-report .reportStep>li{padding:30px 0}
+.popCont.pop-report .reportStep>li:first-of-type{padding-top:0}
+.popCont.pop-report .reportStep>li strong.title{font-size:14px}
+.popCont.pop-report .reportStep strong.title + .desc{margin-top:10px; color:#222}
+.popCont.pop-report .reportStep>li .cmntEnter{margin-top:20px}
+.popCont.pop-report .reportStep .cmntEnter .uploadfile-area ul>li{display:flex; padding:0; border:none}
+.popCont.pop-report .reportStep .cmntEnter .uploadfile-area ul>li a{display:flex; height:100%; vertical-align:middle}
+.popCont.pop-report .reportStep .cmntEnter .uploadfile-area ul>li button{display:inline-block; margin-top:-3px;}
+.popCont.pop-report .reportStep .cmntEnter .uploadfile-area .upload-byte{flex:0 0 90px; margin:0 8px 0; color:#999}
+.popCont.pop-report .reportStep .cmntEnter .uploadfile-area .file-name{flex:0 0 auto; max-width:210px; overflow:hidden; padding-right:2px; -o-text-overflow:ellipsis; text-overflow:ellipsis; white-space:nowrap;} 
+.popCont.pop-report .reportStep .cmntEnter .inputFile{border-width:0; border-top-width:1px; border-color:#b9b9b9;  border-top-left-radius:0; border-top-right-radius:0}
+.popCont.pop-report .reportStep .reporting{margin-top:10px; font-size:14px}
+.popCont.pop-report .reportStep .downLink{padding-top:20px; border:0}
+.popCont.pop-report .reportStep .noti{padding:0 10px; text-align:center}
+.popCont.pop-report .reportStep .noti span{display:block; padding:10px 15px; background-color:#D9D9D9}
+.popCont.pop-report .downLink .link.none{background:none;}
+.popCont.pop-report .downLink .link.delete{background:none; position:relative;}
+.popCont.pop-report .downLink .link.delete:after{content:''; display:inline-block; position:absolute; top:0; bottom:0; right:0; width:16px; height:100%; background:url('../img/btn_input_del_selected.svg') 16px 16px /cover}
+.popCont.pop-report .downloadAll{margin-top:20px}
+.popCont.pop-report .downloadAll .link:first-of-type{margin-top:0}
+.popCont.pop-report .downloadAll .link{display:block; padding-left:20px; background:url('../img/icon_download_32_px.svg') no-repeat 0/16px}
+.popCont.pop-report .downloadAll .link span{display:block; max-width:90%; color:#000; font-size: 14px; font-weight:700}
+
+/*debateArea*/
+.popCont.pop-debate .pop-q-form-inner .title_text{padding-bottom:0}
+.popCont.pop-debate .pop-q-form-inner .title_text:after{display:none}
+.popCont.pop-debate .pop-q-form-inner .title_text .debate-writer{margin:10px 0 30px; color:#666; font-size:12px}
+.popCont.pop-debate .pop-q-form-inner .title_text .debate-writer span{margin:0 6px}
+.popCont.pop-debate .pop-q-form-inner .title_text .debate-writer span:first-of-type{display:inline-block; position:relative; margin-left:0}
+.popCont.pop-debate .pop-q-form-inner .title_text .debate-writer span:first-of-type:after{content:''; display:inline-block; position:absolute; top:5px; bottom:5px; right:-6px; width:1px; background-color:#ddd;}
+
+.popCont.pop-debate .sortArea{padding:0 15px}
+.popCont.pop-debate .sortArea +.cmntArea{margin-top:15px}
+.popCont.pop-debate .sortArea .inpD .txt{max-width:100%}
+.popCont.pop-debate .cmntArea{padding:0 30px}
+.popCont.pop-debate .cmntArea .info{height:40px; padding:2px 110px 0 0; font-size:0; white-space: nowrap}
+.popCont.pop-debate .cmntArea .info .name{display: inline-block; overflow:hidden; max-width:42%; font-size:14px; font-weight: 700; -o-text-overflow:ellipsis; text-overflow:ellipsis; white-space:nowrap; vertical-align:top}
+.popCont.pop-debate .cmntArea .info .metadata{padding-left:20px; background:url('../img/btn-community-like-off-32-px.png') no-repeat 0/16px}
+.popCont.pop-debate .cmntArea .info .metadata.on{background-image:url('../img/btn-community-like-on-32-px.png')}
+.popCont.pop-debate .cmntArea .info .name ~span:before{content:''; display:inline-block; width:1px; height:8px; margin:7px 27px 0 -27px; background-color:#ddd; vertical-align:top}
+.popCont.pop-debate .cmntArea .info span.timeLine:before{margin: 7px 6px 0 -6px}
+.popCont.pop-debate .cmntArea .info .name ~span{display:inline-block; margin-left:12px; color:#666; font-size:14px}
+.popCont.pop-debate i.ico.course{width:16px; height:16px; margin-bottom:3px; background: url('../img/icon_course_b_55_px.svg') no-repeat 0/16px}
+.popCont.pop-debate .course-tit span{display:inline-block; overflow:hidden; max-width:310px; margin-left:4px; color:#6c788f; -o-text-overflow:ellipsis; text-overflow:ellipsis; white-space:nowrap}
+
+/*task*/
+
+.boardDetail.task-title .topText .titleWrap .title.task_important{padding-left:30px; background:url('../img/badge-important.png') no-repeat 0/28px 16px}
+.boardDetail.task-title .postInfo{margin-top:20px}
+.boardDetail.task-title .postInfo .view.newOrange:after{content:'NEW';display:inline-block; margin-left:6px; color:#ff664d; font-size:12px; font-weight:700}
+.boardDetail.task-title .contText{padding:30px 15px 0}
+.boardComment.task-title {padding-bottom:100px}
+.boardComment.task-title .sortArea .inpD .txt{max-width:100%}
+
+
+/*mylearning*/
+
+.datePickers + .inpD{display:block; margin-top:22px;}

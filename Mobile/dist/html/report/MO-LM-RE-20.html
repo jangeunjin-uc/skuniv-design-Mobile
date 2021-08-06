@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>mySUNI</title>
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <script src="../../js/Chart.min.js"></script>
+    <script src="../../js/ui.js"></script>
+</head>
+
+<body>
+
+    <!-- .content -->
+
+    <section class="content">
+    </section>
+    <!-- // .content -->
+    <!-- layer -->
+    <section class="popWrap full">
+        <form>
+            <div class="popBox">
+                <div class="popTitle">
+                    <p>Report</p>
+                    <a href="#" target="_blank" class="btnClose">닫기</a>
+                </div>
+                <div class="popCont pop-report">
+                    <div class="pop-q-form-inner">
+                        <div class="statusBox">
+                            <p class="sv_status blue">검수중</p>
+                        </div>
+                        <div class="title_text">
+                            <h3>팬데믹 현상에 대해 기술하세요</h3>
+                            <p>전 세계적으로 유행하고 있는 Global Pandemic 현상에 대해 기술하고, 이를 극복하기 위한 노력 및 해결책을 제시하시오.</p>
+                        </div>
+                    </div>
+                    <ul class="reportStep">
+                        <li>
+                            <div>
+                                <strong class="title">작성가이드</strong>
+                                <p class="desc">과정 담당자가 등록한 Report양식을 Download 받으실 수 있습니다.</p>
+                                <button type="button" class="btnNormal"><i class="ico down red"></i>Download File</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <strong class="title">첨부파일</strong>
+                                <p class="desc">다운로드 받은 양식 파일에 내용을 작성하신 후 업로드 해주세요. <br />등록하신 파일은 재 등록할 수 없으니 등록 시 주의해주세요. <br />제출한 파일을 과정 담당자가 확인 후 의견을 드립니다.</p>
+                            </div>
+                            <div class="cmntEnter">
+                                <div class="inner">
+                                    <div class="field uploadfile-area">
+                                        <ul>
+                                            <li>
+                                                <a href="#"><span class="file-name">Learning materials_UX community.avi</span><span class="upload-byte">23KB</span></a>
+                                                <button type="button" class="del"><i class="ico clear"></i></button>
+                                            </li>
+                                            <li>
+                                                <a href="#"><span class="file-name">inputfile.pdf </span><span class="upload-byte">589KB</span></a>
+                                                <button type="button" class="del"><i class="ico clear"></i></button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="inputFile">
+                                        <span class="box">
+                                            <input type="text" placeholder="파일을 업로드해주세요." readonly />
+                                            <button type="button" class="del">
+                                                <i class="ico clear"></i>
+                                            </button>
+                                        </span>
+                                        <label>
+                                            파일찾기
+                                            <input type="file">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <strong class="title">담당자의견</strong>
+                                <p class="reporting">등록된 담당자 의견이 노출됩니다. 등록하신 Report는 잘 읽어봤습니다. 내용이 아주 흥미롭네요.. 다만 오타가 너무 많습니다. 아래 첨부파일 참고하여 오타 수정 후 및 문맥 상 맞지 않은 내용은 수정하여 다시 제출해주세요.</p>
+                            </div>
+                            <div class="downLink">
+                                <div class="linkWrap">
+                                    <a href="#" class="link"><span class="file">Mobile App UI UX GUI Design Tutorials.pptx</span></a>
+                                    <a href="#" class="link"><span class="file">Mobile App UI UX GUI Design Tutorials.doc</span></a>
+                                </div>
+                            </div>
+                            <div class="downloadAll">
+                                <div class="linkWrap">
+                                    <a href="#" class="link"><span class="file">전체 다운로드</span></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="BtmBtn floating">
+                    <div class="btnGroup">
+                        <button type="button" class="btnBlack">저장</button>
+                        <button type="button" class="btnOrange">제출</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <!-- alert -->
+    <section class="popWrap center">
+        <div class="popBox">
+            <div class="popCont">
+                <strong class="title">Report 안내</strong>
+                <div class="scrollArea">
+                    <p class="txt">필수 항목을 입력하세요.등 입력항목 체크</p>
+                </div>
+            </div>
+            <div class="popBtm">
+                <button type="button">확인</button>
+            </div>
+        </div>
+    </section>
+    <!-- // alert-->
+    <!-- //layer -->
+    <script>
+        if ($('.popWrap.center').is('.on')) {
+            $('.popWrap.center').show();
+        } else {
+            $('.popWrap.center').hide();
+        };
+    </script>
+</body>
+
+</html>

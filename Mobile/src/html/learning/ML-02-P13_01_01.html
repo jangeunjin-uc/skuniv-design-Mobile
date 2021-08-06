@@ -1,0 +1,141 @@
+@@include("head.html")
+<body style="overflow: hidden;">
+@@include('listheader.html',{
+	"title" : "Learning"
+})
+<!-- .content -->
+<section class="content">
+</section>
+<!-- // .content -->
+
+<!-- layer -->
+<section class="popWrap full">
+	<div class="popBox bgBlue">
+		<div class="popTitle">
+			<p>승인자검색</p>
+			<a href="#" class="btnClose">닫기</a>
+		</div>
+		<div class="popCont managerSch noPad">
+			<div class="tabBox">
+                <div class="menuWrap">
+                    <div class="menu">
+                        <a href="../learning/ML-02-P13_01_01.html" target="_blank" class="active">구성원검색</a>
+                        <a href="../learning/ML-02-P13_02_01.html" target="_blank">조직도</a>
+                    </div>
+                </div>
+            </div>
+            <!--top-->
+            <div class="schForm">
+                <div class="company selectbox2Wrap">
+                    <select name="" id="" class="selectbox2">
+                        <option value="">SK 주식회사 C&C</option>
+                        <option value="">회사명2</option>
+                        <option value="">회사명3</option>
+                    </select>
+                </div>
+                <div class="inputWrap">
+                    <div class="filter">
+                        <select name="" id="" class="selectbox">
+                            <option value="" selected="selected">이름</option>
+                            <option value="">부서</option>
+                            <option value="">HP</option>
+                        </select>
+                    </div>
+                    <div class="searchBox">
+                        <div class="inputBox sch">
+                            <input type="text" class="inp" placeholder="검색어를 입력해주세요.">
+                            <button type="button" class="btn inpReset">초기화</button>
+                            <button type="button" class="btn schBtn">검색</button>
+                        </div>
+                        <!--자동완성-->
+                        <div class="schResult">
+                            <ol>
+                                <li><a href="#"><span>신현정</span><span>testid@test.test</span></a></li>
+                                <li><a href="#"><span>신현정</span><span>testid@test.test</span></a></li>
+                                <li><a href="#"><span>신현정</span><span>testid@test.test</span></a></li>
+                                <li><a href="#"><span>신현정</span><span>testid@test.test</span></a></li>
+                                <li><a href="#"><span>신현정</span><span>testid@test.test</span></a></li>
+                            </ol>
+                        </div>
+                        <!--//자동완성-->
+                    </div>
+                </div>
+            </div>
+            <!--content-->
+            <div class="resultCont">
+                <div class="title">최근 선택한 승인자 정보</div>
+                <ul class="managerList">
+                    <li class="item">
+                        <div class="line1">
+                            <span>이름이름이름이름이름이름이름이름</span>
+                            <span>직급</span>
+                            <span>직책</span>
+                        </div>
+                        <div class="line2">
+                            <span>팀명팀명팀명팀명팀명팀명팀명</span>
+                            <span>회사명회사명회사명회사명회사명</span>
+                        </div>
+                        <div class="line3">업무명이나전화번호 업무명이나전화번호 업무명이나전화번호</div>
+                        <button type="button" class="btnSelect"><span>선택</span></button>
+                    </li>
+                    <li class="item">
+                        <div class="line1">
+                            <span>신현정</span>
+                            <span>수석</span>
+                            <span>팀원</span>
+                        </div>
+                        <div class="line2">
+                            <span>DW서비스 관리</span>
+                            <span>SK 주식회사 C&C</span>
+                        </div>
+                        <div class="line3">[UX/UI & Mobile Cell] mySUNI 구축 UI/UX 담당</div>
+                        <button type="button" class="btnSelect"><span>선택</span></button>
+                    </li>
+                    <li class="item">
+                        <div class="line1">
+                            <span>신현정</span>
+                            <span>수석</span>
+                            <span>팀원</span>
+                        </div>
+                        <div class="line2">
+                            <span>DW서비스 관리</span>
+                            <span>SK 주식회사 C&C</span>
+                        </div>
+                        <div class="line3">010-1234-5678</div>
+                        <button type="button" class="btnSelect"><span>선택</span></button>
+                    </li>
+                    <li class="item">
+                        <div class="line1">
+                            <span>신현정</span>
+                            <span>수석</span>
+                            <span>팀원</span>
+                        </div>
+                        <div class="line2">
+                            <span>DW서비스 관리</span>
+                            <span>SK 주식회사 C&C</span>
+                        </div>
+                        <div class="line3">[UX/UI & Mobile Cell] mySUNI 구축 UI/UX 담당</div>
+                        <button type="button" class="btnSelect"><span>선택</span></button>
+                    </li>
+                    <li class="item">
+                        <div class="line1">
+                            <span>신현정</span>
+                            <span>수석</span>
+                            <span>팀원</span>
+                        </div>
+                        <div class="line2">
+                            <span>DW서비스 관리</span>
+                            <span>SK 주식회사 C&C</span>
+                        </div>
+                        <div class="line3">010-1234-5678</div>
+                        <button type="button" class="btnSelect"><span>선택</span></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</div>
+</section>
+<!-- //layer -->
+
+</body>
+</html>

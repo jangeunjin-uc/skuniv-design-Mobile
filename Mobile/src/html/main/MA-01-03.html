@@ -1,0 +1,115 @@
+@@include("head.html")
+<body>
+@@include('listheader.html',{
+	"title" : "학습자들의 평가가 좋은 인기과정입니다.",
+	"link" : "../main/MA-01-01.html"
+})
+<!-- .content -->
+<section class="content">
+	<div class="recViews">
+		<!--p class="tit etc">
+			<span class="txt"><b>사용자들이 많이 수강하는 <br />상위 RANK 전체 학습 과정 입니다.</b></span>
+		</-p-->
+		<div class="sortChannel">
+			<div class="inner">
+				<div class="sorting">
+					<button type="button" class="btn sort ty2" onclick="window.open('../recommend/RC-02-p02.html')"><span>최신순</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<ul class="recList">
+		<li>
+			<a href="../learning/ML-02-06.html" target="_blank" class="card">
+				<div class="cardInner">
+					<div class="titleArea">
+						<div class="topRight">
+							<span class="apply">수강신청</span>
+							<span class="icon">e-learning<i class="ico ico learning"></i></span>
+						</div>
+						<p class="category red">혁신디자인</p>
+						<strong class="title">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI</strong>
+					</div>
+					<div class="infoArea">
+						<p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+						<p class="label"><i class="ico star"></i><b>4.0</b></p>
+					</div>
+				</div>
+			</a>
+			<a href="../learning/ML-02-07.html" target="_blank" class="card">
+				<div class="cardInner">
+					<div class="titleArea">
+						<div class="topRight">
+							<span class="icon">Video<i class="ico video"></i></span>
+						</div>
+						<p class="category teal">Management</p>
+						<strong class="title">Swift4로 배우는 iOS11 프로그래밍 인공지능(AI) 아이폰 앱 개발</strong>
+					</div>
+					<div class="infoArea">
+                        <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                        <p class="label"><i class="ico star"></i><b>4.0</b></p>
+					</div>
+				</div>
+			</a>
+			<a href="#" class="card">
+				<div class="cardInner">
+					<div class="titleArea">
+						<div class="topRight">
+							<span class="apply">수강신청</span>
+							<span class="icon">Classroom<i class="ico classroom"></i></span>
+						</div>
+						<p class="category purple">AI</p>
+						<strong class="title">UI/UX design with Adobe XD: Design &amp; Prototype</strong>
+					</div>
+					<div class="infoArea">
+						<p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+						<p class="label"><i class="ico star"></i><b>4.0</b></p>
+					</div>
+				</div>
+			</a>
+			<a href="#" class="card">
+				<div class="cardInner">
+					<div class="titleArea">
+						<div class="topRight">
+							<span class="icon">Webpage<i class="ico webpage"></i></span>
+						</div>
+						<p class="category blue">Leadership</p>
+						<strong class="title">실습 위주의 안드로이드 어플리케이션 해킹 기초 강의</strong>
+					</div>
+					<div class="infoArea">
+                        <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                        <p class="label"><i class="ico star"></i><b>4.0</b></p>
+					</div>
+				</div>
+			</a>
+			<a href="#" class="card">
+				<div class="cardInner">
+					<div class="titleArea">
+						<div class="topRight">
+							<span class="apply">수강신청</span>
+							<span class="icon">Classroom<i class="ico classroom"></i></span>
+						</div>
+						<p class="category violet">DT</p>
+						<strong class="title">TensorFlow로 배우는 Generative Models 알고리즘 실습하기</strong>
+					</div>
+					<div class="infoArea">
+                        <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                        <p class="label"><i class="ico star"></i><b>4.0</b></p>
+					</div>
+				</div>
+			</a>
+			<button type="button" class="btnListMore" type="button"><i class="ico plus"></i>list more (<em>5</em>/<em>20</em>)</button>	
+		</li>
+	</ul>
+</section>
+<!-- // .content -->
+@@include('toolbar.html', {
+	"ty1": "",
+	"ty2": "",
+	"ty3": "",
+	"ty4": "",
+	"ty5": ""
+})
+</body>
+</html>

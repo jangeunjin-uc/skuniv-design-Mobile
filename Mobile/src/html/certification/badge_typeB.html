@@ -1,0 +1,138 @@
+@@include("head.html")
+<body>
+<style>
+    .wrap::after {content:''; display:block; clear:both;}
+    .tt{font-size:15px; color:#000; font-weight:700; margin:30px 5px 5px;}
+    .wrap .badge{float:left; margin:2vw;}
+    .tt2{font-size:15px; color:#4072c6; font-weight:700; margin:15px;}
+
+    
+/*typeB*/
+
+/*Badge*/
+.badge{position:relative; display:block; text-align:center; background-position:50% 50%; background-repeat:no-repeat; background-size:100% auto; box-sizing:content-box; font-family:'Apple SD Gothic Neo','AppleGothic','Apple Gothic','-apple-system','NotoSansKR','notosanskr', Sans-serif;}
+.badgeB .title{display:table; width:100%; font-weight:700; text-align:center; color:#000;  border:1px solid transparent;}
+.badgeB .title .cell {display:table-cell; padding:0 14%; text-align:center; vertical-align: middle; line-height:1.2;}
+.badgeB .title .cell span {overflow: hidden; text-overflow: ellipsis; white-space: normal; word-break:normal; display: -webkit-box; -webkit-line-clamp: 2;  -webkit-box-orient: vertical}
+.badgeB .college {position:relative; display:block; text-align:center; width:26%; padding-top:26%;}
+.badgeB .college img {position:absolute; top:0; left:0; width:100%;}
+.badgeB .college span {display:block; text-align:center; font-weight:700}
+.badgeB .issuing {display:block; position:absolute; bottom:15.6%; left:50%; margin-left:-25.8%; padding-top:10.6%; width:51.3%;}
+.badgeB .issuing img {position:absolute; top:0; left:0; height:100%; width:auto;}
+
+.badgeB.big{width:41.6vw; height:41.6vw; padding:0.5vw 0.83vw 1.11vw; margin-left:-0.83vw; margin-top:-0.5vw;}
+.badgeB.big .college {margin:6.9vw auto 2.7vw;}
+.badgeB.big .title {height:9.65vw; font-size:2.77vw;}
+.badgeB.big .college span {font-size:1.94vw; }
+.badgeB.small{width:25vw; height:25vw; padding:0.27vw 0.5vw 0.83vw; margin-left:-0.5vw; margin-top:-0.27vw;}
+.badgeB.small .college {margin:4.1vw auto 1.6vw;}
+.badgeB.small .college span {font-size:1.3vw;}
+.badgeB.small .title{height:5.9vw; font-size:1.66vw;}
+
+.badgeB.big.basic{background-image:url('../img/bronze_1_b.png');}
+.badgeB.big.intermediate{background-image:url('../img/silver_1_b.png');}
+.badgeB.big.advanced{background-image:url('../img/gold_1_b.png');}
+.badgeB.small.basic{background-image:url('../img/bronze_2_b.png');}
+.badgeB.small.intermediate{background-image:url('../img/silver_2_b.png');}
+.badgeB.small.advanced{background-image:url('../img/gold_2_b.png');}
+</style>
+<!-- .content -->
+<section class="content">
+    <h2 class="tt2">뱃지 사이즈는 고정px이 아니며, <br />디바이스 해상도에 맞춰 비율대로 늘어남<br />뱃지는 큰 사이즈, 작은 사이즈, 링크 유무로 구분.<br />레벨은 소스 내 주석으로 명시</h2>
+    <!--CT-01-01, CT-03-01, main용, big size 링크有-->
+	<div class="wrap">
+        <h2 class="tt">CT-01-01, CT-03-01, main용, 큰 사이즈(.big), 링크 有</h2>
+        <!--basic-->
+        <a href="#none" class="badgeB big basic">
+            <span class="issuing"><img src="../../img/logo_badge.svg" alt="발급기관:mySUNI" /></span>
+            <span class="college"><img src="../../img/icon_chanel_78_px.png" alt="" /></span>
+            <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+        </a>
+        <!--intermediate-->
+        <a href="#none" class="badgeB big intermediate">
+            <span class="issuing"><img src="../../img/logo_badge.svg" alt="발급기관:mySUNI" /></span>
+            <span class="college"><img src="../../img/icon_chanel_78_px.png" alt="" /></span>
+            <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+        </a>
+        <!--advanced-->
+        <a href="#none" class="badgeB big advanced">
+            <span class="issuing"><img src="../../img/logo_badge.svg" alt="발급기관:mySUNI" /></span>
+            <span class="college"><img src="../../img/icon_chanel_78_px.png" alt="" /></span>
+            <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+        </a>
+    </div>
+
+    <!--CT-01-01, CT-03-01, main용, big size 링크無-->
+	<div class="wrap">
+        <h2 class="tt">CT-01-01, CT-03-01, main용, 큰 사이즈(.big), 링크無</h2>
+        <!--basic-->
+        <div class="badgeB big basic">
+            <span class="issuing"><img src="../../img/logo_badge2.png" alt="발급기관:mySUNI" /></span>
+            <span class="college"><img src="../../img/icon_chanel_78_px.png" alt="" /></span>
+            <span class="title"><span class="cell"><span>한글</span></span></span>
+        </div>
+        <!--intermediate-->
+        <div class="badgeB big intermediate">
+            <span class="issuing"><img src="../../img/logo_badge.svg" alt="발급기관:mySUNI" /></span>
+            <span class="college"><img src="../../img/icon_chanel_78_px.png" alt="" /></span>
+            <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+        </div>
+        <!--advanced-->
+        <div class="badgeB big advanced">
+            <span class="issuing"><img src="../../img/logo_badge.svg" alt="발급기관:mySUNI" /></span>
+            <span class="college"><img src="../../img/icon_chanel_78_px.png" alt="" /></span>
+            <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+        </div>
+    </div>
+
+    <!--CT-01-01-01, CT-02-01용, small size 링크有-->
+    <div class="wrap">
+        <h2 class="tt">CT-01-01-01, CT-02-01용, 작은 사이즈(.small), 링크 有</h2>
+        <!--basic-->
+        <a href="#none" class="badgeB small basic">
+            <span class="issuing"><img src="../../img/logo_badge2.png" alt="발급기관:mySUNI" /></span>
+            <span class="college"><img src="../../img/icon_chanel_78_px.png" alt="" /></span>
+            <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+        </a>
+        <!--intermediate-->
+        <a href="#none" class="badgeB small intermediate">
+            <span class="issuing"><img src="../../img/logo_badge.svg" alt="발급기관:mySUNI" /></span>
+            <span class="college"><img src="../../img/icon_chanel_78_px.png" alt="" /></span>
+            <span class="title"><span class="cell"><span>가나단란맙핫라아리히가나단란맙핫라아리히가나단란맙핫라아리히</span></span></span>
+        </a>
+        <!--advanced-->
+        <a href="#none" class="badgeB small advanced">
+            <span class="issuing"><img src="../../img/logo_badge.svg" alt="발급기관:mySUNI" /></span>
+            <span class="college"><img src="../../img/icon_chanel_78_px.png" alt="" /></span>
+            <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+        </a>
+    </div>
+
+    <!--CT-01-01-01, CT-02-01용, small size 링크無-->
+    <div class="wrap">
+        <h2 class="tt">CT-01-01, CT-03-01, main용, 작은 사이즈(.small), 링크無</h2>
+        <!--basic-->
+        <div class="badgeB small basic">
+            <span class="issuing"><img src="../../img/logo_badge.svg" alt="발급기관:mySUNI" /></span>
+            <span class="college"><img src="../../img/icon_chanel_78_px.png" alt="" /></span>
+            <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+        </div>
+        <!--intermediate-->
+        <div class="badgeB small intermediate">
+            <span class="issuing"><img src="../../img/logo_badge.svg" alt="발급기관:mySUNI" /></span>
+            <span class="college"><img src="../../img/icon_chanel_78_px.png" alt="" /></span>
+            <span class="title"><span class="cell"><span>가나단란맙핫라아리히</span></span></span>
+        </div>
+        <!--advanced-->
+        <div class="badgeB small advanced">
+            <span class="issuing"><img src="../../img/logo_badge.svg" alt="발급기관:mySUNI" /></span>
+            <span class="college"><img src="../../img/icon_chanel_78_px.png" alt="" /></span>
+            <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+        </div>
+    </div>
+
+
+</section>
+<!-- // .content -->
+</body>
+</html>

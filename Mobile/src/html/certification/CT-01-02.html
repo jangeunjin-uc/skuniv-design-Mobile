@@ -1,0 +1,51 @@
+@@include("head.html")
+<body>
+@@include('listheader.html',{
+	"title" : "Certification",
+	"link" : "../main/MA-01-01.html"
+})
+<!-- .content -->
+<section class="content">
+	
+	<div class="tabBox">
+		<div class="menuWrap">
+			<div class="menu">
+				<a href="../certification/CT-01-01.html" target="_blank" class="active">Badge List</a>
+				<a href="../certification/CT-02-01.html" target="_blank">도전중 Badge<span class="count">+30</span></a>
+				<a href="../certification/CT-03-01.html" target="_blank">My Badge<span class="count">+30</span></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="badgeSelect">
+		<div class="title">Badge 분야를 선택해주세요.</div>
+		<ul>
+			<li class="on"><button type="button">AI/DT</button></li>
+			<li><button type="button">미래 Biz.</button></li>
+			<li><button type="button">BM Desigm</button></li>
+			<li><button type="button">Global</button></li>
+			<li><button type="button">행복 경영</button></li>
+			<li><button type="button">Mgmt.</button></li>
+		</ul>
+	</div>
+
+	<div class="topGuide">
+		<span class="txt"><b>0개</b>의 획득할 수 있는 Badge가 있습니다.</span>
+	</div>
+
+    <div class="emptyBox">
+		<i class="icon ico noCont"></i>
+		<p class="txt">등록된 Badge List가 없습니다.</p>
+	</div>
+</section>
+<!-- // .content -->
+
+@@include('toolbar.html', {
+	"ty1": "",
+	"ty2": "",
+	"ty3": " on",
+	"ty4": "",
+	"ty5": ""
+})
+</body>
+</html>

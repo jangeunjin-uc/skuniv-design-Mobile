@@ -1,0 +1,77 @@
+@@include("head.html")
+<body style="overflow: hidden;">
+@@include('listheader.html',{
+	"title" : "Certification"
+})
+<!-- .content -->
+<section class="content">
+</section>
+<!-- // .content -->
+
+<!-- layer -->
+<section class="popWrap full">
+	<div class="popBox">
+		<div class="popTitle">
+			<p>List Filter</p>
+			<a href="#" class="btnClose">닫기</a>
+		</div>
+		<div class="popCont">
+			<ul class="filterList accordion">
+				<li>
+					<div class="viewBox">
+						<a href="#" class="anch">
+							<strong>Level</strong>
+							<i class="ico arrow"></i>
+						</a>
+						<div class="line">
+							<p class="selectedItem">
+								<span>Basic</span>
+								<span>Intermediate</span>
+							</p>
+							<em class="count">2</em>
+						</div>
+					</div>
+					<ul class="sub" style="display: none;">
+						<li>
+							<span class="inpD">
+								<label>
+									<span class="txt">Basic <em>(33)</em></span>
+									<input type="checkbox">
+									<i class="ico checkBox"></i>
+								</label>
+							</span>
+						</li>
+						<li>
+							<span class="inpD">
+								<label>
+									<span class="txt">Intermediate <em>(33)</em></span>
+									<input type="checkbox">
+									<i class="ico checkBox"></i>
+								</label>
+							</span>
+						</li>
+						<li>
+							<span class="inpD">
+								<label>
+									<span class="txt">Advanced <em>(33)</em></span>
+									<input type="checkbox">
+									<i class="ico checkBox"></i>
+								</label>
+							</span>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="BtmBtn floating">
+			<div class="btnGroup">
+				<button type="button" class="btnBlack">Initialize</button>
+				<button type="button" class="btnOrange">Filter</button>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //layer -->
+
+</body>
+</html>

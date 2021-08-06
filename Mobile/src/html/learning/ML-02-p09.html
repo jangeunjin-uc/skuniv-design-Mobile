@@ -1,0 +1,114 @@
+@@include("head.html")
+<body style="overflow: hidden;">
+@@include('listheader.html',{
+	"title" : "College"
+})
+<!-- .content -->
+<section class="content">
+</section>
+<!-- // .content -->
+<!-- layer -->
+<section class="popWrap full">
+    <form>
+        <div class="popBox">
+            <div class="popTitle">
+                <p>Survey</p>
+                <a href="../common/CO_05_02.html" target="_blank" class="btnClose">닫기</a>
+            </div>
+            <div class="popCont">
+                <div class="pop-q-form-inner">
+                    <ul class="question-wrap">
+                        <li>
+                            <div class="q">1. 본 과정을 다른 구성원에게도 추천하고 싶으신가요?</div>
+                            <div class="a">
+                                <ul>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <input type="radio" name="q1">
+                                                <i class="ico radio"></i>
+                                                <span class="txt">전혀 그렇지 않다.</span>
+                                            </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <input type="radio" name="q1">
+                                                <i class="ico radio"></i>
+                                                <span class="txt">보통이다.</span>
+                                            </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <input type="radio" name="q1" checked>
+                                                <i class="ico radio"></i>
+                                                <span class="txt">매우 그렇다.</span>
+                                            </label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="q">2. 본 과정을 들었으면 하는 구성원 그룹을 선택해주세요. (다중 선택 가능)</div>
+                            <div class="a">
+                                <ul>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="txt">SK C&C</span>
+                                                <i class="ico checkBox"></i>
+                                            </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <input type="checkbox" checked>
+                                                <span class="txt">SK 아카데미</span>
+                                                <i class="ico checkBox"></i>
+                                            </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="inpD">
+                                            <label>
+                                                <input type="checkbox" checked>
+                                                <span class="txt">SK 이노베이션</span>
+                                                <i class="ico checkBox"></i>
+                                            </label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="q">3. 본 과정에서 만족스러운 부분과 개선 사항을 적어주세요.</div>
+                            <div class="a">
+                                <textarea placeholder="답변을 입력해주세요.(최대 100자까지 입력 가능)">유익한 강의였습니다.</textarea>
+                                <div class="area">
+                                    <span class="byte"><em class="left">0</em>/<em class="total">500</em></span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="BtmBtn floating">
+                <div class="btnGroup">
+                    <button type="button" class="btnBlack">저장</button>
+                    <button type="button" class="btnOrange">제출</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+<!-- //layer -->
+
+</body>
+</html>

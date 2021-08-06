@@ -1,0 +1,52 @@
+/* 김유진 */
+.incidentWrap.none {border-top:none;}
+.keywordWrap.sub {padding:20px 0;}
+.introList.mt30 {margin-top:30px;}
+.course_description > span > i {margin-right:5px;}
+.course_description > span > img {margin-right:5px;margin-top:2px;}
+/* top */
+.tabCont2 {background:#fff;border-top:none;border-bottom:1px solid #ebebeb;}
+.tabCont2 > .downLink {padding:30px 15px 30px 15px;border-top:none;}
+.category.learning {background:#45484f;border:1px solid #ff8b4d;color:#ff8b4d;margin-left:5px;}
+.category.done {background:#45484f;border:1px solid #cccccc;color:#cccccc;margin-left:5px;}
+.infoArea.mb46 {margin-bottom:46px;}
+.video_text {background:#f7f7f7;font-size:10px;color:#6c788f;padding:10px 15px;}
+
+.inpD label .txt.sub {max-width:100%;}
+.topRight.sub {margin:0;float:right;}
+.topRight.sub > .btnLink > span {text-decoration: none;}
+.classTable > strong {font-size:14px;font-weight:700;}
+
+.audio_player_box > img {width:100%;}
+.classInfo .sub .txtTable th, .classInfo .sub .txtTable.sub2 td {word-break: break-word;}
+.classTableWrap.sub2 .line > .date {min-width: 56.2%;}
+.BtmBtn .btnGroup .btnWhite{color:#ff664d;background:#fff;}
+
+.linkWrap.linkList > ul > li {display:block;margin:10px 0;}
+.linkWrap.linkList > ul li a span{display:inline-block;font-size: 12px;line-height: 16px;color: rgb(14, 115, 219);font-weight: 700;text-decoration: underline;}
+.linkWrap.linkList > ul li a > img {width:16px;}
+.linkWrap.linkList > ul li > div {float:right;}
+.linkWrap.linkList > ul li > div > a:first-child {margin-right:5px;}
+.hide4.linkList > ul li:nth-child(3)~li{display:none;}
+.downLink .moreRead2{display: block; width: 100%; margin: 30px 0 0; padding: 0 20px; font-size: 12px; color: #6c788f}
+.downLink .moreRead2:after{display: inline-block; content: ''; width: 0; height: 0; margin-left: 3px; border-top: 7px solid #6c788f; border-right: 5px solid transparent; border-left: 5px solid transparent}
+
+
+/* MO-LM-CL-20 */
+.register_cancle_date {background:#fff;padding:30px 15px;border-bottom: 1px solid #ebebeb;font-size:14px;}
+.register_cancle_date div {font-weight:700;}
+.register_cancle_date > div:first-child {margin-bottom:8px;}
+.register_cancle_date div > span {display:inline-block;font-weight:500;margin-right:20px;}
+i.ico.time02{width: 18px; height: 18px; background-image: url(../img/icon-period-36-px.png);vertical-align: middle;margin:0 5px 4px 0;}
+i.ico.clear02{width: 18px; height: 18px; background-image: url(../img/icon-cancel-36-px.png);vertical-align: middle;margin:0 5px 4px 0;}
+
+
+/* MO-LM-CO-10 */
+.newsFactory_box {background:#fff;padding:30px 15px;border-bottom: 1px solid #ebebeb;}
+.newsFactory_link {display:inline-block;}
+.newsFactory_link img {width:80px;}
+.newsFactory_description {display:inline-block;width:65%;vertical-align: top;margin:10px 0 0 20px;}
+.newsFactory_description.sub {margin-top:0;}
+.newsFactory_description h1 {font-size:14px;font-weight:700;width:150px;}
+.newsFactory_description p {font-size:12px;;}
+.newsFactory_description a {font-size:10px;text-decoration: underline;color: #0e73db;}

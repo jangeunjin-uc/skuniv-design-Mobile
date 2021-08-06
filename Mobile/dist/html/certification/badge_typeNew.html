@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>mySUNI</title>
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <script src="../../js/Chart.min.js"></script>
+    <script src="../../js/ui.js"></script>
+</head>
+
+<body>
+    <style>
+        .wrap::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .tt {
+            font-size: 15px;
+            color: #000;
+            font-weight: 700;
+            margin: 30px 5px 5px;
+        }
+
+        .wrap .badge {
+            float: left;
+            margin: 2vw;
+        }
+
+        .tt2 {
+            font-size: 15px;
+            color: #4072c6;
+            font-weight: 700;
+            margin: 15px;
+        }
+    </style>
+    <!-- .content -->
+    <section class="content">
+        <h2 class="tt2">12121뱃지 사이즈는 고정px이 아니며, <br />디바이스 해상도에 맞춰 비율대로 늘어남<br />뱃지는 큰 사이즈, 작은 사이즈, 링크 유무로 구분.<br />레벨은 소스 내 주석으로 명시</h2>
+        <!--CT-01-01, CT-03-01, main용, big size 링크有-->
+        <div class="wrap">
+            <h2 class="tt">CT-01-01, CT-03-01, main용, 큰 사이즈(.big), 링크 有</h2>
+            <!--basic-->
+            <a href="#none" class="new-badge big bg-badge-01 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge big bg-badge-01 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge big bg-badge-01 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+            <!-- bg-badge-2 -->
+            <!--basic-->
+            <a href="#none" class="new-badge big bg-badge-02 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge big bg-badge-02 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge big bg-badge-02 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+            <!-- bg-badge-3 -->
+            <!--basic-->
+            <a href="#none" class="new-badge big bg-badge-03 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge big bg-badge-03 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge big bg-badge-03 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+            <!-- bg-badge-4 -->
+            <!--basic-->
+            <a href="#none" class="new-badge big bg-badge-04 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge big bg-badge-04 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge big bg-badge-04 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+            <!-- bg-badge-5 -->
+            <!--basic-->
+            <a href="#none" class="new-badge big bg-badge-05 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge big bg-badge-05 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge big bg-badge-05 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+        </div>
+
+        <!--CT-01-01, CT-03-01, main용, big size 링크無-->
+        <div class="wrap">
+            <h2 class="tt">CT-01-01, CT-03-01, main용, 큰 사이즈(.big), 링크無</h2>
+            <!--basic-->
+            <a href="#none" class="new-badge big bg-badge-01 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge big bg-badge-01 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge big bg-badge-01 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+            <!-- bg-badge-2 -->
+            <!--basic-->
+            <a href="#none" class="new-badge big bg-badge-02 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge big bg-badge-02 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge big bg-badge-02 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+            <!-- bg-badge-3 -->
+            <!--basic-->
+            <a href="#none" class="new-badge big bg-badge-03 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge big bg-badge-03 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge big bg-badge-03 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+            <!-- bg-badge-4 -->
+            <!--basic-->
+            <a href="#none" class="new-badge big bg-badge-04 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge big bg-badge-04 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge big bg-badge-04 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+            <!-- bg-badge-5 -->
+            <!--basic-->
+            <a href="#none" class="new-badge big bg-badge-05 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge big bg-badge-05 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge big bg-badge-05 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-01-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+        </div>
+
+        <!--CT-01-01-01, CT-02-01용, small size 링크有-->
+        <div class="wrap">
+            <h2 class="tt">CT-01-01-01, CT-02-01용, 작은 사이즈(.small), 링크 有</h2>
+            <!--basic-->
+            <a href="#none" class="new-badge small bg-badge-01 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge small bg-badge-01 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge small bg-badge-01 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+            <!-- bg-badge-2 -->
+            <!--basic-->
+            <a href="#none" class="new-badge small bg-badge-02 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge small bg-badge-02 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge small bg-badge-02 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+            <!-- bg-badge03 -->
+            <!--basic-->
+            <a href="#none" class="new-badge small bg-badge-03 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge small bg-badge-03 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge small bg-badge-03 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+            <!-- bg-badge-4 -->
+            <!--basic-->
+            <a href="#none" class="new-badge small bg-badge-04 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge small bg-badge-04 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge small bg-badge-04 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+            <!-- bg-badge-5 -->
+            <!--basic-->
+            <a href="#none" class="new-badge small bg-badge-05 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge small bg-badge-05 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge small bg-badge-05 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+        </div>
+
+        <!--CT-01-01-01, CT-02-01용, small size 링크無-->
+        <div class="wrap">
+            <h2 class="tt">CT-01-01, CT-03-01, main용, 작은 사이즈(.small), 링크無</h2>
+            <!--basic-->
+            <a href="#none" class="new-badge small bg-badge-01 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge small bg-badge-01 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge small bg-badge-01 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+            <!-- bg-badge-2 -->
+            <!--basic-->
+            <a href="#none" class="new-badge small bg-badge-02 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge small bg-badge-02 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge small bg-badge-02 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+            <!-- bg-badge03 -->
+            <!--basic-->
+            <a href="#none" class="new-badge small bg-badge-03 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge small bg-badge-03 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge small bg-badge-03 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+            <!-- bg-badge-4 -->
+            <!--basic-->
+            <a href="#none" class="new-badge small bg-badge-04 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge small bg-badge-04 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge small bg-badge-04 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+            <!-- bg-badge-5 -->
+            <!--basic-->
+            <a href="#none" class="new-badge small bg-badge-05 basic">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer EmpathyCustomer EmpathyCustomer EmpathyCustomer Empathy</span></span></span>
+            </a>
+            <!--intermediate-->
+            <a href="#none" class="new-badge small bg-badge-05 intermediate">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>가나다라마행복한글행복한글가나다라마</span></span></span>
+            </a>
+            <!--advanced-->
+            <a href="#none" class="new-badge small bg-badge-05 advanced">
+                <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                <span class="college"><img src="../../img/img-badge-02-icon.svg" alt="" /></span>
+                <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+            </a>
+        </div>
+
+
+    </section>
+    <!-- // .content -->
+</body>
+
+</html>

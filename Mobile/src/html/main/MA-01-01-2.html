@@ -1,0 +1,111 @@
+@@include("head.html")
+<body>
+@@include('notice.html')
+@@include('header.html')
+
+
+<!-- .content -->
+<section class="content">
+	<div class="recBannerWrap">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><img src="../../img/temp/promotion.jpg" /></div>
+		</div>
+		<div class="swiper-pagination swiper-pager"></div>
+	</div>
+	<div class="recCourseWrap">
+		<p class="tit"><a href="#"><strong class="name">김유니 김유니 김유니 김유니</strong><span>님을 위한 권장 <span class="txtEnd">과정입니다.</span></span></a></p>
+		<div class="recCourse">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="#" class="card">
+						<div class="cardInner">
+							<div class="titleArea">
+								<div class="topRight">
+									<span class="icon">Video<i class="ico ico video"></i></span>
+								</div>
+								<p class="category navy">SK하이닉스시스템아이씨</p>
+								<strong class="title">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI</strong>
+							</div>
+							<div class="infoArea">
+								<p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+								<p class="label"><i class="ico star"></i><b>4.0</b></p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="#" class="card">
+						<div class="cardInner">
+							<div class="titleArea">
+								<div class="topRight">
+									<span class="icon">Video<i class="ico ico video"></i></span>
+								</div>
+								<p class="category navy">SK하이닉스시스템아이씨</p>
+								<strong class="title">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI</strong>
+							</div>
+							<div class="infoArea">
+								<p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+								<p class="label"><i class="ico star"></i><b>4.0</b></p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="swiper-pagination swiper-pager"></div>
+		</div>
+	</div>
+	<div class="mainRec">
+		<div class="inner">
+			<a href="#" class="btn channelLink"><span>Channel별 전체 과정</span></a>
+		</div>
+		<ul class="recList">
+			<li>
+				<div class="recTit"><a href="#"><span class="txt"><span class="ellipsis">김유니 김유니 김유니 김유니 김유니 김유니</span>님이 <strong class="cName">수강중인 과정</strong><span class="txtEnd">입니다. (0)</span></span></a></div>
+				<div class="emptyBox">
+					<i class="icon ico noCont"></i>
+					<p class="txt">수강중인 학습과정이 없습니다.</p>
+					<div class="view-course2">
+						<a href="#">
+							<span class="name">김유니 Adolph Blaine Charles David Earl Frederick Jack Gerald Hube</span>
+							<span class="fix">님에게 추천하는 학습 과정 보기 <i class="ico link"></i></span>
+						</a>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="recTit"><a href="#"><span class="txt"><span class="ellipsis2">김유니 김유니 김유니 김유니</span>님의 <strong class="cName">관심 채널</strong><span class="txtEnd">입니다.</span></span></a></div>
+				<div class="keywordWrapCheck">
+					<div class="keywordWrap">
+						<a href="#">AI Fundamental</a>
+						<a href="#">Speech AI</a>
+						<a href="#">국제정세</a>
+						<a href="#">지역 전문가</a>
+						<a href="#">Value</a>
+						<a href="#">SV 이해</a>
+						<a href="#">전략</a>
+						<a href="#">Biz. Trend &amp; Insight</a>
+						<a href="#">Leadership Clinic</a>
+						<a href="#">Growth Mindset (Leadership Specialist)</a>
+					</div>
+				</div>
+				<!-- 
+					최대 4줄까지 노출되며 4줄 초과시 view all 버튼 노출 
+					if($('.keywordWrap').height() > $('.keywordWrap > span').outerHeight(true) * 4){
+						// view all 노출 조건
+					}
+				-->
+				<button type="button" class="btnListMore" type="button"><i class="ico plus"></i>view all</button>	
+			</li>
+		</ul>
+	</div>
+</section>
+<!-- // .content -->
+@@include('toolbar.html', {
+	"ty1": " on",
+	"ty2": "",
+	"ty3": "",
+	"ty4": "",
+	"ty5": ""
+})
+</body>
+</html>

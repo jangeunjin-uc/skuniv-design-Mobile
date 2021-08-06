@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>mySUNI</title>
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <script src="../../js/Chart.min.js"></script>
+    <script src="../../js/ui.js"></script>
+</head>
+
+<body>
+    <!-- .header -->
+    <header>
+        <section class="detailHeader">
+
+
+            <a href="#" class="btn pageBack">이전 페이지</a>
+
+            <div class="keyWord">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI 이론을 통한 실전</div>
+            <div class="shortCuts">
+                <button type="button" class="btn scMenuBtn">Short Cut Menu</button>
+                <ul class="shortCutList">
+                    <li><button type="button" class="btn scBtn ty1">관심목록 추가</button></li>
+                    <li><button type="button" class="btn scBtn ty2">관심목록 제거</button></li>
+                    <li><button type="button" class="btn scBtn ty4">설문하기</button></li>
+                </ul>
+            </div>
+        </section>
+    </header>
+    <!-- // .header -->
+    <!-- .content -->
+    <section class="content">
+
+        <div class="topView">
+            <p class="ribbon"><span>핵인싸과정</span></p>
+            <div class="inner">
+                <p class="category teal">Management</p>
+                <P class="category learning">학습중</P>
+                <strong class="title">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI 이론을 통한 실전</strong>
+                <div class="infoArea mb46">
+                    <span class="icon"><i class="ico video"></i>Video</span>
+                    <span>Investment Financing</span>
+                </div>
+                <div class="course_description">
+                    <span><i class="ico level-03"></i>Advanced</span>
+                    <span><img src="../../img/icon-time-card-32-px.png" alt="icon-time-card-32-px" class="icon_time_card">1h 02m</span>
+                    <span>이수 : <span>230명</span></span>
+                    <p>담당 : <span>엄유미</span> <em>(SK커뮤니케이션즈)</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="videoArea">
+            <div class="videoWrap">
+                <div class="thumb"><img src="../../img/play_thumbnail_740x416_dark1.png" alt="" /></div>
+                <a href="#" class="btn-play"><img src="../../img/thumbnail_player.png" alt="Play" /></a>
+            </div>
+        </div>
+
+        <div class="video_text">
+            ※동영상 학습 시간은 익일 혹은 컨텐츠 재방문시 반영됩니다.
+        </div>
+
+
+        <div class="tabBox">
+            <div class="menuWrap">
+                <div class="menu">
+                    <a href="#">Overview</a>
+                    <a href="#" class="active">Transcript</a>
+                    <a href="MO-LM-VI-20.html">Comment<span class="count">+30</span></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- comment -->
+        <div class="tabCont">
+
+            <div class="select_box">
+                <select name="slt_language" id="slt_language" class="slt_language">
+                    <option value="KOR">KOR</option>
+                    <option value="CHN">CHN</option>
+                    <option value="ENG">ENG</option>
+                </select>
+
+                <button type="button" class="btn_download"><i></i><span>Download</span></button>
+
+                <button type="button" class="btn_help"><i></i></button>
+                <!-- btn_help 클릭시 아래 bubble 창이 노출 됩니다.-->
+                <div class="bubble active">
+                    <button type="button" class="btn_close"><i></i></button>
+                    <strong>다운로드 안내</strong>
+                    <p>
+                        현재 선택된 언어의 Transcript를
+                        <br/>txt 파일로 다운로드 받으실 수 있습니다.
+                    </p>
+                </div>
+            </div>
+
+            <div class="transcript_box">
+                <p><span>Now one question that you might have about that, is about this notion of the right way of thinking about things.</span></p>
+                <p><span>Now these are really, really important questions for philosophy, and I don't want to try and answer them now. But I do want to consider what a couple of famous, influential philosophers have said about those questions. And that's why I'm here at Old Calton Cemetery, outside the David Hume monument. David Hume was a famous Edinburgh-based philosopher. And he thought that a skeptical attitude towards philosophy's capacity to find the truth about the world was entirely appropriate.</span></p>
+                <p class="active"><span>Now one question that you might have about that, is about this notion of the right way of thinking about things.</span></p>
+                <p><span>Now these are really, really important questions for philosophy, and I don't want to try and answer them now. But I do want to consider what a couple of famous, influential philosophers have said about those questions. And that's why I'm here at Old Calton Cemetery, outside the David Hume monument. David Hume was a famous Edinburgh-based philosopher. And he thought that a skeptical attitude towards philosophy's capacity to find the truth about the world was entirely appropriate.</span></p>
+            </div>
+        </div>
+        <!-- //comment -->
+
+        <div class="BtmBtn floating">
+            <div class="btnGroup">
+                <button type="button" class="btnOrange">학습하기</button>
+            </div>
+        </div>
+
+    </section>
+    <!-- // .content -->
+    <script>
+        $('.btn_help').click(function() {
+            $(this).next('.bubble').toggleClass('active');
+        })
+    </script>
+
+</body>
+
+</html>

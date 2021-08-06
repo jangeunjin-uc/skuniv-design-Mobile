@@ -1,0 +1,84 @@
+@@include("head.html")
+<body style="overflow: hidden;">
+@@include('listheader.html',{
+	"title" : "승인관리"
+})
+<!-- .content -->
+<section class="content">
+</section>
+<!-- // .content -->
+
+<!-- layer -->
+<section class="popWrap full">
+	<div class="popBox">
+		<div class="popTitle">
+			<p>List Filter</p>
+			<a href="#" class="btnClose">닫기</a>
+		</div>
+		<div class="popCont">
+			<ul class="filterList accordion">
+				<li>
+					<div class="viewBox">
+						<a href="#" class="anch">
+							<strong>승인상태</strong>
+							<i class="ico arrow"></i>
+						</a>
+						<div class="line">
+							<p class="selectedItem">
+								<span>전체</span>
+							</p>
+						</div>
+					</div>
+					<ul class="sub" style="display: none;">
+						<li>
+							<span class="inpD">
+								<label>
+									<span class="txt">전체</span>
+									<input type="radio" name="r1" checked>
+									<i class="ico radio"></i>
+								</label>
+							</span>
+						</li>
+						<li>
+							<span class="inpD">
+								<label>
+									<span class="txt">승인대기</span>
+									<input type="radio" name="r1">
+									<i class="ico radio"></i>
+								</label>
+							</span>
+						</li>
+						<li>
+							<span class="inpD">
+								<label>
+									<span class="txt">승인</span>
+									<input type="radio" name="r1">
+									<i class="ico radio"></i>
+								</label>
+							</span>
+						</li>
+						<li>
+							<span class="inpD">
+								<label>
+									<span class="txt">반려</span>
+									<input type="radio" name="r1">
+									<i class="ico radio"></i>
+								</label>
+							</span>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="BtmBtn floating">
+			<div class="btnGroup">
+				<button type="button" class="btnBlack">초기화</button>
+				<button type="button" class="btnOrange">적용</button>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //layer -->
+
+</body>
+</html>

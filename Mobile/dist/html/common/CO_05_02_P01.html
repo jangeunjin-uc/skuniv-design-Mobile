@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>mySUNI</title>
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <script src="../../js/Chart.min.js"></script>
+    <script src="../../js/ui.js"></script>
+</head>
+
+<body style="overflow: hidden;">
+    <!-- .header -->
+    <header>
+        <section class="listHeader">
+
+
+            <a href="#" target="_blank" class="btn pageBack">이전 페이지</a>
+
+            <div class="keyWord">College</div>
+        </section>
+    </header>
+    <!-- // .header -->
+    <!-- .content -->
+    <section class="content">
+    </section>
+    <!-- // .content -->
+
+    <!-- layer -->
+    <section class="popWrap full">
+        <div class="popBox">
+            <div class="popTitle">
+                <p>List Filter</p>
+                <a href="../common/CO_05_02.html" target="_blank" class="btnClose">닫기</a>
+            </div>
+            <div class="popCont">
+                <ul class="filterList accordion">
+                    <li>
+                        <div class="viewBox">
+                            <a href="#" class="anch">
+                                <strong>Channel</strong>
+                                <i class="ico arrow"></i>
+                            </a>
+                            <div class="line">
+                                <p class="selectedItem">
+                                    <span>AI</span>
+                                    <span>행복</span>
+                                </p>
+                                <em class="count">2</em>
+                            </div>
+                        </div>
+                        <ul class="sub" style="display: none;">
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">AI <em>(33)</em></span>
+                                <input type="checkbox" checked>
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">DT <em>(33)</em></span>
+                                <input type="checkbox">
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">행복 <em>(33)</em></span>
+                                <input type="checkbox" checked>
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">SV <em>(33)</em></span>
+                                <input type="checkbox">
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">혁신디자인 <em>(33)</em></span>
+                                <input type="checkbox">
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">Global <em>(33)</em></span>
+                                <input type="checkbox">
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">Leadership <em>(33)</em></span>
+                                <input type="checkbox">
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">Management <em>(33)</em></span>
+                                <input type="checkbox">
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">반도체 <em>(33)</em></span>
+                                <input type="checkbox">
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">에너지솔루션 <em>(33)</em></span>
+                                <input type="checkbox">
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">SK경영 <em>(33)</em></span>
+                                <input type="checkbox">
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">SK아카데미 <em>(33)</em></span>
+                                <input type="checkbox">
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">Life Style <em>(33)</em></span>
+                                <input type="checkbox">
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">SK(주)_C&C <em>(33)</em></span>
+                                <input type="checkbox">
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="viewBox">
+                            <a href="#" class="anch">
+                                <strong>교육유형</strong>
+                                <i class="ico arrow"></i>
+                            </a>
+                            <div class="line">
+                                <p class="selectedItem">
+                                    <span>Video</span>
+                                    <span>Audio</span>
+                                </p>
+                                <em class="count">2</em>
+                            </div>
+                        </div>
+                        <ul class="sub" style="display: none;">
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">Course <em>(33)</em></span>
+                                <input type="checkbox">
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">Video <em>(33)</em></span>
+                                <input type="checkbox" checked>
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">Audio <em>(33)</em></span>
+                                <input type="checkbox" checked>
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">e-Learning <em>(33)</em></span>
+                                <input type="checkbox">
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">Classroom <em>(33)</em></span>
+                                <input type="checkbox">
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">Community <em>(33)</em></span>
+                                <input type="checkbox">
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">Web Page <em>(33)</em></span>
+                                <input type="checkbox">
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">Documents <em>(33)</em></span>
+                                <input type="checkbox">
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="viewBox">
+                            <a href="#" class="anch">
+                                <strong>난이도</strong>
+                                <i class="ico arrow"></i>
+                            </a>
+                            <div class="line">
+                                <p class="selectedItem">
+                                    <span>(All)</span>
+                                </p>
+                                <em class="count">4</em>
+                            </div>
+                        </div>
+                        <ul class="sub" style="display: none;">
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">Basic <em>(33)</em></span>
+                                <input type="checkbox" checked>
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">Intermediate <em>(33)</em></span>
+                                <input type="checkbox" checked>
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">Advanced <em>(33)</em></span>
+                                <input type="checkbox" checked>
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">Expert <em>(33)</em></span>
+                                <input type="checkbox" checked>
+                                <i class="ico checkBox"></i>
+                                </label>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="viewBox">
+                            <a href="#" class="anch">
+                                <strong>교육기간</strong>
+                                <i class="ico arrow"></i>
+                            </a>
+                            <div class="line">
+                                <p class="selectedItem">
+                                    <span>2019. 01. 11 - 2019. 02. 11</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sub" style="display: none;">
+                            <div class="datePick">
+                                <p class="tit">Learning Date</p>
+                                <div class="datePickers">
+                                    <div class="ele">
+                                        <div class="inputBox date">
+                                            <label for="dateFirst" class="dateLabel"><span>시작일</span></label>
+                                            <input type="date" id="dateFirst" class="inp">
+                                        </div>
+                                    </div>
+                                    <div class="ele">
+                                        <div class="inputBox date">
+                                            <label for="dateEnd" class="dateLabel"><span>종료일</span></label>
+                                            <input type="date" id="dateEnd" class="inp">
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn dateReset">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="viewBox">
+                            <a href="#" class="anch">
+                                <strong>핵인싸</strong>
+                                <i class="ico arrow"></i>
+                            </a>
+                            <div class="line">
+                                <p class="selectedItem">
+                                    <span>(선택 안 함)</span>
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="sub" style="display: none;">
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">선택 안 함</span>
+                                <input type="radio" name="inssa" checked>
+                                <i class="ico radio"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">유</span>
+                                <input type="radio" name="inssa">
+                                <i class="ico radio"></i>
+                                </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="inpD">
+								<label>
+									<span class="txt">무</span>
+                                <input type="radio" name="inssa">
+                                <i class="ico radio"></i>
+                                </label>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="BtmBtn floating">
+                <div class="btnGroup">
+                    <button type="button" class="btnBlack" onclick="window.open('../common/CO_05_02.html')">초기화</button>
+                    <button type="button" class="btnOrange" onclick="window.open('../common/CO_05_02_01.html')">적용</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //layer -->
+
+</body>
+
+</html>

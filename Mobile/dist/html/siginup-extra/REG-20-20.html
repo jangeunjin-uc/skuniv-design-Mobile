@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>mySUNI</title>
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <script src="../../js/Chart.min.js"></script>
+    <script src="../../js/ui.js"></script>
+</head>
+
+<body class="pgLogin">
+    <!-- .content -->
+    <section class="content">
+        <div class="dimmer white-dimmer active">
+            <div class="load-area">
+                <span class="load-dot"></span>
+                <strong>회원가입코드를 확인하고 있습니다.<br/>잠시만 기다려 주세요.</strong>
+            </div>
+        </div>
+        <div class="pgLoginWrap">
+            <div class="logo"><img src="../../img/logo_gnb_login_90px.svg" alt="mySUNI" /></div>
+            <div class="regiForm">
+                <h2>회원가입</h2>
+                <form>
+                    <div class="inputBox h44 white">
+                        <strong class="input-tit">아이디 입력</strong>
+                        <input type="text" class="inp white" placeholder="이메일" />
+                        <button type="button" class="btn inpReset">초기화</button>
+                    </div>
+                    <div class="inputBox h44 white mt30">
+                        <strong class="input-tit">회원가입코드 입력</strong>
+                        <input type="password" class="inp white" placeholder="회원가입코드 6자리" />
+                        <button type="button" class="btn inpReset">초기화</button>
+                    </div>
+                    <div class="ckWrap">
+                        <span class="inpD">회원가입코드의 유효기간이 만료되었나요?</span>
+                        <a href="#" class="inpD codereq">회원가입코드 재 요청</a>
+                    </div>
+                    <button type="button" class="btn h44 orange" disabled>인증하기</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="88" height="88" viewBox="0 0 88 88">
+    <defs>
+        <circle id="beulc96nja" cx="20" cy="20" r="20"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g>
+                        <g transform="translate(-663.000000, -583.000000) translate(127.000000, 166.000000) translate(8.000000, 417.000000) translate(528.000000, 0.000000) translate(20.000000, 20.000000) translate(4.000000, 4.000000)">
+                            <mask id="gsopjvtmzb" fill="#fff">
+                                <use xlink:href="#beulc96nja"/>
+                            </mask>
+                            <circle cx="20" cy="20" r="18.5" stroke="#3E8AE9" stroke-width="3"/>
+                            <g mask="url(#gsopjvtmzb)">
+                                <g>
+                                    <path stroke="#3E8AE9" stroke-width="2.5" d="M21.097 12.795l6.614 4.806-2.526 7.776h-8.176L14.482 17.6l6.615-4.806z" transform="translate(-1.096783, 0.250000)"/>
+                                    <path fill="#3E8AE9" d="M19.847 4.75H22.347V13.75H19.847z" transform="translate(-1.096783, 0.250000)"/>
+                                    <path fill="#3E8AE9" d="M7.597 26.25L10.097 26.25 10.097 35.25 7.597 35.25z" transform="translate(-1.096783, 0.250000) translate(8.846783, 30.750000) rotate(-90.000000) translate(-8.846783, -30.750000)"/>
+                                    <path fill="#3E8AE9" d="M12.727 30.455L15.227 30.455 15.227 39.455 12.727 39.455z" transform="translate(-1.096783, 0.250000) translate(13.977395, 34.955485) rotate(-15.000000) translate(-13.977395, -34.955485)"/>
+                                    <path fill="#3E8AE9" d="M27.469 30.455L29.969 30.455 29.969 39.455 27.469 39.455z" transform="translate(-1.096783, 0.250000) translate(28.718876, 34.955485) scale(-1, 1) rotate(-15.000000) translate(-28.718876, -34.955485)"/>
+                                    <path fill="#3E8AE9" d="M32.597 26.25L35.097 26.25 35.097 35.25 32.597 35.25z" transform="translate(-1.096783, 0.250000) translate(33.846783, 30.750000) rotate(-90.000000) translate(-33.846783, -30.750000)"/>
+                                    <path fill="#3E8AE9" d="M6.347 6.75H8.847000000000001V15.75H6.347zM33.597 6.75H36.097V15.75H33.597z" transform="translate(-1.096783, 0.250000)"/>
+                                    <path fill="#3E8AE9" d="M26.497 24.11L28.997 24.11 28.997 33.11 26.497 33.11z" transform="translate(-1.096783, 0.250000) translate(27.747029, 28.609761) rotate(-35.000000) translate(-27.747029, -28.609761)"/>
+                                    <path fill="#3E8AE9" d="M13.51 24.194L16.01 24.194 16.141 32.732 13.641 32.732z" transform="translate(-1.096783, 0.250000) translate(14.825483, 28.463137) scale(-1, 1) rotate(-35.000000) translate(-14.825483, -28.463137)"/>
+                                    <path fill="#3E8AE9" d="M16.893 -0.794L18.893 -0.794 18.893 7.206 16.893 7.206z" transform="translate(-1.096783, 0.250000) translate(17.893140, 3.205896) rotate(-53.000000) translate(-17.893140, -3.205896)"/>
+                                    <path fill="#3E8AE9" d="M9.198 12.058L11.698 12.058 11.698 20.058 9.198 20.058z" transform="translate(-1.096783, 0.250000) translate(10.447574, 16.057773) rotate(-70.000000) translate(-10.447574, -16.057773)"/>
+                                    <path fill="#3E8AE9" d="M30.633 12.058L33.133 12.058 33.133 20.058 30.633 20.058z" transform="translate(-1.096783, 0.250000) translate(31.883079, 16.057773) scale(-1, 1) rotate(-70.000000) translate(-31.883079, -16.057773)"/>
+                                    <path fill="#3E8AE9" d="M22.993 -0.794L24.993 -0.794 24.993 7.206 22.993 7.206z" transform="translate(-1.096783, 0.250000) translate(23.993140, 3.205896) scale(-1, 1) rotate(-53.000000) translate(-23.993140, -3.205896)"/>
+                                    <path fill="#3E8AE9" d="M8.286 15.972L7.19 13.725 0 17.232 1.096 19.479zM34 15.972L35.096 13.725 42.286 17.232 41.19 19.479z" transform="translate(-1.096783, 0.250000)"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

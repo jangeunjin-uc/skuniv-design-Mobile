@@ -1,0 +1,109 @@
+@@include("head.html")
+<body>
+@@include('listheader.html',{
+	"title" : "Learning",
+	"link" : "../main/MA-01-01.html"
+})
+<!-- .content -->
+<section class="content">
+    <div class="myStatus">
+		<div class="statusWrap">
+			<ul>
+				<li>
+					<span class="tit"><em>2021년</em> 학습시간</span>
+					<strong><span>999</span>h <span>59</span>m</strong>
+					<span class="total">&lpar;누적 <span>999</span>h <span>59</span>m&rpar;</span>
+				</li>
+				<li>
+					<span class="tit">My Stamp</span>
+					<span class="icon"><i class="myStamp">stamp</i> x <span>999</span></span>
+				</li>
+				<li>
+					<span class="tit">My Badge</span>
+					<span class="icon"><i class="myBadge">badge</i> x <span>999</span></span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="tabBox">
+		<div class="menuWrap">
+			<div class="menu">
+				<a href="../learning/ML-01-01.html" target="_blank">학습중<span class="count">+30</span></a>
+				<a href="../learning/ML-01-02.html" target="_blank">관심목록<span class="count">+30</span></a>
+				<a href="../learning/ML-01-03.html" target="_blank">권장과정<span class="count">+30</span></a>
+				<a href="../learning/ML-01-04.html" target="_blank">학습예정<span class="count">+99</span></a>
+				<a href="../learning/ML-01-05.html" target="_blank">mySUNI 학습완료<span class="count">+99</span></a>
+				<a href="../learning/ML-01-09.html" target="_blank" class="active">개인학습 완료<span class="count">+99</span></a>
+				<a href="../learning/ML-01-07.html" target="_blank">취소/미이수<span class="count">+99</span></a>
+			</div>
+		</div>
+    </div>
+    <div class="recViews">
+		<p class="tit">
+			<span class="txt">총 <b>30개</b>의 리스트가 있습니다.</span>
+		</p>
+	</div>
+    <div class="apList">
+        <ul>
+            <li>
+                <a href="AP-01-02-01.html" target="_blank">
+                    <span class="title ellipsis">AI 101 AI와 Block Chain과의 상관관계는 어떻게 되는가</span>
+                    <span class="user">
+                        <span>AI</span>
+                        <span>3h30m</span>
+                        <span>신청자 박성수</span>
+                    </span>
+                    <span class="status"> <!-- 승인대기일떄 추가되는 클래스 없음-->
+                        <span>승인대기</span>
+                        <span class="date">2020.07.21</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="AP-01-02-01.html" target="_blank">
+                    <span class="title ellipsis">AI 101 AI와 Block Chain과의 상관관계는 어떻게 되는가</span>
+                    <span class="user">
+                        <span>AI</span>
+                        <span>3h30m</span>
+                        <span>신청자 박성수</span>
+                    </span>
+                    <span class="status yes"><!-- 승인되었을때 yes 클래스 추가됨-->
+                        <span>승인</span>
+                        <span class="date">2020.07.21</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="AP-01-02-01.html" target="_blank">
+                    <span class="title ellipsis">AI 101 AI와 Block Chain과의 상관관계는 어떻게 되는가</span>
+                    <span class="user">
+                        <span>AI</span>
+                        <span>3h30m</span>
+                        <span>신청자 박성수</span>
+                    </span>
+                    <span class="status no"><!-- 반려되었을때 no 클래스 추가됨-->
+                        <span>반려</span>
+                        <span class="date">2020.07.21</span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <button type="button" class="btnListMore" type="button"><i class="ico plus"></i>list more (<em>20</em>/<em>38</em>)</button>
+    <div class="BtmBtn floating type2">
+        <div class="btnGroup">
+            <button type="button" class="btnOrange">삭제</button>
+        </div>
+    </div>
+</section>
+<!-- // .content -->
+
+@@include('toolbar.html', {
+	"ty1": "",
+	"ty2": "",
+	"ty3": "",
+	"ty4": "",
+	"ty5": ""
+})
+</body>
+</html>

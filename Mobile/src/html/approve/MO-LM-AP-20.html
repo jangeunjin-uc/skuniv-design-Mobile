@@ -1,0 +1,140 @@
+@@include("head.html")
+<body>
+@@include('listheader.html',{
+	"title" : "승인관리",
+	"link" : "../main/MA-01-01.html"
+})
+<!-- .content -->
+<section class="content">
+	<div class="tabBox">
+		<div class="menuWrap">
+			<div class="menu">
+				<a href="../approval/AP-01-01-01.html" target="_blank" class="active">유료과정<span class="count">+39</span></a>
+				<a href="../approval/AP-02-01-01.html" target="_blank">개인학습<span class="count">+39</span></a>
+			</div>
+		</div>
+    </div>
+    <div class="approvalRadio">
+        <ul>
+            <li>
+                <span class="inpD">
+                    <label>
+                        <span class="txt">승인요청(99)</span>
+                        <input type="radio" name="r1">
+                        <i class="ico radio"></i>
+                    </label>
+                </span>
+            </li>
+            <li>
+                <span class="inpD">
+                    <label>
+                        <span class="txt">반려(99)</span>
+                        <input type="radio" name="r1">
+                        <i class="ico radio"></i>
+                    </label>
+                </span>
+            </li>
+            <li>
+                <span class="inpD">
+                    <label>
+                        <span class="txt">승인(99)</span>
+                        <input type="radio" name="r1" checked>
+                        <i class="ico radio"></i>
+                    </label>
+                </span>
+            </li>
+        </ul>
+        <div class="num">총<b>99건</b>의 리스트가 있습니다.</div>
+        <button type="button" class="btnFilter" onclick="window.open('../approval/AP-01-01-01-P01.html')"><i class="ico filter"></i>Filter(0)</button>
+    </div>
+    <div class="apList">
+        <div class="all">
+            <span class="inpD">
+                <label>
+                    <span class="txt">전체선택</span>
+                    <input type="checkbox">
+                    <i class="ico checkBox"></i>
+                </label>
+            </span>
+        </div>
+        <ul class="ck">
+            <li>
+                <span class="inpD">
+                    <label>
+                        <input type="checkbox">
+                        <i class="ico checkBox"></i>
+                    </label>
+                </span>
+                <a href="AP-01-02-01.html" target="_blank">
+                    <span class="title ellipsis">AI 101 AI와 Block Chain과의 상관관계는 어떻게 되는가</span>
+                    <span class="user">
+                        <span>AI</span>
+                        <span>3h30m</span>
+                        <span>신청자 박성수</span>
+                    </span>
+                    <span class="status"><!-- 승인대기일때 추가되는 클래스 없음-->
+                        <span>승인대기</span>
+                        <span class="date">2020.07.21</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <span class="inpD">
+                    <label>
+                        <input type="checkbox">
+                        <i class="ico checkBox"></i>
+                    </label>
+                </span>
+                <a href="AP-01-02-01.html" target="_blank">
+                    <span class="title ellipsis">AI 101 AI와 Block Chain과의 상관관계는 어떻게 되는가</span>
+                    <span class="user">
+                        <span>AI</span>
+                        <span>3h30m</span>
+                        <span>신청자 박성수</span>
+                    </span>
+                    <span class="status no"><!-- 승인 되었을때 yes 클래스 추가됨-->
+                        <span>승인</span>
+                        <span class="date">2020.07.21</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <span class="inpD">
+                    <label>
+                        <input type="checkbox">
+                        <i class="ico checkBox"></i>
+                    </label>
+                </span>
+                <a href="AP-01-02-01.html" target="_blank">
+                    <span class="title ellipsis">AI 101 AI와 Block Chain과의 상관관계는 어떻게 되는가</span>
+                    <span class="user">
+                        <span>AI</span>
+                        <span>3h30m</span>
+                        <span>신청자 박성수</span>
+                    </span>
+                    <span class="status no"><!-- 반려되었을때 no 클래스 추가됨-->
+                        <span>반려</span>
+                        <span class="date">2020.07.21</span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <button type="button" class="btnListMore" type="button"><i class="ico plus"></i>list more (<em>20</em>/<em>38</em>)</button>
+    <div class="BtmBtn floating type2">
+        <div class="btnGroup">
+            <button type="button" class="btnOrange">삭제</button>
+        </div>
+    </div>
+</section>
+<!-- // .content -->
+
+@@include('toolbar.html', {
+	"ty1": "",
+	"ty2": "",
+	"ty3": "",
+	"ty4": "",
+	"ty5": ""
+})
+</body>
+</html>

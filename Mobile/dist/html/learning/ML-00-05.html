@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>mySUNI</title>
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <script src="../../js/Chart.min.js"></script>
+    <script src="../../js/ui.js"></script>
+</head>
+
+<body>
+    <style>
+        body {
+            padding: 20px 15px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #222;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 15px;
+            color: #f00;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .incidentWrap {
+            margin-bottom: 30px;
+        }
+    </style>
+    <!-- .content -->
+    <section class="content">
+
+
+        <h2>Test UI 정의</h2>
+
+        <!--Test > 응시 전-->
+        <h3>Test > 응시 전</h3>
+        <div class="incidentWrap">
+            <ul>
+                <li class="tsr test">
+                    <div class="tit">Test</div>
+                    <div class="text ellipsis2">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI</div>
+                    <a href="#" class="btnArrow"><span>평가응시</span></a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Test > Test 후-->
+        <h3>Test > Test 후</h3>
+        <div class="incidentWrap">
+            <ul>
+                <li class="tsr test">
+                    <div class="tit">Test</div>
+                    <div class="text ellipsis2">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI</div>
+                    <span class="status">결과대기</span>
+                </li>
+            </ul>
+        </div>
+
+        <!--Test > 재응시-->
+        <h3>Test > 재응시</h3>
+        <div class="incidentWrap">
+            <ul>
+                <li class="tsr test">
+                    <div class="tit">Test</div>
+                    <div class="text ellipsis2">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI</div>
+                    <a href="#" class="btnArrow"><span>재응시</span></a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Test > Fail-->
+        <h3>Test > Fail</h3>
+        <div class="incidentWrap">
+            <ul>
+                <li class="tsr test">
+                    <div class="tit">Test</div>
+                    <div class="text ellipsis2">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI</div>
+                    <span class="status">Fail</span>
+                </li>
+            </ul>
+        </div>
+
+        <!--Test > Pass-->
+        <h3>Test > Pass</h3>
+        <div class="incidentWrap">
+            <ul>
+                <li class="tsr test">
+                    <div class="tit">Test</div>
+                    <div class="text ellipsis2">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI</div>
+                    <span class="status">Pass</span>
+                </li>
+            </ul>
+        </div>
+
+
+        <h2>Report UI 정의</h2>
+
+        <!--Report > 제출 전 -->
+        <h3>Report > 제출 전</h3>
+        <div class="incidentWrap">
+            <ul>
+                <li class="tsr report">
+                    <div class="tit">Report</div>
+                    <div class="text ellipsis2">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI</div>
+                    <a href="#" class="btnArrow"><span>과제제출</span></a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Report > 제출 후 -->
+        <h3>Report > 제출 후</h3>
+        <div class="incidentWrap">
+            <ul>
+                <li class="tsr report">
+                    <div class="tit">Report</div>
+                    <div class="text ellipsis2">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI</div>
+                    <span class="status">결과대기</span>
+                </li>
+            </ul>
+        </div>
+
+        <!--Report > 재응시-->
+        <h3>Report > 재응시</h3>
+        <div class="incidentWrap">
+            <ul>
+                <li class="tsr report">
+                    <div class="tit">Report</div>
+                    <div class="text ellipsis2">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI</div>
+                    <a href="#" class="btnArrow"><span>재응시</span></a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Report > Fail -->
+        <h3>Report > Fail</h3>
+        <div class="incidentWrap">
+            <ul>
+                <li class="tsr report">
+                    <div class="tit">Report</div>
+                    <div class="text ellipsis2">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI</div>
+                    <span class="status">Fail</span>
+                </li>
+            </ul>
+        </div>
+        <!--Report > Pass -->
+        <h3>Report > Pass</h3>
+        <div class="incidentWrap">
+            <ul>
+                <li class="tsr report">
+                    <div class="tit">Report</div>
+                    <div class="text ellipsis2">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI</div>
+                    <span class="status">제출완료</span>
+                </li>
+            </ul>
+        </div>
+
+
+        <h2>Survey UI 정의</h2>
+
+        <!--Survey > 제출 전 -->
+        <h3>Survey > 제출 전</h3>
+        <div class="incidentWrap">
+            <ul>
+                <li class="tsr report">
+                    <div class="tit">Survey</div>
+                    <div class="text ellipsis2">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI</div>
+                    <a href="#" class="btnArrow"><span>설문하기</span></a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Survey > 제출 후 -->
+        <h3>Survey > 제출 후</h3>
+        <div class="incidentWrap">
+            <ul>
+                <li class="tsr report">
+                    <div class="tit">Survey</div>
+                    <div class="text ellipsis2">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI</div>
+                    <span class="status">참여완료</span>
+                </li>
+            </ul>
+        </div>
+
+
+        <h2>Cube</h2>
+
+        <!--Cube-->
+        <h3>Cube > Report & Test & Survey</h3>
+        <ul class="list">
+            <li class="tsr cube test">
+                <div class="tit">Test</div>
+                <div class="text ellipsis2">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI</div>
+                <a href="#" class="btnArrow"><span>평가응시</span></a>
+            </li>
+            <li class="tsr cube report">
+                <div class="tit">Report</div>
+                <div class="text ellipsis2">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI</div>
+                <a href="#" class="btnArrow"><span>과제제출</span></a>
+            </li>
+            <li class="tsr cube survey">
+                <div class="tit">Survey</div>
+                <div class="text ellipsis2">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI</div>
+                <a href="#" class="btnArrow"><span>설문하기</span></a>
+            </li>
+        </ul>
+
+    </section>
+    <!-- // .content -->
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+@@include("head.html")
+<body class="pgLogin">
+<header>
+    <section class="loginHeader">
+        <a href="LO-01-01.html" target="_blank" class="btn pageBack">이전 페이지</a>
+    </section>
+</header>
+<!-- .content -->
+<section class="content">
+    <div class="pgResetWrap">
+        <div class="logo"><img src="../../img/login_logo_small.svg" alt="mySUNI" /></div>
+        <div class="resetForm">
+            <h2>비밀번호 초기화</h2>
+            <form>
+                <h3>이메일</h3>
+                <div class="inputBox h44 white">
+                    <input type="text" class="inp white" placeholder="Email을 입력해주세요." value="uni.kim@sk.com" />
+                    <button type="button" class="btn inpReset">초기화</button>
+                </div>
+                <div class="guideTxt">메일로 비밀번호 재 설정용 인증번호가 전송됩니다.</div>
+                <button type="button" class="btn h44 orange">인증번호 발송</button>
+            </form>
+            <form>
+                <h3>인증번호</h3>
+                <div class="inputBox h44 white">
+                    <input type="text" class="inp white" placeholder="인증번호를 입력해주세요." />
+                    <span class="remain">남은 시간 5:00</span>
+                </div>
+                <div class="guideTxt">메일로 비밀번호 재 설정용 인증번호가 전송됩니다.</div>
+                <button type="button" class="btn h44 orange" disabled>인증번호 확인</button>
+            </form>            
+        </diiv>
+    </div>
+</section>
+</body>
+</html>

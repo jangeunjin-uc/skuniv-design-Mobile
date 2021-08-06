@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon / 70px / report</title>
+    <g id="icon-/-70px-/-report" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-5-Copy" transform="translate(14.000000, 15.000000)" fill-rule="nonzero">
+            <path d="M38,14.723 L42.3952715,44.1623436 L38,44.688 L38,14.723 Z" id="Combined-Shape" stroke="#6A758B" stroke-width="2"></path>
+            <path d="M38,6 L38,47 L0,47 L0,6 L5,6 L5,8 L33,8 L33,6 L38,6 Z" id="Combined-Shape" stroke="#6A758B" stroke-width="2"></path>
+            <rect id="Rectangle-Copy-12" fill="#6A758B" x="5" y="40" width="20" height="2"></rect>
+            <rect id="Rectangle-Copy-14" fill="#6A758B" x="5" y="35" width="28" height="2"></rect>
+            <rect id="Rectangle-Copy-15" fill="#6A758B" x="5" y="30" width="10" height="2"></rect>
+            <g id="Group" transform="translate(6.000000, 10.000000)">
+                <rect id="Rectangle-Copy-16" fill="#6A758B" x="18" y="8" width="9" height="2"></rect>
+                <rect id="Rectangle-Copy-19" fill="#6A758B" x="18" y="13" width="6" height="2"></rect>
+                <rect id="Rectangle-Copy-17" fill="#6A758B" x="18" y="3" width="9" height="2"></rect>
+                <path d="M13,9.5 C13,13.0898509 10.0898509,16 6.5,16 C2.91014913,16 0,13.0898509 0,9.5 C0,5.91014913 2.91014913,3 6.5,3" id="Path" stroke="#6A758B" stroke-width="2"></path>
+                <path d="M8,0 C12.418278,0 16,3.581722 16,8 L8,8 L8,0 Z" id="Combined-Shape" fill="#EA644D"></path>
+            </g>
+            <path d="M28,0 L28,3 L31,3 C32.1045695,3 33,3.8954305 33,5 L33,8 L5,8 L5,5 C5,3.8954305 5.8954305,3 7,3 L10,3 L10,0 L28,0 Z" id="Combined-Shape" stroke="#6A758B" stroke-width="2"></path>
+        </g>
+        <rect id="Rectangle-Copy-9" stroke="#6A758B" stroke-width="2" fill-rule="nonzero" x="21" y="11" width="24" height="4"></rect>
+    </g>
+</svg>
