@@ -1363,7 +1363,7 @@ nav.on {
   font-weight: 700;
 }
 
-.recCourse .card {
+.recCourse  {
   margin: 0;
   -webkit-box-shadow: 0px 1px 5px 0px #486aa2;
           box-shadow: 0px 1px 5px 0px #486aa2;

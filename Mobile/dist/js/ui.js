@@ -85,7 +85,7 @@ $(function(){
 		slidesPerView:1.05,
 	});
 	var swiperH = new Swiper('.badgeSlider', {
-		slidesPerView:2.2,
+		slidesPerView:2.5,
 	});
 	var swiperH = new Swiper('.badgeSlider2', {
 		slidesPerView:3,

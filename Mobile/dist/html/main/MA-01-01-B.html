@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>mySUNI</title>
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <script src="../../js/Chart.min.js"></script>
+    <script src="../../js/ui.js"></script>
+</head>
+
+<body>
+
+    <div class="noticeWrap">
+        <a href="#">UX DESIGN강좌 11월 수강신청 안내</a>
+        <button type="button" class="btn close">닫기</button>
+    </div>
+    <!-- .header -->
+    <header>
+        <section class="header">
+            <div class="inner">
+                <h1 class="logo">mySUNI</h1>
+                <div class="keyWord">오늘은 <span>Language AI</span>를 검색해 보세요.</div>
+                <div class="inputBox sch dpb">
+                    <input type="text" class="inp">
+                    <button type="button" class="btn inpReset">초기화</button>
+                    <button type="button" class="btn schBtn" onclick="window.open('../search/SE-01-01.html')">검색</button>
+                </div>
+            </div>
+            <button type="button" class="gnbOpen">전체 메뉴 열기</button>
+            <nav>
+                <div class="navTop">
+                    <div class="login">
+                        <a href="#" class="btn_login"><span>Logout</span></a>
+                        <!--a href="#" class="btn_login"><span>Login</span></a-->
+                    </div>
+                    <button type="button" class="btn close2">닫기</button>
+                </div>
+                <div class="gnb">
+                    <ul class="gnbList">
+                        <li class="ty1"><a href="../main/MA-01-01.html" target="_blank">Home</a></li>
+                        <li class="ty2">
+                            <span>Learning</span>
+                            <ul class="gnbListDept">
+                                <li><a href="../learning/ML-01-01.html" target="_blank">학습중</a></li>
+                                <li><a href="../learning/ML-01-02.html" target="_blank">관심목록</a></li>
+                                <li><a href="../learning/ML-01-03.html" target="_blank">권장과정</a></li>
+                                <li><a href="../learning/ML-01-04.html" target="_blank">학습예정</a></li>
+                                <li><a href="../learning/ML-01-05.html" target="_blank">mySUNI 학습완료</a></li>
+                                <li><a href="../learning/ML-01-09.html" target="_blank">개인학습 완료</a></li>
+                                <li><a href="../learning/ML-01-06.html" target="_blank">My Stamp</a></li>
+                                <li><a href="../learning/ML-01-07.html" target="_blank">취소/미이수</a></li>
+                            </ul>
+                        </li>
+                        <li class="ty10">
+                            <span>Certification</span>
+                            <ul class="gnbListDept">
+                                <li><a href="../certification/CT-01-01.html" target="_blank">Badge List</a></li>
+                                <li><a href="../certification/CT-02-01.html" target="_blank">도전중 Badge</a></li>
+                                <li><a href="../certification/CT-03-01.html" target="_blank">My Badge</a></li>
+                            </ul>
+                        </li>
+                        <li class="ty8 accordion">
+                            <button type="button"><span>College</span></button>
+                            <ul class="gnbListDept">
+                                <li><a href="../common/CO_05_02.html" target="_blank">AI <span>(10)</span></a></li>
+                                <li><a href="#">DT <span>(10)</span></a></li>
+                                <li><a href="#">행복 <span>(50)</span></a></li>
+                                <li><a href="#">SV <span>(5)</span></a></li>
+                                <li><a href="#">혁신디자인 <span>(100)</span></a></li>
+                                <li><a href="#">Global <span>(2)</span></a></li>
+                                <li><a href="#">Leadership <span>(2)</span></a></li>
+                                <li><a href="#">Management <span>(2)</span></a></li>
+                                <li><a href="#">반도체 <span>(2)</span></a></li>
+                                <li><a href="#">에너지 솔루션 <span>(2)</span></a></li>
+                                <li><a href="#">SK 아카데미 <span>(2)</span></a></li>
+                                <li><a href="#">SK 경영 <span>(2)</span></a></li>
+                                <li><a href="#">Life Style <span>(2)</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="ty3"><a href="../recommend/RC-01-01.html" target="_blank">Recommend</a></li>
+                        <li class="ty4"><a href="../community/CM-02-01-01.html" target="_blank">Community <span>(서비스예정)</span></a></li>
+                        <li class="ty5"><a href="../support/SU-01-01-01.html" target="_blank">Support</a></li>
+                        <li class="ty6"><a href="../search/SE-02-01.html" target="_blank">Search</a></li>
+                        <li class="ty7"><a href="../mypage/MY-01-01.html" target="_blank">My Page</a></li>
+                        <li class="ty8">
+                            <span>승인관리</span>
+                            <ul class="gnbListDept">
+                                <li><a href="../approval/AP-01-01-01.html" target="_blank">유료과정</a></li>
+                                <li><a href="../approval/AP-02-01-01.html" target="_blank">개인학습</a></li>
+                            </ul>
+                        </li>
+                        <li class="ty9">
+                            <a href="#">Help Desk</a>
+                            <a href="tel:02-6323-9002" class="tel">02-6323-9002</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+    </header>
+    <!-- // .header -->
+    <!-- .content -->
+    <section class="content">
+        <div class="recCourseWrap">
+            <p class="tit"><a href="#"><strong class="name">김유니 김유니 김유니 김유니</strong><span>님이 학습중인 <span class="txtEnd">과정입니다.</span></span></a></p>
+            <div class="recCourse mainSliider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Video</span>
+                                    </div>
+                                    <p class="category navy">SK하이닉스시스템아이씨</p>
+                                    <strong class="title">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>CHN</span><span>ENG</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>4.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Video</span>
+                                    </div>
+                                    <p class="category red">혁신디자인</p>
+                                    <strong class="title">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>CHN</span><span>ENG</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>4.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Video</span>
+                                    </div>
+                                    <p class="category navy">SK하이닉스시스템아이씨</p>
+                                    <strong class="title">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>CHN</span><span>ENG</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>4.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Video</span>
+                                    </div>
+                                    <p class="category navy">SK하이닉스시스템아이씨</p>
+                                    <strong class="title">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>CHN</span><span>ENG</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>4.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Video</span>
+                                    </div>
+                                    <p class="category red">혁신디자인</p>
+                                    <strong class="title">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>CHN</span><span>ENG</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>4.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Video</span>
+                                    </div>
+                                    <p class="category navy">SK하이닉스시스템아이씨</p>
+                                    <strong class="title">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>CHN</span><span>ENG</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>4.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mainWrap">
+            <div class="recTit">
+                <a href="#none" target="_blank">
+                    <span class="txt">
+					<span class="ellipsis">김유니김유니김유니김유니</span><span class="txtEnd">님이 도전중인 Badge</span></span></a>
+            </div>
+            <div class="badgeSlider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#none" class="new-badge big bg-badge-01 intermediate">
+                            <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                            <span class="college"><img src="../../img/img_badge_05_icon.svg" alt="" /></span>
+                            <span class="title"><span class="cell"><span>Digital HR Transformation</span></span></span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" class="new-badge big bg-badge-05 advanced">
+                            <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                            <span class="college"><img src="../../img/img_badge_04_icon.svg" alt="" /></span>
+                            <span class="title"><span class="cell"><span>AI/DT Literacy</span></span></span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" class="new-badge big bg-badge-03 basic">
+                            <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                            <span class="college"><img src="../../img/img_badge_05_icon.svg" alt="" /></span>
+                            <span class="title"><span class="cell"><span>Customer Empathy</span></span></span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" class="new-badge big bg-badge-02 intermediate">
+                            <span class="issuing"><img src="../../img/logo-newBadge.svg" alt="발급기관:mySUNI" /></span>
+                            <span class="college"><img src="../../img/img_badge_04_icon.svg" alt="" /></span>
+                            <span class="title"><span class="cell"><span>SV Fundamentals</span></span></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pager"></div>
+            </div>
+        </div>
+
+        <div class="recBannerWrap">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../../img/temp/promotion.jpg" /></div>
+                <div class="swiper-slide"><img src="../../img/temp/promotion.jpg" /></div>
+                <div class="swiper-slide"><img src="../../img/temp/promotion.jpg" /></div>
+                <div class="swiper-slide"><img src="../../img/temp/promotion.jpg" /></div>
+                <div class="swiper-slide"><img src="../../img/temp/promotion.jpg" /></div>
+                <div class="swiper-slide"><img src="../../img/temp/promotion.jpg" /></div>
+                <div class="swiper-slide"><img src="../../img/temp/promotion.jpg" /></div>
+                <div class="swiper-slide"><img src="../../img/temp/promotion.jpg" /></div>
+                <div class="swiper-slide"><img src="../../img/temp/promotion.jpg" /></div>
+                <div class="swiper-slide"><img src="../../img/temp/promotion.jpg" /></div>
+            </div>
+            <div class="swiper-pagination swiper-pager"></div>
+        </div>
+
+        <div class="mainWrap">
+            <div class="recTit"><a href="#none" target="_blank"><span class="txt">SK 구성원이라면 꼭 들어야 하는 필수 <span class="txtEnd">권장 학습 과정</span></span></a></div>
+            <div class="mainSliider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="apply">수강신청</span>
+                                        <span class="icon">e-learning</span>
+                                    </div>
+                                    <p class="category teal">Management</p>
+                                    <strong class="title">UI/UX design with Adobe XD: Design &amp; Prototype</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>CHN</span><span>ENG</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>2.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Webpage</span>
+                                    </div>
+                                    <p class="category purple">AI</p>
+                                    <strong class="title">TensorFlow로 배우는 Generative Models 알고리즘으로 배우는 딥러닝</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>CHN</span><span>ENG</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>2.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Video</span>
+                                    </div>
+                                    <p class="category navy">SK하이닉스시스템아이씨</p>
+                                    <strong class="title">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>CHN</span><span>ENG</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>4.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Video</span>
+                                    </div>
+                                    <p class="category red">혁신디자인</p>
+                                    <strong class="title">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>CHN</span><span>ENG</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>4.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pager"></div>
+            </div>
+            <div class="recTit"><a href="#none" target="_blank"><span class="txt">mySUNI 5월 4주<span class="txtEnd"> 신규학습 과정</span></span></a></div>
+            <div class="mainSliider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Document</span>
+                                    </div>
+                                    <p class="category yellow">행복</p>
+                                    <strong class="title">UI/UX design with Adobe XD: Design & Prototype</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>ENG</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>4.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Webpage</span>
+                                    </div>
+                                    <p class="category purple">AI</p>
+                                    <strong class="title">TensorFlow로 배우는 Generative Models 알고리즘으로 배우는 딥러닝</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>CHN</span><span>ENG</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>2.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Video</span>
+                                    </div>
+                                    <p class="category navy">SK하이닉스시스템아이씨</p>
+                                    <strong class="title">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>4.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Video</span>
+                                    </div>
+                                    <p class="category red">혁신디자인</p>
+                                    <strong class="title">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>CHN</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>4.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pager"></div>
+            </div>
+            <div class="recTit"><a href="#none" target="_blank"><span class="txt">학습자들의 평가가 좋은 <span class="txtEnd">인기과정입니다</span></span></a></div>
+            <div class="mainSliider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="apply">수강신청</span>
+                                        <span class="icon">e-learning</span>
+                                    </div>
+                                    <p class="category teal">Management</p>
+                                    <strong class="title">UI/UX design with Adobe XD: Design &amp; Prototype</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>CHN</span><span>ENG</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>2.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Webpage</span>
+                                    </div>
+                                    <p class="category purple">AI</p>
+                                    <strong class="title">TensorFlow로 배우는 Generative Models 알고리즘으로 배우는 딥러닝</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>2.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Video</span>
+                                    </div>
+                                    <p class="category navy">SK하이닉스시스템아이씨</p>
+                                    <strong class="title">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>CHN</span><span>ENG</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>4.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Video</span>
+                                    </div>
+                                    <p class="category red">혁신디자인</p>
+                                    <strong class="title">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>ENG</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>4.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pager"></div>
+            </div>
+            <div class="recTit"><a href="#none" target="_blank"><span class="txt">mySUNI가<span class="ellipsis">김유니김유니김유니김유니</span>님만을 위해 추천하는 <span class="txtEnd">과정입니다.</span></span></a></div>
+            <div class="mainSliider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Video</span>
+                                    </div>
+                                    <p class="category red">혁신디자인</p>
+                                    <strong class="title">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>4.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="apply">수강신청</span>
+                                        <span class="icon">e-learning</span>
+                                    </div>
+                                    <p class="category teal">Management</p>
+                                    <strong class="title">UI/UX design with Adobe XD: Design &amp; Prototype</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>CHN</span><span>ENG</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>2.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="apply">수강신청</span>
+                                        <span class="icon">e-learning</span>
+                                    </div>
+                                    <p class="category teal">Management</p>
+                                    <strong class="title">UI/UX design with Adobe XD: Design &amp; Prototype</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>CHN</span><span>ENG</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>2.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Webpage</span>
+                                    </div>
+                                    <p class="category purple">AI</p>
+                                    <strong class="title">TensorFlow로 배우는 Generative Models 알고리즘으로 배우는 딥러닝</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>CHN</span><span>ENG</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>2.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Video</span>
+                                    </div>
+                                    <p class="category navy">SK하이닉스시스템아이씨</p>
+                                    <strong class="title">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>CHN</span><span>ENG</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>4.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none" target="_blank" class="card">
+                            <div class="cardInner">
+                                <div class="titleArea">
+                                    <div class="topRight">
+                                        <span class="icon">Video</span>
+                                    </div>
+                                    <p class="category red">혁신디자인</p>
+                                    <strong class="title">Mobile App UI/UX GUI Design Tutorials 모바일 앱 UX UI GUI</strong>
+                                </div>
+                                <div class="gbArea">
+                                    <span>KOR</span><span>CHN</span>
+                                </div>
+                                <div class="infoArea">
+                                    <p class="label"><i class="ico time"></i><b>2h 40m</b></p>
+                                    <p class="label"><i class="ico star"></i><b>4.0</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pager"></div>
+            </div>
+        </div>
+    </section>
+    <!-- // .content -->
+    <!-- .pageTop -->
+    <div class="pageTop">
+        <button type="button" class="btn gototop"><span>Top</span></button>
+    </div>
+    <!-- // .pageTop -->
+
+    <!-- .toolBar -->
+    <section class="toolBar">
+        <!--li에 .on / .new 추가 시 on(현재페이지) or new(신규컨텐츠) 표시 -->
+        <ul class="toolList">
+            <li class="ty1 on"><a href="../main/MA-01-01.html" target="_blank"><span>Home</span></a></li>
+            <li class="ty2 new"><a href="../learning/ML-01-01.html" target="_blank"><span>Learning</span></a></li>
+            <li class="ty3 new"><a href="../certification/CT-01-01.html" target="_blank"><span>Certification</span></a></li>
+            <!--<li class="ty3 new"><a href="../community/CM-02-01-01.html" target="_blank"><span>Community</span></a></li>-->
+            <li class="ty4 new"><a href="../support/SU-01-01-01.html" target="_blank"><span>Notice</span></a></li>
+            <li class="ty5"><a href="../mypage/MY-01-01.html" target="_blank"><span>My page</span></a></li>
+        </ul>
+    </section>
+    <!-- // .toolBar -->
+</body>
+
+</html>
