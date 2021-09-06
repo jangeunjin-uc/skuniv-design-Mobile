@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-    <g fill="none" fill-rule="evenodd" transform="translate(0 -6)">
-        <circle cx="10" cy="16" r="10" fill="#E1002A"/>
-        <text fill="#FFF" font-family="NotoSansCJKkr-Bold, Noto Sans CJK KR" font-size="18" font-weight="bold" letter-spacing="-.15">
-            <tspan x="4" y="21">n</tspan>
-        </text>
+<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd">
+        <circle fill="#DF022B" cx="10" cy="10" r="10"/>
+        <text font-family="NotoSansCJKkr-Bold, Noto Sans CJK KR" font-size="13" font-weight="bold" letter-spacing="-.108" fill="#FFF">
+                            <tspan x="5" y="15">N</tspan>
+                        </text>
     </g>
 </svg>

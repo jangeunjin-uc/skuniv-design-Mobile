@@ -248,10 +248,9 @@ i.ico.course-btn {width:25px; height:25px; background-image:url('../img/icon-cou
 /* card */
 .card{display: block; margin: 0 15px 15px; padding: 20px; background-color: #fff; box-shadow: 0px 1px 5px rgba(204,212,231,.8); border-radius: 10px; overflow: hidden}
 .card .cardInner{position: relative}
-.card .titleArea{display: block; margin-bottom: 10px}
+.card .titleArea{display: block; margin-bottom: 6px}
 .card .titleArea .title{display: -webkit-box; height: 50px; padding-right: 20px; font-size: 18px; color: #222; font-weight: 700; line-height: 23px; letter-spacing: -.45px; 	overflow: hidden; text-overflow: ellipsis; 	-webkit-line-clamp: 2; -webkit-box-orient: vertical; word-wrap:break-word}
-.card .infoArea{font-size: 14px; line-height: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; float:right}
-.card::after{content:'';display:inline-block; clear: both;}
+.card .infoArea{width:100%; font-size: 14px; line-height: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: right;}
 .card .btmArea{display: flex; justify-content: space-between; align-items: center; margin: 8px -20px 0px; padding: 8px 20px 9px; border-top: 1px solid #eee; font-size: 12px; color: #666}
 .card .category{margin-bottom: 12px}
 .card .topRight{position: absolute; top: -4px; right: 0; margin: 0; font-size: 0; float: none;}
@@ -268,7 +267,7 @@ i.ico.course-btn {width:25px; height:25px; background-image:url('../img/icon-cou
 .card .tag{padding-top: 3px; color: #6280b2}
 .card .tag span{line-height: 1.45}
 .card .tag + .date{margin-top: 2px}
-.card .date{font-size: 12px; line-height: 1.5; color: #666; letter-spacing: 0.5px}
+.card .date{font-size: 12px; line-height: 1.5; color: #666; letter-spacing: 0.5px; text-align: left;}
 .card .state{color: #222}
 .card i.check{margin-right: 3px}
 

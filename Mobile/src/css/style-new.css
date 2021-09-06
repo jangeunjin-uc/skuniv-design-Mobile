@@ -833,7 +833,8 @@ i.icon_emoji_7{background-image: url('../img/btn_emoji_7.svg');}
 .resetMsg img{width: 225px;}
 .resetMsg strong{display: block; margin: 25px 0 30px; color:#222; font-size: 13px; font-weight: bold;}
 .btn.w280{width: 280px}
-
+.gbArea + .infoArea{margin-top:10px}
+.gbArea{line-height: 18px;}
 .gbArea span{display: inline-block; padding:0 3px;  color:#6c788f; font-size: 12px; letter-spacing: -0.36px; position:relative}
 .gbArea span + span::before{content:'';display: inline-block; width:2px; height:2px; background-color: #6c788f; position: absolute; top: 9px; left: -1px;}
 
