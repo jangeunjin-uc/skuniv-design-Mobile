@@ -3756,3 +3756,6 @@ i.icon_emoji_7{background-image: url('../img/btn_emoji_7.svg');}
 
 .mainWrap .new-badge.big{width:33.28vw; height:33.28vw;}
 .mainWrap .new-badge.big .title{height:8.4vw; font-size: 2.216vw;}
+
+/* 다국어 */
+.langList li .inpD.checked .txt{font-weight: bold;}
