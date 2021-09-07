@@ -598,7 +598,7 @@ nav.on {left:0;}
 .badge.big.basic{background-image:url('../img/LV1_mobile_300.png');}
 .badge.big.intermediate{background-image:url('../img/LV2_mobile_300.png');}
 .badge.big.advanced{background-image:url('../img/LV3_mobile_300.png');}
-.badge.small.basic{background-image:url('../img/LV1_mobile_180.png');}
+.badge.small.basic{background-image:url('../img/LV1_mobile_180.png');} 
 .badge.small.intermediate{background-image:url('../img/LV2_mobile_180.png');}
 .badge.small.advanced{background-image:url('../img/LV3_mobile_180.png');}
 
