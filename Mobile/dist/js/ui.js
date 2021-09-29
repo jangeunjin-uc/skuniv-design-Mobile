@@ -458,10 +458,10 @@ $(document).on('click', '.overlay-button.fullscreen', function(){
 	if($('.overlay-button').hasClass('on')){$('.overlay-button').removeClass('on')}
 	if($('.video-container').hasClass('full')){
 		$('.video-container').removeClass('full');
-		$('section.content').removeClass('fullScreen');		
+		$('section.content').removeClass('fullscreen');		
 	}else{
 		$('.video-container').addClass('full');
-		$('section.content').addClass('fullScreen');
+		$('section.content').addClass('fullscreen');
 	}
 })
 

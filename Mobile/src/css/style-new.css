@@ -917,4 +917,4 @@ i.icon_emoji_7{background-image: url('../img/btn_emoji_7.svg');}
 .video-quiz-wrap .quiz-content-wrap .video-quiz-content .checkbox-wrap + .checkbox-wrap { margin-top:1.25rem; }
 
 .videoWrap .thumb img{display: block;}
-section.content.fullScreen{height:100vh; overflow-y: hidden;}
+section.content.fullscreen{height:100vh; overflow-y: hidden;}
