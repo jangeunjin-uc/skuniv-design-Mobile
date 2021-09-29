@@ -416,3 +416,51 @@ function chart2(a, b) {
 	var myChart = new Chart(ctx, config);
 }
 
+//비디오panoptoplayer 
+
+$(document).on('click', '.overlay-button.playspeed', function(){
+	if ( $(this).hasClass('on') )
+	{
+		$(this).removeClass('on');
+	} else {
+		$(this).addClass('on');
+		if($('.overlay-button.language').hasClass('on')){
+			$('.overlay-button.language').removeClass('on')
+		}
+	}
+});
+
+$(document).on('click', '.overlay-button.language', function(){
+	if ( $(this).hasClass('on') )
+	{
+		$(this).removeClass('on');
+	} else {
+		$(this).addClass('on');
+		if($('.overlay-button.playspeed').hasClass('on')){
+			$('.overlay-button.playspeed').removeClass('on')
+		}
+	}
+});
+
+$(document).on('click', '.overlay-button.caption', function(){
+	if($('.overlay-button').hasClass('on')){$('.overlay-button').removeClass('on')}
+	if ( $(this).hasClass('off') )
+	{
+		$(this).removeClass('off');
+		$(this).addClass('on');
+	} else {
+		$(this).removeClass('on');
+		$(this).addClass('off');
+	}
+});
+
+$(document).on('click', '.overlay-button.fullscreen', function(){
+	if($('.overlay-button').hasClass('on')){$('.overlay-button').removeClass('on')}
+	if($('.video-container').hasClass('full')){
+		$('.video-container').removeClass('full');
+		$('section.content').removeClass('fullScreen');		
+	}else{
+		$('.video-container').addClass('full');
+		$('section.content').addClass('fullScreen');
+	}
+})
