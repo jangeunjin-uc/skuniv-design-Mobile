@@ -457,9 +457,11 @@ $(document).on('click', '.overlay-button.caption', function(){
 $(document).on('click', '.overlay-button.fullscreen', function(){
 	if($('.overlay-button').hasClass('on')){$('.overlay-button').removeClass('on')}
 	if($('.video-container').hasClass('full')){
+		$(this).removeClass('exit');
 		$('.video-container').removeClass('full');
-		$('section.content').removeClass('fullscreen');		
+		$('section.content').removeClass('fullscreen');
 	}else{
+		$(this).addClass('exit');
 		$('.video-container').addClass('full');
 		$('section.content').addClass('fullscreen');
 	}
