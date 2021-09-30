@@ -467,6 +467,15 @@ $(document).on('click', '.overlay-button.fullscreen', function(){
 	}
 })
 
+//다국어 선택
+$(document).on('click', '.globalSelect ul li > button', function(){
+	if ( $(this).closest('li').hasClass('active') ){
+	} else {
+		$('.globalSelect ul li').removeClass('active');
+		$(this).closest('li').addClass('active');
+	}
+});
+
 
 // script yjm
 

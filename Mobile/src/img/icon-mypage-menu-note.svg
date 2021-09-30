@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" viewBox="0 0 12 12">
+    <defs>
+        <ellipse id="mfeeaaoxbd" cx="6.119" cy="5.5" rx="2.75" ry="5.5"/>
+        <filter id="ntbfa9uska" color-interpolation-filters="auto">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.133333 0 0 0 0 0.133333 0 0 0 0 0.133333 0 0 0 1.000000 0"/>
+        </filter>
+        <circle id="oilfwf4o8b" cx="6" cy="6" r="6"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g filter="url(#ntbfa9uska)" transform="translate(-780.000000, -615.000000) translate(780.000000, 225.000000) translate(0.000000, 384.000000) translate(0.000000, 6.000000)">
+                        <g>
+                            <mask id="dgs4orsetc" fill="#fff">
+                                <use xlink:href="#oilfwf4o8b"/>
+                            </mask>
+                            <circle cx="6" cy="6" r="5.5" stroke="#222"/>
+                            <g mask="url(#dgs4orsetc)">
+                                <g transform="translate(-0.119048, 0.500000)">
+                                    <path fill="#D8D8D8" stroke="#979797" d="M0.5 5.5H11.5V6.5H0.5z"/>
+                                    <ellipse cx="6.119" cy="5.5" stroke="#222" rx="2.25" ry="5"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
