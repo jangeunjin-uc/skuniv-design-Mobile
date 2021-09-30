@@ -3786,7 +3786,7 @@ i.icon_emoji_7{background-image: url('../img/btn_emoji_7.svg');}
 .fp-duration { display: inline-block; font-size: 2.5vw; line-height: 5vw;vertical-align: text-top;}
 .fp-duration:before {content: " / ";}
 .fp-remaining { display: none;}
-.overlay-button { width: 7vw; height: 5vw; float: left; background-position: center; background-repeat: no-repeat; background-size: 5vw; position: relative; cursor: pointer; outline: none;}
+.overlay-button { width: 8vw; height: 5vw; float: left; background-position: center; background-repeat: no-repeat; background-size: 5vw; position: relative; cursor: pointer; outline: none;}
 .overlay-button.play { background-image: url(../img/baseline_play_arrow_white_24dp.png);}
 .overlay-button.stop,
 .overlay-button.play.stop { background-image: url(../img/baseline_pause_white_24dp.png);}
@@ -3799,22 +3799,22 @@ i.icon_emoji_7{background-image: url('../img/btn_emoji_7.svg');}
 .overlay-button.caption.on { background-image: url(../img/baseline_closed_caption_white_24dp.png);}
 .overlay-button.fullscreen { background-image: url(../img/baseline_fullscreen_white_24dp.png);}
 .overlay-button.fullscreen.exit { background-image: url(../img/baseline_fullscreen_exit_white_24dp.png);}
-.selector-container { display: none; background: rgba(0,0,0,0.8); color: #ccc; position: absolute; bottom: 108%; border-radius: 4px; padding: 1vw;}
-.caption-language-selector-container { width: 20vw; left:0}
-.playspeed-selector-container { width: 15vw; right:0}
+.selector-container { display: none; background: rgba(0,0,0,0.6); color: #ccc; position: absolute; bottom: 108%; border-radius: 4px; padding: 1vw;}
+.caption-language-selector-container { width: 27vw; left:0}
+.playspeed-selector-container { width: 20vw; right:0}
 .overlay-button.language.on .caption-language-selector-container, .overlay-button.playspeed.on .playspeed-selector-container { display: block;}
 .selector-container dl, .selector-container dt, .selector-container dd { display: block;}
-.selector-container .slt-title { display: block; border-bottom: #999 1px solid; color: #999; text-align: center; font-size: 2.2vw; font-weight: 300; line-height: 1.142; padding-bottom: 2px;}
-.selector-container .slt-item { display: block; position: relative; color: #ccc; font-weight: 400; padding: 1vw 1.2vw; text-align: left; font-size: 2.5vw; line-height: 1.142; cursor: pointer;}
+.selector-container .slt-title { display: block; border-bottom: #999 1px solid; color: #fff; text-align: center; font-size: 2.2vw; font-weight: 700; line-height: 1.142; padding-bottom: 2px;}
+.selector-container .slt-item { display: block; position: relative; color: #fff; font-weight: 700; padding: 1.3vw 1.2vw; text-align: left; font-size: 2.7vw; line-height: 1.142; cursor: pointer;}
 .selector-container .slt-item:hover,
-.selector-container .slt-item.on { color: #fff;}
+.selector-container .slt-item.on { color: #000; background-color: #fff;}
 .selector-container .slt-item.on:after {display: block; content: ""; position: absolute; right: 0.5rem; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); width: 1.25rem; height: 1.25rem; background: url(../img/baseline_check_white_24dp.png) center no-repeat; background-size: contain;}
 #secondaryControls .overlay-button { background-size: 5vw;}
 #volumeSlider { width: 20vw; height: 5vw; display: none; }
 #volumeControls.on #volumeSlider { display: block; }
 #volumeControls.on + .flowplayer-time-display { display: none; }
 #volumeSlider input[type="range"] { display: block; margin-top: 1.5rem; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%);}
-#playbackSpeedButton { position: relative; font-weight: 600; color: #fff; font-size: 4vw; line-height: 5vw; width:auto}
+#playbackSpeedButton { position: relative; font-weight: 600; color: #fff; font-size: 4vw; line-height: 1.1; width:auto}
 .selected-value{display: inline-block; padding:0 2px}
 .range-wrap { display: block; position: relative; width: -webkit-calc(100% - 10px); width: calc(100% - 10px); margin-right: 10px; height: 100%; }
 .rangeslide { display: block; position: absolute; width: 100%; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); -webkit-box-sizing: border-box; box-sizing: border-box; cursor: pointer; }
