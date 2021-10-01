@@ -929,3 +929,4 @@ i.icon_emoji_7{background-image: url('../img/btn_emoji_7.svg');}
 
 .videoWrap .thumb img{display: block;}
 section.content.fullscreen{height:100vh; overflow-y: hidden;}
+.loginForm .guideTxt.guideTxt2{margin-bottom: 5px;}
