@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
-    <title>mySUNI</title>
-    <link rel="stylesheet" href="../../css/swiper.min.css">
-    <link rel="stylesheet" href="../../css/style.css">
-    <script src="../../js/jquery-1.12.4.js"></script>
-    <script src="../../js/swiper.min.js"></script>
-    <script src="../../js/Chart.min.js"></script>
-    <script src="../../js/ui.js"></script>
-</head>
+@@include("head.html")
 
 <body class="pgLogin">
     <!-- .content -->
@@ -23,19 +10,20 @@
                 <form>
                     <h3>이메일</h3>
                     <div class="field login">
-                        <div class="inputBox h44 white login">
+                        <div class="inputBox h44 white">
                             <input type="text" class="inp white" placeholder="Email" />
                         </div>
-                        <div class="guideTxt mb20">메일로 로그인용 인증번호가 전송됩니다.</div>
-                        <button type="button" class="btn h44 orange">Send code</button>
+                        <div class="guideTxt mb20">메일로 비밀번호 재 설정용 인증번호가 전송됩니다.</div>
+                        <button type="button" class="btn h44 orange" disabled >Re-Send code</button>
                     </div>
                     <h3>인증번호</h3>
                     <div class="field login">
-                        <div class="inputBox h44 white time">
+                        <div class="inputBox h44 white">
                             <input type="text" class="inp white" placeholder="Code number" />
+                            <span class="reamin-time">남은 시간 5:00</span>
                         </div>
                         <div class="guideTxt mb20">메일에 전송된 인증 번호를 입력해 주세요.</div>
-                        <button type="button" class="btn h44 orange" disabled>Confirm</button>
+                        <button type="button" class="btn h44 orange">Confirm</button>
                     </div>
                 </form>
             </div>

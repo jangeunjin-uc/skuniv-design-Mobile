@@ -3848,4 +3848,5 @@ section.content.fullscreen{height:100vh; overflow-y: hidden;}
 .loginForm .guideTxt.guideTxt2{margin-bottom: 5px;}
 
 /* 로그인 : 이메일 인증 */
-.resetForm .guideTxt.mb20 {margin-bottom: 20px;}
+.resetForm .guideTxt.mb20 { margin-bottom: 20px; }
+.inputBox.h44 .reamin-time { position: absolute; top: 13px; right: 15px; color: #ff664d; font-size: 12px; }
