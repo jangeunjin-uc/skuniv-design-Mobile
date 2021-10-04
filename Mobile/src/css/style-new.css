@@ -930,3 +930,6 @@ i.icon_emoji_7{background-image: url('../img/btn_emoji_7.svg');}
 .videoWrap .thumb img{display: block;}
 section.content.fullscreen{height:100vh; overflow-y: hidden;}
 .loginForm .guideTxt.guideTxt2{margin-bottom: 5px;}
+
+/* 로그인 : 이메일 인증 */
+.resetForm .guideTxt.mb20 {margin-bottom: 20px;}
