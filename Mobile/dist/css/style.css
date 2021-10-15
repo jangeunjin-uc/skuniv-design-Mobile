@@ -3761,7 +3761,7 @@ i.icon_emoji_7{background-image: url('../img/btn_emoji_7.svg');}
 .langList li .inpD.checked .txt{font-weight: bold;}
 
 /* 다국어선택 */
-.globalSelect{margin-top: 15px;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-pack: start;-webkit-justify-content: flex-start;-ms-flex-pack: start;justify-content: flex-start;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;font-size: 12px;line-height: 1.414;}
+.globalSelect{margin-top: 25px;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-pack: start;-webkit-justify-content: flex-start;-ms-flex-pack: start;justify-content: flex-start;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;font-size: 12px;line-height: 1.414;}
 .globalSelect ul{display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex; -webkit-box-pack: start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; margin-left: 5px;}
 .globalSelect i {display: inline-block;}
 .globalSelect i img { vertical-align: -1px; display: inline-block; }
