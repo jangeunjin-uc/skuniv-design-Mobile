@@ -512,11 +512,12 @@ $(document).on('click', '.cmntArea.sty2 .btn.rep', function(){
 		$(this).addClass('active');
 		$('.cmntFloat.on').addClass('re');
 	}	
-	$('.cmntFloat textarea').focus();
+	$('.cmntFloat textarea').trigger('click');
+	
 })
 $(document).on('click', '.cmntFloat.re .btnClose', function(){
 	$('.cmntArea.sty2 .btn.rep').removeClass('active');
-	$('.cmntFloat').removeClass('re');
+	$('.cmntFloat').removeClass('re');	
 	$('.cmntFloat textarea').focus();
 })
 
