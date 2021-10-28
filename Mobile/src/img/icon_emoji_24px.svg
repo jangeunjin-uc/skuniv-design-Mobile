@@ -1,31 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>icon_emoji_48px</title>
-    <defs>
-        <filter x="-7.5%" y="-7.1%" width="115.0%" height="114.1%" filterUnits="objectBoundingBox" id="filter-1">
-            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="14" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0.298039216   0 0 0 0 0.298039216   0 0 0 0 0.298039216  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
-            <feMerge>
-                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
-                <feMergeNode in="SourceGraphic"></feMergeNode>
-            </feMerge>
-        </filter>
-    </defs>
     <g id="Mobile_Discussion" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="MO-LM-DI-50(학습중/공개의견/댓글영역활성화)_Discussion" transform="translate(-24.000000, -3725.000000)">
-            <g id="comment_활성화" filter="url(#filter-1)" transform="translate(0.000000, 3579.000000)">
-                <g id="btn-/-emoji" transform="translate(24.000000, 146.000000)">
-                    <g id="icon" transform="translate(8.000000, 8.000000)">
-                        <circle id="Oval" stroke="#4C4C4C" stroke-width="2" cx="15.6" cy="15.6" r="14.6"></circle>
-                        <g id="Group" transform="translate(8.466201, 18.885670)" stroke="#4C4C4C" stroke-linecap="round" stroke-width="2">
-                            <path d="M0,0 C1.2124543,2.73395783 3.95042122,4.68592987 7.13379883,4.68592987 C9.28770935,4.68592987 11.2377094,3.81288513 12.6492317,2.40136276 C13.3466598,1.70393468 13.9126287,0.919989554 14.3067814,0" id="Path"></path>
-                        </g>
-                        <circle id="Oval" fill="#4C4C4C" cx="10.374" cy="12.09" r="2.106"></circle>
-                        <circle id="Oval" fill="#4C4C4C" cx="20.826" cy="12.09" r="2.106"></circle>
-                    </g>
-                </g>
+        <g id="icon" transform="translate(8.000000, 8.000000)">
+            <circle id="Oval" stroke="#4C4C4C" stroke-width="2" cx="16" cy="16" r="15"></circle>
+            <g id="Group" transform="translate(8.683283, 19.369918)" stroke="#4C4C4C" stroke-linecap="round" stroke-width="2">
+                <path d="M0,0 C1.24354288,2.80405931 4.05171407,4.80608192 7.31671674,4.80608192 C9.52585574,4.80608192 11.5258557,3.91065142 12.973571,2.46293617 C13.6888819,1.74762531 14.2693628,0.943579029 14.673622,0" id="Path"></path>
             </g>
+            <circle id="Oval" fill="#4C4C4C" cx="10.64" cy="12.4" r="2.16"></circle>
+            <circle id="Oval" fill="#4C4C4C" cx="21.36" cy="12.4" r="2.16"></circle>
         </g>
     </g>
 </svg>

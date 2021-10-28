@@ -1,26 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>icon_emoji_24px</title>
-    <defs>
-        <filter x="-7.5%" y="-7.1%" width="115.0%" height="114.1%" filterUnits="objectBoundingBox" id="filter-1">
-            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="14" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0.298039216   0 0 0 0 0.298039216   0 0 0 0 0.298039216  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
-            <feMerge>
-                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
-                <feMergeNode in="SourceGraphic"></feMergeNode>
-            </feMerge>
-        </filter>
-    </defs>
     <g id="Mobile_Discussion" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="MO-LM-DI-50(학습중/공개의견/댓글영역활성화)_Discussion" transform="translate(-648.000000, -3725.000000)" fill="#A7ABBE">
-            <g id="comment_활성화" filter="url(#filter-1)" transform="translate(0.000000, 3579.000000)">
-                <g id="btn-/-submit" transform="translate(648.000000, 146.000000)">
-                    <g id="icon_emoji_24px" transform="translate(24.000000, 24.000000) rotate(-270.000000) translate(-24.000000, -24.000000) ">
-                        <path d="M40.3657402,9.02406264 C40.4695953,9.33136189 40.4695953,9.66359505 40.3657402,9.9708943 L30.563176,38.9759374 C30.298086,39.7603184 29.4384946,40.1842294 28.6432247,39.922769 C28.2994892,39.8097593 28.0080796,39.5791994 27.8216628,39.2727589 L21.1476578,28.3017976 L30.1635478,19.4100431 C30.479686,19.0982335 30.5148125,18.6142161 30.2689272,18.2641381 L30.1635478,18.1397351 C29.8474096,17.8279255 29.3566731,17.79328 29.0017352,18.0357986 L28.8756054,18.1397351 L19.8589992,27.0307832 L8.73715431,20.4495551 C8.01832826,20.0241647 7.7852388,19.1045727 8.21653443,18.3955888 C8.40295118,18.0891482 8.69436082,17.8585884 9.03809632,17.7455787 L38.4457889,8.07723097 C39.2410588,7.81577063 40.1006503,8.2396816 40.3657402,9.02406264 Z" id="Path" transform="translate(24.221816, 24.000000) rotate(-90.000000) translate(-24.221816, -24.000000) "></path>
-                    </g>
-                </g>
-            </g>
+        <g id="icon_submit_24px" fill="#A7ABBE" transform="translate(24.000000, 24.000000) rotate(-270.000000) translate(-24.000000, -24.000000) translate(-0.000000, 0.000000)">
+            <path d="M39.9231738,9.02406264 C40.0256087,9.33136189 40.0256087,9.66359505 39.9231738,9.9708943 L30.254649,38.9759374 C29.9931839,39.7603184 29.1453464,40.1842294 28.360951,39.922769 C28.0219157,39.8097593 27.7344908,39.5791994 27.5506231,39.2727589 L20.9678779,28.3017976 L29.8604853,19.4100431 C30.1723007,19.0982335 30.2069468,18.6142161 29.9644238,18.2641381 L29.8604853,18.1397351 C29.5486699,17.8279255 29.0646437,17.79328 28.7145593,18.0357986 L28.5901541,18.1397351 L19.6968402,27.0307832 L8.72707453,20.4495551 C8.01807764,20.0241647 7.78817542,19.1045727 8.21357356,18.3955888 C8.39744126,18.0891482 8.68486619,17.8585884 9.02390148,17.7455787 L38.0294758,8.07723097 C38.8138712,7.81577063 39.6617086,8.2396816 39.9231738,9.02406264 Z" id="Path" transform="translate(24.000000, 24.000000) rotate(-90.000000) translate(-24.000000, -24.000000) "></path>
         </g>
     </g>
 </svg>

@@ -751,7 +751,7 @@ button.emoji-btn.active i.ico.emoji-icon{background-image: url("../img/btn_emoji
     right:0;
     bottom:0;
 }
-.emoji-wrap.on{display: block;}
+.emoji-wrap.on{display: block; padding-bottom: 15px;}
 
 .emoji_popup_body{
     overflow-x: auto;
@@ -994,7 +994,7 @@ section.content.fullscreen{height:100vh; overflow-y: hidden;}
 .cmntFloat.up .inner .pic {width: 40px; height: 40px;}
 
 .buttons{display: none; width:100%; padding: 8px 13px; border-top: 1px solid #ddd}
-.cmntFloat.up .inner .field{padding-top:9px}
+.cmntFloat.up .inner .field textarea{padding-top:9px}
 .cmntFloat.up .inner .enterButton{display: none;}
 .cmntFloat.up .buttons{display: flex; justify-content: space-between;}
 
@@ -1002,6 +1002,7 @@ section.content.fullscreen{height:100vh; overflow-y: hidden;}
 .enterButton .ico.submit{display: block; width: 24px; height: 24px; background: #fff url('../img/icon_submit_24px.svg') 0 0/cover no-repeat;}
 .enterButton.active .ico.submit{background-image: url('../img/icon_submit_o_24px.svg');}
 .emojiButton .ico.emoji{display: block; width: 24px; height: 24px; background: #fff url('../img/icon_emoji_24px.svg') 0 0/cover no-repeat;}
+.emojiButton.active .ico.emoji{background-image: url('../img/icon_emoji_o_24px.svg');}
 
 /* talk 화면 */
 .taInfo {margin-top: 20px; font-size: 14px; color: #adadad;}

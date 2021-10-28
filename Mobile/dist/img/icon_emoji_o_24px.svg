@@ -3,12 +3,12 @@
     <title>icon_emoji_48px</title>
     <g id="Mobile_Discussion" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="icon" transform="translate(8.000000, 8.000000)">
-            <circle id="Oval" stroke="#4C4C4C" stroke-width="2" cx="16" cy="16" r="15"></circle>
-            <g id="Group" transform="translate(8.683283, 19.369918)" stroke="#4C4C4C" stroke-linecap="round" stroke-width="2">
+            <circle id="Oval" stroke="#3E8AE9" stroke-width="2" cx="16" cy="16" r="15"></circle>
+            <g id="Group" transform="translate(8.683283, 19.369918)" stroke="#3E8AE9" stroke-linecap="round" stroke-width="2">
                 <path d="M0,0 C1.24354288,2.80405931 4.05171407,4.80608192 7.31671674,4.80608192 C9.52585574,4.80608192 11.5258557,3.91065142 12.973571,2.46293617 C13.6888819,1.74762531 14.2693628,0.943579029 14.673622,0" id="Path"></path>
             </g>
-            <circle id="Oval" fill="#4C4C4C" cx="10.64" cy="12.4" r="2.16"></circle>
-            <circle id="Oval" fill="#4C4C4C" cx="21.36" cy="12.4" r="2.16"></circle>
+            <circle id="Oval" fill="#3E8AE9" cx="10.64" cy="12.4" r="2.16"></circle>
+            <circle id="Oval" fill="#3E8AE9" cx="21.36" cy="12.4" r="2.16"></circle>
         </g>
     </g>
 </svg>
