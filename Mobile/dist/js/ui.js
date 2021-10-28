@@ -117,28 +117,6 @@ $(function(){
 		$('.recBannerWrap .swiper-pagination').remove();
 	}
 	
-	//emoji
-	if($('.emoji_icons').find('.em_b').length > 1)
-	{
-		$('.emoji_box').each(function(){
-			var lw = width_li($(this));
-			$(this).css('width', lw +'px' );
-		})
-	}
-
-	function width_li(w){
-		var lw = (w.find('.em_b').length) % 4 ;
-		var sw = ((w.find('.em_b').length)/4)* 39;
-		console.log(sw);
-		if (lw > 0){
-			sw = (parseInt((w.find('.em_b').length)/4) + 1 )* 39;
-		}
-		return sw;
-	}
-	$('.emoji_list').on('click',function(){
-		$('.emoji_list').removeClass('active');
-		$(this).addClass('active');
-	})
 
 
 	// page top
@@ -475,6 +453,73 @@ $(document).on('click', '.globalSelect ul li > button', function(){
 		$(this).closest('li').addClass('active');
 	}
 });
+//emoji
+$(document).on('click','.emoji-btn', function (){
+	
+	if($('.emoji-btn').hasClass('active')){
+		$('.emoji-btn').removeClass('active')
+		$('.emoji-wrap').removeClass('on')
+	}else{
+		$('.emoji-btn').removeClass('active')
+		$('.emoji-wrap').removeClass('on')
+		$(this).addClass('active')
+		$('.emoji-wrap').addClass('on')
+	}
+
+});
+
+$(document).on('click','.emojiButton', function (){
+	
+	if($('.emojiButton').hasClass('active')){
+		$('.emojiButton').removeClass('active')
+		$('.emoji-wrap').removeClass('on')
+	}else{
+		$('.emojiButton').removeClass('active')
+		$('.emoji-wrap').removeClass('on')
+		$(this).addClass('active')
+		$('.emoji-wrap').addClass('on')
+	}
+});
+
+$(document).on('click','.emoji_belt > .emoji_list', function(){
+	var idx = $(this).index();	
+	var i = idx+1;
+	var l_go = $('.emoji_box').eq(idx).outerWidth() * i;
+
+	$('.emoji_list').removeClass('active');
+	$(this).addClass('active');
+	$('.emoji_popup_body').scrollLeft(l_go)
+});
+
+$(document).on('click', '.cmntFloat textarea', function(){
+	if($('.cmntFloat').hasClass('up')) return;
+	$('.cmntFloat').addClass('up');	
+	$(this).focus();
+});
+
+
+$(document).on('keyup', '.cmntFloat textarea', function(){
+	if($(this).val().length === 0) {$('.cmntFloat.up .enterButton').removeClass('active')};
+	if($(this).val().length > 1 && $('.cmntFloat.up .enterButton').hasClass('active')===false) {
+		$('.cmntFloat.up .enterButton').addClass('active');
+	};	
+});
+
+$(document).on('click', '.cmntArea.sty2 .btn.rep', function(){	
+	$(this).siblings('.edit').removeClass('active');
+	if($(this).hasClass('active')){
+	}else{
+		$(this).addClass('active');
+		$('.cmntFloat.on').addClass('re');
+	}	
+	$('.cmntFloat textarea').focus();
+})
+$(document).on('click', '.cmntFloat.re .btnClose', function(){
+	$('.cmntArea.sty2 .btn.rep').removeClass('active');
+	$('.cmntFloat').removeClass('re');
+	$('.cmntFloat textarea').focus();
+})
+
 
 
 // script yjm

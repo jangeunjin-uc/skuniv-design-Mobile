@@ -616,6 +616,7 @@ table.borderTable td:nth-child(2){text-align:left; padding-left:10px;}
 .cmntBtn .btn.rep{background-image: url(../img/icon_comment_reply_48_px.svg)}
 .cmntBtn .btn.del{background-image: url(../img/icon_comment_delete_48_px.svg)}
 .cmntBtn .btn.edit{background-image: url(../img/icon_comment_edit_48_px.svg)}
+.cmntBtn .btn.pin{background-image: url('../img/icon_comment_pin_48_px.svg');}
 .cmntBtn .btn.rep.active{background-image: url(../img/icon_comment_reply_active_48_px.svg)}
 .cmntBtn .btn.del.active{background-image: url(../img/icon_comment_delete_active_48_px.svg)}
 .cmntBtn .btn.edit.active{background-image: url(../img/icon_comment_edit_active_48_px.svg)}

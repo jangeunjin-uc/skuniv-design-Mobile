@@ -1568,6 +1568,7 @@ table.borderTable td:nth-child(2){text-align:left; padding-left:10px;}
 .cmntBtn .btn.rep{background-image: url(../img/icon_comment_reply_48_px.svg)}
 .cmntBtn .btn.del{background-image: url(../img/icon_comment_delete_48_px.svg)}
 .cmntBtn .btn.edit{background-image: url(../img/icon_comment_edit_48_px.svg)}
+.cmntBtn .btn.pin{background-image: url('../img/icon_comment_pin_48_px.svg');}
 .cmntBtn .btn.rep.active{background-image: url(../img/icon_comment_reply_active_48_px.svg)}
 .cmntBtn .btn.del.active{background-image: url(../img/icon_comment_delete_active_48_px.svg)}
 .cmntBtn .btn.edit.active{background-image: url(../img/icon_comment_edit_active_48_px.svg)}
@@ -2701,10 +2702,10 @@ i.ico.close_btn {
 .conditionBox{padding:25px 15px;font-size: 14px;}
 .conditionBox .tit_codition{padding-left:21px;font-weight:700;color:#222;background:url('../img/icon_task_condition_16_px.png') no-repeat left center;background-size:16px 16px;}
 .conditionBox .list_condition{margin-top:5px;margin-left:10px;}
-.conditionBox .list_condition li{margin:5px 0;color:#4c4c4c;}
+.conditionBox .list_condition li{padding:5px 0;color:#4c4c4c;}
 .conditionBox .list_condition li::before{content: "\2022";display: inline-block; width: 10px;margin-left: -10px;font-weight: bold;color: #4c4c4c;}
 .conditionBox .list_condition li em{color:#ff664d;}
-.conditionBox .txt{margin-top:10px;color:#4c4c4c;}
+.conditionBox .txt{margin-top:10px;color:#4c4c4c; letter-spacing: -0.3px;}
 
 .radioBox{padding:20px 15px;border-top:1px solid #ddd;background:#fff;}
 .radioBox .list_radio{display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;}
@@ -2717,9 +2718,10 @@ i.ico.close_btn {
 .myBox{margin-top:25px;padding:15px;background:#fff;border-radius:4px;border:1px solid #ddd;}
 .myBox .my{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;color:#888;}
 .myBox .my.reply{margin-top:6.5px;}
-.myBox .my .tit{display:inline-block;width:80px;padding-left:28px;text-align:left;font-weight:700;}
+.myBox .my .tit{display:inline-block;width:95px;padding-left:28px;text-align:left;font-weight:700;}
 .myBox .my.post .tit{background:url('../img/icon_24_px_mypost.png') no-repeat left center;background-size:18px 18px;}
-.myBox .my.reply .tit{background:url('../img/icon_24_px_comment.png') no-repeat left center;background-size:18px 18px;}
+.myBox .my.reply .tit{background:url('../img/icon_36_px_commentreply.svg') no-repeat left center;background-size:18px 18px;}
+.myBox .my.comment .tit{background:url('../img/icon_36_px_comment.svg') no-repeat left center;background-size:18px 18px;}
 .myBox .my .cnt{display:inline-block;width:120px;text-align:right;}
 .myBox .my .cnt strong{font-weight: 700;color:#222;}
 .myBox .my .cnt span{font-weight:500;color:#6c788f;}
@@ -3641,15 +3643,22 @@ i.ico.emoji-icon{
     background-position:center;
 }
 button.emoji-btn.active i.ico.emoji-icon{background-image: url("../img/btn_emoji_on.svg");}
-.floating.emoji-wrap{
-    position:absolute;
-    background:#fff;    
-    bottom:0;
-    left:0;
-    right:0;
+.emoji-wrap{
+    width:100%;
+    background:#fff;        
     z-index:10;
     border-top: 1px solid #d6deed;
+    display: none;
 }
+
+.floating.emoji-wrap{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+}
+.emoji-wrap.on{display: block;}
+
 .emoji_popup_body{
     overflow-x: auto;
     overflow-y:hidden;
@@ -3728,6 +3737,7 @@ i.icon_emoji_4{background-image: url('../img/btn_emoji_4.svg');}
 i.icon_emoji_5{background-image: url('../img/btn_emoji_5.svg');}
 i.icon_emoji_6{background-image: url('../img/btn_emoji_6.svg');}
 i.icon_emoji_7{background-image: url('../img/btn_emoji_7.svg');}
+i.icon_emoji_8{background-image: url('../img/btn_emoji_8.svg');}
 
 .emoji_list.active i.icon_emoji_1{background-image: url('../img/btn_emoji_1_on.svg');}
 .emoji_list.active i.icon_emoji_2{background-image: url('../img/btn_emoji_2_on.svg');}
@@ -3736,6 +3746,12 @@ i.icon_emoji_7{background-image: url('../img/btn_emoji_7.svg');}
 .emoji_list.active i.icon_emoji_5{background-image: url('../img/btn_emoji_5_on.svg');}
 .emoji_list.active i.icon_emoji_6{background-image: url('../img/btn_emoji_6_on.svg');}
 .emoji_list.active i.icon_emoji_7{background-image: url('../img/btn_emoji_7_on.svg');}
+.emoji_list.active i.icon_emoji_8{background-image: url('../img/btn_emoji_8_on.svg');}
+
+
+.emoji_box{width: 312px;}
+.emoji_box#emoji02{width:195px}
+.emoji_box#emoji04{width:273px}
 
 /* 비밀번호 */
 .logo.w90{width: 90px; height: 39px}
@@ -3850,3 +3866,63 @@ section.content.fullscreen{height:100vh; overflow-y: hidden;}
 /* 로그인 : 이메일 인증 */
 .resetForm .guideTxt.mb20 { margin-bottom: 20px; }
 .inputBox.h44 .reamin-time { position: absolute; top: 13px; right: 15px; color: #ff664d; font-size: 12px; }
+
+/* mo-lm-discussion */
+.tit_codition.discussion{background-image: url('../img/icon_discuss_24_px.svg');}
+.tit_codition.link{background-image: url('../img/icon_url.svg');}
+.tit_codition.file{background-image: url('../img/icon_file.svg');}
+.boardComment.discussion{border-top:0}
+.boardComment.discussion .cmntEnter{margin:0; padding-bottom: 25px}
+.conditionBox + .conditionBox{padding-top:0}
+.conditionBox .linkWrap .link { display: block; margin-top: 15px; background: url(../img/icon_download_blue_16_px.svg) 100% 0 no-repeat; background-size: 16px 16px;}
+.conditionBox .linkWrap .link .file{ display: block; max-width: 90%; font-size: 12px; line-height: 16px; color: #0e73db; text-decoration: underline; font-weight: 700;}
+.urlList{margin: 10px 0 0;}
+.urlList a{display: inline-block; padding:5px 0; width:100%; color:#0e73db; font-size: 12px; font-weight: bold; text-decoration: underline; line-height: 1.5; overflow:hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap;}
+
+.radioBox.sty2{background-color:#fff; margin: 0 -15px; padding: 20px 15px; border-top: 1px solid #c8d0e0; border-bottom: 1px solid #c8d0e0;}
+.cnt_p{padding-top:20px; color:#6c788f; font-size: 12px; font-weight: normal;}
+.cnt_p strong{font-weight: bold;}
+
+/* 댓글 변경 */
+.cmntArea.sty2 .info{padding-top:0}
+.cmntArea.sty2 .info .name{display: block;}
+.cmntArea.sty2 .name.pin{padding-left:22px;background:#fff url('../img/icon_36_px_list_pin_red.svg') 0 0/18px 18px no-repeat;}
+.cmntArea.sty2 .name.secret{padding-left:22px;background:#fff url('../img/icon_community_secret.svg') 0 0/18px 18px no-repeat;}
+.cmntArea.sty2 .date{display: block; margin:0; font-size: 12px; line-height: 1.67;}
+.cmntArea.sty2 .date::before{display: none;}
+
+.cmntArea.sty2 .reply .info{padding:0}
+.cmntArea.sty2 .reply .date{line-height: 1;}
+
+/* 댓글입력창 floating ver */
+.cmntFloat{width:100%; background: #fff;}
+.cmntFloat.on{position: fixed; left:0; bottom:0;-webkit-box-shadow:0px 0px 4px rgb(0 0 0 / 20%);box-shadow:0px 0px 4px rgb(0 0 0 / 20%);z-index:3;}
+
+.cmntFloat .reply{display: none; position:relative; padding:7px 15px; width:100%; background-color: #ddd;}
+.cmntFloat .reply p{color:#666; font-size: 12px; line-height: 22px;}
+.cmntFloat .reply .btnClose{width:16px; height:16px;}
+.cmntFloat .reply .btnClose .ico.close{display: block; width: 16px; height:16px; background: transparent url('../img/icon_close_w_40_px.svg') no-repeat;}
+.cmntFloat.re .reply{display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between;}
+
+.cmntFloat .inner{width:100%; background-color: #fff; padding: 8px 12px 8px 15px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center;}
+.cmntFloat .inner .pic{width:34px; height: 34px;background-color: #fff; overflow:hidden; border-radius: 100%;}
+.cmntFloat .inner .pic img{display: block; width:100%; height: 100%;}
+.cmntFloat .inner .field{margin-left:10px; padding-top:6px; width:-webkit-calc(100% - 68px); width:calc(100% - 68px); max-height: 40px; overflow:hidden;}
+.cmntFloat .field textarea{display: inline-block; width:100%; color:#222; font-size:14px; border:0; outline:none;}
+.cmntFloat.up .inner .pic {width: 40px; height: 40px;}
+
+.buttons{display: none; width:100%; padding: 8px 13px; border-top: 1px solid #ddd}
+.cmntFloat.up .inner .enterButton{display: none;}
+.cmntFloat.up .buttons{display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between;}
+
+.enterButton{display: inline-block;}
+.enterButton .ico.submit{display: block; width: 24px; height: 24px; background: #fff url('../img/icon_submit_24px.svg') 0 0/cover no-repeat;}
+.enterButton.active .ico.submit{background-image: url('../img/icon_submit_o_24px.svg');}
+.emojiButton .ico.emoji{display: block; width: 24px; height: 24px; background: #fff url('../img/icon_emoji_24px.svg') 0 0/cover no-repeat;}
+
+/* talk 화면 */
+.taInfo {margin-top: 20px; font-size: 14px; color: #adadad;}
+.topView.talk {min-height: auto; padding-bottom: 24px;}
+.taInfo .opCnt {color: #fff;}
+.taInfo .taDate {display: inline-block; position: relative; padding-left: 10.5px; color:#fff;}
+.taInfo .taDate:after{content:''; display:inline-block; width: 1px; height: 8px; background-color:#969dac; position : absolute; top:6.5px; left: 5px;}
