@@ -982,8 +982,8 @@ section.content.fullscreen{height:100vh; overflow-y: hidden;}
 
 .cmntFloat .reply{display: none; position:relative; padding:7px 15px; width:100%; background-color: #ddd;}
 .cmntFloat .reply p{color:#666; font-size: 12px; line-height: 22px;}
-.cmntFloat .reply .btnClose{width:16px; height:16px;}
-.cmntFloat .reply .btnClose .ico.close{display: block; width: 16px; height:16px; background: transparent url('../img/icon_close_w_40_px.svg') no-repeat;}
+.cmntFloat .reply .btnClose{display: block; width:22px; height:22px;}
+.cmntFloat .reply .btnClose .ico.close{display: block; margin-left:6px; width: 16px; height:16px; background: transparent url('../img/icon_close_b_28_px.svg')-3px -3px/22px no-repeat;}
 .cmntFloat.re .reply{display: flex; justify-content: space-between;}
 
 .cmntFloat .inner{width:100%; background-color: #fff; padding: 8px 12px 8px 15px; display: flex; align-items: center;}
