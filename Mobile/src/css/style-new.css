@@ -790,7 +790,7 @@ button.emoji-btn.active i.ico.emoji-icon{background-image: url("../img/btn_emoji
 .emoji_belt{height: 44px; border-top: 1px solid #d6deed;}
 .emoji_list{
     display: inline-block;
-    width: 44px;
+    width: 40px;
     height:44px;
     position:relative;
 }

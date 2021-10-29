@@ -487,14 +487,27 @@ $(document).on('click','.emojiButton', function (){
 });
 
 $(document).on('click','.emoji_belt > .emoji_list', function(){
-	var idx = $(this).index();	
-	var i = idx+1;
-	var l_go = $('.emoji_box').eq(idx).outerWidth() * i;
-
+	var idx = $(this).index();		
+	var i = idx - 1;
 	$('.emoji_list').removeClass('active');
-	$(this).addClass('active');
-	$('.emoji_popup_body').scrollLeft(l_go)
+	$(this).addClass('active');	
+	getWidth(i);
+
 });
+
+function getWidth(idx) {
+	var a = 0;
+	if (idx < 0 ) {idx = 0;} 
+
+	for( var i = 0; i <= idx; i++ ){
+		var wd = $('.emoji_box').eq(i).outerWidth() + 15;
+		a = a + wd;		
+	}		
+	
+	$('.emoji_popup_body').scrollLeft(a);
+}
+
+
 
 
 $(document).on('click', '.cmntFloat textarea', function(){
