@@ -502,8 +502,14 @@ $(document).on('keyup', '.cmntFloat textarea', function(){
 	if($(this).val().length === 0) {$('.cmntFloat.up .enterButton').removeClass('active')};
 	if($(this).val().length > 1 && $('.cmntFloat.up .enterButton').hasClass('active')===false) {
 		$('.cmntFloat.up .enterButton').addClass('active');
-	};	
+	};
+
+	//text 높이 조정
+	$(this).css('height', 'auto');	
+	var el_h = $(this).prop('scrollHeight');
+	$(this).css('height',el_h);
 });
+
 
 $(document).on('click', '.cmntArea.sty2 .btn.rep', function(){	
 	$(this).siblings('.edit').removeClass('active');

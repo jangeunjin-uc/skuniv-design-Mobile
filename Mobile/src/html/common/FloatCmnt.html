@@ -1,7 +1,10 @@
-@@include('head.html');
+@@include('head.html')
+<style>
+    h3{padding:30px 10px 15px}
+</style>
 <body>    
     <!-- on 클래스를 넣어야 float bottom됩니다. -->
-    <h3>댓글 플로팅 영역 ver.0 !!!! click전</h3>
+    <h3>1. 댓글 bottom 플로팅 영역 ver.0 !!!! click전</h3>    
     <div class="cmntFloat">
         <div class="reply">
             <p>홍길동님에게 답글 작성하기</p>
@@ -33,7 +36,7 @@
         @@include('emoji_popup.html')
     </div>
     
-    <h3>댓글 플로팅 영역 ver.0 !!!! click 후</h3>
+    <h3>2. 댓글 bottom 플로팅 영역 ver.0 !!!! click 후</h3>
     <div class="cmntFloat up">
         <div class="reply">
             <p>홍길동님에게 답글 작성하기</p>
@@ -65,8 +68,40 @@
         @@include('emoji_popup.html')
     </div>
     
+    <h3>2-1. 댓글 bottom 플로팅 영역 ver.0 !!!! click 후 submit 활성화</h3>
+    <div class="cmntFloat up">
+        <div class="reply">
+            <p>홍길동님에게 답글 작성하기</p>
+            <button type="button" class="btnClose">
+                <i class="ico close"></i>
+            </button>
+        </div>
+        <div class="inner">
+            <span class="pic"><img src="../../img/temp/profile_80_px.png" alt=""></span>
+            <div class="field">                    
+                <textarea placeholder="여기에 의견을 남겨주세요.">가나다라마바사아자차카타파하 최대 3줄로입니다. 가나다라마바사아자차카타파하 최대 3줄로입니다. 가나다라마바사아자차카타파하 최대 3줄로입니다.</textarea>
+            </div>        
+            <button type="button" class="enterButton">
+                <i class="ico submit"></i>
+            </button>        
+        </div>
+        <div class="buttons">
+            <div class="leftButtons">
+                <button class="emojiButton" type="button">
+                    <i class="ico emoji"></i>
+                </button>                
+            </div>
+            <div class="rightButtons">
+                <button type="button" class="enterButton">
+                    <i class="ico submit"></i>
+                </button>
+            </div>
+        </div>
+        @@include('emoji_popup.html')
+    </div>
+    
         
-    <h3>대댓글 플로팅 영역</h3>
+    <h3>3. 대댓글 bottom 플로팅 영역</h3>
     <div class="cmntFloat up re">
         <div class="reply">
             <p>홍길동님에게 답글 작성하기</p>
