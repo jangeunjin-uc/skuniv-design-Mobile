@@ -620,7 +620,7 @@ table.borderTable td:nth-child(2){text-align:left; padding-left:10px;}
 .cmntBtn .btn.rep.active{background-image: url(../img/icon_comment_reply_active_48_px.svg)}
 .cmntBtn .btn.del.active{background-image: url(../img/icon_comment_delete_active_48_px.svg)}
 .cmntBtn .btn.edit.active{background-image: url(../img/icon_comment_edit_active_48_px.svg)}
-.cmntArea .moreReply{display: block; padding-right: 17px; font-size: 12px; line-height: 18px; color: #666; background: url(../img/icon_comment_open_28_px.svg) no-repeat right top 3px; background-size: 14px; text-align: left}
+.cmntArea .moreReply{white-space: nowrap; display: block; padding-right: 17px; font-size: 12px; line-height: 18px; color: #666; background: url(../img/icon_comment_open_28_px.svg) no-repeat right top 3px; background-size: 14px; text-align: left}
 .cmntArea .moreReply.opened{background-image: url(../img/icon_comment_close_selected_28_px.svg)}
 .cmntArea .moreReply em{display: inline-block; font-size: 12px; font-weight: 700; color: #ff664d; vertical-align: top}
 .cmntArea .moreRead{font-size: 12px; color: #0e73db; vertical-align: top}
@@ -640,7 +640,7 @@ table.borderTable td:nth-child(2){text-align:left; padding-left:10px;}
 .cmntArea .fit + .img{margin-top: 16px}
 /* 대댓 보기 버튼 */
 .cmntArea .moreReplyArea {padding-bottom:20px; overflow:hidden}
-.cmntArea .moreReplyArea .moreRead {position: absolute; right: 0; margin-top:15px}
+.cmntArea .moreReplyArea .moreRead {position: absolute; right: 0; margin-top:15px; white-space: nowrap;}
 .cmntArea .cmntText + .moreReplyArea .moreRead:only-child{position: static; float: right}
 .cmntArea .cmntEnter + .moreReplyArea *{display: none}
 /* 대댓 */

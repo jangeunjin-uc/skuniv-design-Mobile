@@ -1572,7 +1572,7 @@ table.borderTable td:nth-child(2){text-align:left; padding-left:10px;}
 .cmntBtn .btn.rep.active{background-image: url(../img/icon_comment_reply_active_48_px.svg)}
 .cmntBtn .btn.del.active{background-image: url(../img/icon_comment_delete_active_48_px.svg)}
 .cmntBtn .btn.edit.active{background-image: url(../img/icon_comment_edit_active_48_px.svg)}
-.cmntArea .moreReply{display: block; padding-right: 17px; font-size: 12px; line-height: 18px; color: #666; background: url(../img/icon_comment_open_28_px.svg) no-repeat right top 3px; background-size: 14px; text-align: left}
+.cmntArea .moreReply{white-space: nowrap; display: block; padding-right: 17px; font-size: 12px; line-height: 18px; color: #666; background: url(../img/icon_comment_open_28_px.svg) no-repeat right top 3px; background-size: 14px; text-align: left}
 .cmntArea .moreReply.opened{background-image: url(../img/icon_comment_close_selected_28_px.svg)}
 .cmntArea .moreReply em{display: inline-block; font-size: 12px; font-weight: 700; color: #ff664d; vertical-align: top}
 .cmntArea .moreRead{font-size: 12px; color: #0e73db; vertical-align: top}
@@ -1592,7 +1592,7 @@ table.borderTable td:nth-child(2){text-align:left; padding-left:10px;}
 .cmntArea .fit + .img{margin-top: 16px}
 /* 대댓 보기 버튼 */
 .cmntArea .moreReplyArea {padding-bottom:20px; overflow:hidden}
-.cmntArea .moreReplyArea .moreRead {position: absolute; right: 0; margin-top:15px}
+.cmntArea .moreReplyArea .moreRead {position: absolute; right: 0; margin-top:15px; white-space: nowrap;}
 .cmntArea .cmntText + .moreReplyArea .moreRead:only-child{position: static; float: right}
 .cmntArea .cmntEnter + .moreReplyArea *{display: none}
 /* 대댓 */
@@ -3912,9 +3912,9 @@ section.content.fullscreen{height:100vh; overflow-y: hidden;}
 .cmntFloat .field textarea{display: inline-block; vertical-align: top; width:100%; color:#222; font-size:14px; border:0; outline:none;}
 .cmntFloat.up .field textarea{max-height: 60px; }
 .cmntFloat.up .inner .pic {width: 40px; height: 40px;}
-.cmntFloat.up .inner .field{max-height: 90px;}
+.cmntFloat.up .inner .field{max-height: 90px; width:100%}
 
-.buttons{display: none; width:100%; padding: 8px 13px; border-top: 1px solid #ddd}
+.buttons{display: none; width:100%; padding: 8px 13px 15px; border-top: 1px solid #ddd}
 .cmntFloat.up .inner .enterButton{display: none;}
 .cmntFloat.up .buttons{display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between;}
 

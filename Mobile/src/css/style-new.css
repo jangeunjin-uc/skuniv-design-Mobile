@@ -994,9 +994,9 @@ section.content.fullscreen{height:100vh; overflow-y: hidden;}
 .cmntFloat .field textarea{display: inline-block; vertical-align: top; width:100%; color:#222; font-size:14px; border:0; outline:none;}
 .cmntFloat.up .field textarea{max-height: 60px; }
 .cmntFloat.up .inner .pic {width: 40px; height: 40px;}
-.cmntFloat.up .inner .field{max-height: 90px;}
+.cmntFloat.up .inner .field{max-height: 90px; width:100%}
 
-.buttons{display: none; width:100%; padding: 8px 13px; border-top: 1px solid #ddd}
+.buttons{display: none; width:100%; padding: 8px 13px 15px; border-top: 1px solid #ddd}
 .cmntFloat.up .inner .enterButton{display: none;}
 .cmntFloat.up .buttons{display: flex; justify-content: space-between;}
 
