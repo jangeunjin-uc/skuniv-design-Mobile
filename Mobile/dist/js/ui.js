@@ -500,7 +500,7 @@ function getWidth(idx) {
 	if (idx < 0 ) {idx = 0;} 
 
 	for( var i = 0; i <= idx; i++ ){
-		var wd = $('.emoji_box').eq(i).outerWidth() + 15;
+		var wd = $('.emoji_box').eq(i).outerWidth() + 9;
 		a = a + wd;		
 	}		
 	
