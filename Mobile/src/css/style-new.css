@@ -756,6 +756,7 @@ button.emoji-btn.active i.ico.emoji-icon{background-image: url("../img/btn_emoji
 .emoji_popup_body{
     overflow-x: auto;
     overflow-y:hidden;
+    -webkit-overflow-scrolling: touch;
 }
 .emoji_popup_body .emoji_inner{
     padding: 16px 0 19px 15px;
@@ -979,7 +980,7 @@ section.content.fullscreen{height:100vh; overflow-y: hidden;}
 
 /* 댓글입력창 floating ver */
 .cmntFloat{width:100%; background: #fff;}
-.cmntFloat.on{position: fixed; left:0; bottom:0;box-shadow:0px 0px 4px rgb(0 0 0 / 20%);z-index:3;}
+.cmntFloat.on{position: fixed; left:0; bottom:0;box-shadow:0px 0px 4px rgb(0 0 0 / 20%);z-index:10; -webkit-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); padding-bottom: 15px;}
 
 .cmntFloat .reply{display: none; position:relative; padding:7px 15px; width:100%; background-color: #ddd;}
 .cmntFloat .reply p{color:#666; font-size: 12px; line-height: 22px;}
@@ -994,7 +995,7 @@ section.content.fullscreen{height:100vh; overflow-y: hidden;}
 .cmntFloat .field textarea{display: inline-block; vertical-align: top; width:100%; color:#222; font-size:14px; border:0; outline:none;}
 .cmntFloat.up .field textarea{max-height: 60px; }
 .cmntFloat.up .inner .pic {width: 40px; height: 40px;}
-.cmntFloat.up .inner .field{max-height: 90px; width:100%}
+.cmntFloat.up .inner .field{max-height: 90px; width:calc(100% - 40px)}
 
 .buttons{display: none; width:100%; padding: 8px 13px 15px; border-top: 1px solid #ddd}
 .cmntFloat.up .inner .enterButton{display: none;}

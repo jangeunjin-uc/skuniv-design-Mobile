@@ -468,6 +468,11 @@ $(document).on('click','.emoji-btn', function (){
 
 });
 
+
+$('.emoji_popup_body').scroll(function(){
+	alert('2222');
+})
+
 $(document).on('click','.emojiButton', function (){
 	
 	if($('.emojiButton').hasClass('active')){
@@ -491,12 +496,13 @@ $(document).on('click','.emoji_belt > .emoji_list', function(){
 	$('.emoji_popup_body').scrollLeft(l_go)
 });
 
+
 $(document).on('click', '.cmntFloat textarea', function(){
 	if($('.cmntFloat').hasClass('up')) return;
 	$('.cmntFloat').addClass('up');	
+	$(this).attr({inputMode : 'text'});
 	$(this).focus();
 });
-
 
 $(document).on('keyup', '.cmntFloat textarea', function(){
 	if($(this).val().length === 0) {$('.cmntFloat.up .enterButton').removeClass('active')};
@@ -528,6 +534,10 @@ $(document).on('click', '.cmntFloat.re .btnClose', function(){
 	$('.cmntFloat').removeClass('re');	
 	$('.cmntFloat textarea').focus();
 })
+
+$('.cmntFloat.up').bind('blur',function(){
+	$(this).find('textarea').attr({inputMode : 'none'});
+});
 
 
 
