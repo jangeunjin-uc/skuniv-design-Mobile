@@ -468,13 +468,7 @@ $(document).on('click','.emoji-btn', function (){
 
 });
 
-
-$('.emoji_popup_body').scroll(function(){
-	alert('2222');
-})
-
 $(document).on('click','.emojiButton', function (){
-	
 	if($('.emojiButton').hasClass('active')){
 		$('.emojiButton').removeClass('active')
 		$('.emoji-wrap').removeClass('on')
@@ -491,24 +485,52 @@ $(document).on('click','.emoji_belt > .emoji_list', function(){
 	var i = idx - 1;
 	$('.emoji_list').removeClass('active');
 	$(this).addClass('active');	
-	getWidth(i);
 
+	var go_i = getWidth(i);	
+	$('.emoji_popup_body').scrollLeft(go_i);
 });
 
 function getWidth(idx) {
 	var a = 0;
-	if (idx < 0 ) {idx = 0;} 
-
+	if (idx < 0 ) return a = 0;
 	for( var i = 0; i <= idx; i++ ){
 		var wd = $('.emoji_box').eq(i).outerWidth() + 9;
 		a = a + wd;		
-	}		
-	
-	$('.emoji_popup_body').scrollLeft(a);
+	}
+	return a;
+}
+function emoji_beltClick(i){
+	$('.emoji_belt > .emoji_list').removeClass('active');
+	$('.emoji_belt > .emoji_list').eq(i).addClass('active');
 }
 
+function scrollEmoji(e){
+	e.preventDefault();
+	var a = $(this).scrollLeft(),
+	b = 0,
+	e_1 = $('#emoji01').outerWidth(), 
+	e_2 = getWidth(1) - 9, 
+	e_3 = getWidth(2) - 9, 
+	e_4 = getWidth(3) - 9, 
+	e_5 = getWidth(4) - 9,
+	e_6 = getWidth(5) - 9,
+	e_7 = $('.emoji_inner').outerWidth() - $(this).outerWidth() - 9;
+	
+	
+	if(a <= e_1){ b= 0; 
+	}else if(e_1 < a && a <= e_2 ){b = 1; 
+	}else if(e_2 < a && a <= e_3 ){b = 2; 
+	}else if(e_3 < a && a <= e_4 ){b = 3;
+	}else if(e_4 < a && a <= e_5 ){b = 4;
+	}else if(e_5 < a && a <= e_6 ){b = 5;
+	}else if(e_6 < a && a <= e_7 ){b = 6;
+	}else if(e_7 <= a ){b = 7;
+	}
 
+	emoji_beltClick(b);
+};
 
+$(document).on('touchmove mousemove','.cmntFloat.up .emoji_popup_body',scrollEmoji);
 
 $(document).on('click', '.cmntFloat textarea', function(){
 	if($('.cmntFloat').hasClass('up')) return;
@@ -551,3 +573,4 @@ $(document).on('click', '.cmntFloat.re .btnClose', function(){
 $('.cmntFloat.up').bind('blur',function(){
 	$(this).find('textarea').attr({inputMode : 'none'});
 });
+

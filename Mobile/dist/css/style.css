@@ -3660,7 +3660,7 @@ button.emoji-btn.active i.ico.emoji-icon{background-image: url("../img/btn_emoji
 .emoji-wrap.on{display: block; padding-bottom: 15px;}
 
 .emoji_popup_body{
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y:hidden;
     -webkit-overflow-scrolling: touch;
 }
