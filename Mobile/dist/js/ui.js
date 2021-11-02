@@ -505,7 +505,7 @@ function emoji_beltClick(i){
 }
 
 function scrollEmoji(e){
-	e.preventDefault();
+	
 	var a = $(this).scrollLeft(),
 	b = 0,
 	e_1 = $('#emoji01').outerWidth(), 
@@ -515,7 +515,6 @@ function scrollEmoji(e){
 	e_5 = getWidth(4) - 9,
 	e_6 = getWidth(5) - 9,
 	e_7 = $('.emoji_inner').outerWidth() - $(this).outerWidth() - 9;
-	
 	
 	if(a <= e_1){ b= 0; 
 	}else if(e_1 < a && a <= e_2 ){b = 1; 
@@ -530,7 +529,8 @@ function scrollEmoji(e){
 	emoji_beltClick(b);
 };
 
-$(document).on('touchmove mousemove','.cmntFloat.up .emoji_popup_body',scrollEmoji);
+$(document).on('mousemove scroll wheel touchmove','.cmntFloat.up .emoji_popup_body',scrollEmoji);
+
 
 $(document).on('click', '.cmntFloat textarea', function(){
 	if($('.cmntFloat').hasClass('up')) return;
