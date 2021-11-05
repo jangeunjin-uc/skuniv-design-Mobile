@@ -570,7 +570,7 @@ $(document).on('click', '.cmntFloat.re .btnClose', function(){
 	$('.cmntFloat textarea').focus();
 })
 
-$('.cmntFloat.up').bind('blur',function(){
+$('.cmntFloat.up').on('blur',function(){
 	$(this).find('textarea').attr({inputMode : 'none'});
 });
 
