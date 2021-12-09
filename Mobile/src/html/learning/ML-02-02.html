@@ -96,7 +96,8 @@
 	<!-- comment -->
 	<div class="tabCont">
 
-		<div class="registWrap">
+		<!-- 2021-12 cube 내 별점영역 삭제 -->
+<!-- 		<div class="registWrap">
 			<div class="box">
 				<p>Total</p>
 				<div class="rateArea">
@@ -119,22 +120,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
-		<div class="cmntEnter">
-			<div class="inner">
-				<div class="field">
-					<textarea class="autoH" placeholder="Writing..."></textarea>
-				</div>
-				<div class="enter">
-					<div class="area">
-						<span class="byte"><em class="left">0</em>/<em class="total">500</em></span>
-					</div>
-					<button type="button" class="btn">Submit</button>
-				</div>
-			</div>
-		</div>
-
+		
 		<div class="sortArea">
 			<span class="inpD">
 				<label>
@@ -152,8 +140,7 @@
 			</span>
 		</div>
 		
-		<ul class="cmntArea">
-
+		<ul class="cmntArea sty2">
 			<li>
 				<div class="box">
 					<span class="pic"><img src="../../img/temp/profile_80_px.png" alt=""></span>
@@ -167,9 +154,11 @@
 						<button type="button" class="btn rep"></button>
 					</div>
 					<div class="cmntText flowText">
-						<p class="txtCont ellipsis2">이거 진짜 안들으면 후회합니다. 1줄일때 560px</p>
+						<p class="txtCont ellipsis2">성공적인 AI 적용을 위한 Andrew Ng의 3가지 조언 중 굿 데이터 확보가 가장 공감 간다.
+							AI가 결국 인간의 뇌가 발달되고 성장해 가는 과정과 같다고 생각한다면, 풀고자 하는 문제에 대해 얼마나 정확하게 다가갈 수 있는 데이터를 확보하였나, 그리고 얼마나 오류를 발생할 수 있는 좋은 데이터를 확보하였나가 AI를 발전시키는데 중요한 자양분이 될 것이라 판단된다.</p>
 					</div>
 					<div class="moreReplyArea">
+						<button type="button" class="moreRead">+ View more</button>
 						<button type="button" class="moreReply">View replies <em>3</em><i class="ico"></i></button>
 					</div>
 				</div>
@@ -181,7 +170,7 @@
 								<div class="info">
 									<b class="name">박열정</b>
 									<span class="date">2020.01.06</span>
-								</div>
+								</div>			
 								<div class="cmntText">
 									<p class="txtCont"><b>@김유니</b>난이도 높은 과제나 실습으로 실력을 단기간에 끌어올리고 싶다면 강사님이 운영하는 POCU 교육 사이트에 등록을 해보길 바랍니다. Git과 Slack으로 다른 교육 서비스와 차별화된 온라인 클래스를 경험할 수 있습니다.</p>
 								</div>
@@ -219,12 +208,12 @@
 					<div class="cmntBtn">
 						<button type="button" class="btn rep"></button>
 					</div>
-					<div class="cmntText flowText">
-						<p class="txtCont ellipsis2">두줄 이상 코멘트 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et soluta tempora voluptas quos vitae veniam, repellat a consequuntur iure velit.</p>
+					<div class="cmntText flowText fit">
+						<p class="txtCont ellipsis2">이거 진짜 안들으면 후회합니다. 최고의 강사가 귀에 쏙쏙 들어오게 강의하는것 같아요. 토론에서 말줄임이 없이 나옵니다. 새로운 버전에서는 viewMore버튼이 없습니다. </p>
 					</div>
-					<div class="moreReplyArea">
+					<div class="moreReplyArea">                      
 						<button type="button" class="moreRead">+ View more</button>
-						<button type="button" class="moreReply opened">Hide replies <em>3</em><i class="ico"></i></button>
+						<button type="button" class="moreReply">View replies <em>3</em><i class="ico"></i></button>
 					</div>
 				</div>
 				<div class="reply on">
@@ -235,7 +224,7 @@
 								<div class="info">
 									<b class="name">차민정</b>
 									<span class="date">2020.01.06</span>
-								</div>
+								</div>			
 								<div class="cmntText">
 									<p class="txtCont"><b>@차은우</b>난이도 높은 과제나 실습으로 실력을 단기간에 끌어올리고 싶다면 강사님이 운영하는 POCU 교육 사이트에 등록을 해보길 바랍니다. Git과 Slack으로 다른 교육 서비스와 차별화된 온라인 클래스를 경험할 수 있습니다.</p>
 								</div>
@@ -251,6 +240,7 @@
 								<div class="cmntBtn">
 									<button type="button" class="btn edit"></button>
 									<button type="button" class="btn del"></button>
+									<button type="button" class="btn rep"></button>
 								</div>
 								<div class="cmntText">
 									<p class="txtCont"><b>@차은우</b>좋은 내용 감사합니다.</p>
@@ -281,15 +271,14 @@
 						<span>(<em>20</em>/<em>38</em>)</span>
 					</button>
 				</div>
-			</li>
-	
+			</li>    
+			<!-- 삭제된 댓글 -->
 			<li class="deleted">
 				<div class="box">
 					<span class="pic"></span>
 					<div class="info">삭제된 댓글입니다.</div>
 				</div>
 			</li>
-
 			<li class="deleted">
 				<div class="box">
 					<span class="pic"></span>
@@ -305,26 +294,29 @@
 								<span class="pic"><img src="../../img/temp/profile_80_px.png" alt=""></span>
 								<div class="info">
 									<b class="name">차민정</b>
+									<span class="metadata"></span>
 									<span class="date">2020.01.06</span>
 								</div>
 								<div class="cmntText">
-									<p class="txtCont"><b>@차은우</b>난이도 높은 과제나 실습으로 실력을 단기간에 끌어올리고 싶다면 강사님이 운영하는 POCU 교육 사이트에 등록을 해보길 바랍니다. Git과 Slack으로 다른 교육 서비스와 차별화된 온라인 클래스를 경험할 수 있습니다.</p>
+									<p class="txtCont"><b>@차은우</b>난이도 높은 과제나 실습으로 실력을 단기간에 끌어올리고 싶다면 강사님이 운영하는 POCU 교육 사이트에 등록을 해보길 바랍니다. Git과 Slack으로 다른 교육 서비스와 차별화된 온라인 클래스를 경험할 수 있습니다. text width 476px</p>
 								</div>
 							</div>
 						</li>
 						<li>
 							<div class="box">
-								<span class="pic"><img src="../../img/temp/profile_80_px.png" alt=""></span>
+								<span class="pic"><img src="../../img/badge_profile3.png" alt=""></span>
 								<div class="info">
 									<b class="name">김유니</b>
+									<span class="metadata on"></span>
 									<span class="date">2020.01.06</span>
 								</div>
 								<div class="cmntBtn">
 									<button type="button" class="btn edit"></button>
 									<button type="button" class="btn del"></button>
+									<button type="button" class="btn rep"></button>
 								</div>
 								<div class="cmntText">
-									<p class="txtCont"><b>@차은우</b>좋은 내용 감사합니다.</p>
+									<p class="txtCont"><b>@차은우</b>좋은 내용 감사합니다</p>
 								</div>
 							</div>
 						</li>
@@ -334,12 +326,63 @@
 								<div class="info">삭제된 댓글입니다.</div>
 							</div>
 						</li>
+						<li>
+							<div class="box">
+								<span class="pic"><img src="../../img/badge_profile2.png" alt=""></span>
+								<div class="info">
+									<b class="name">최행복</b>
+									<span class="metadata"></span>
+									<span class="date">2020.01.06</span>
+								</div>
+								<div class="cmntText">
+									<p class="txtCont"><b>@차은우</b>새로운 콘텐츠로 기초를 다시 익히고 다시 배우고 최신 패키지 및 도구를 배울 수있는 좋은 기회입니다</p>
+								</div>
+							</div>
+						</li>
 					</ul>
+					<button type="button" class="moreReplyList">
+						<span>more replies</span>
+						<span>(<em>20</em>/<em>38</em>)</span>
+					</button>
 				</div>
 			</li>
-		</ul>
-		
+		</ul>            
 		<button type="button" class="btnListMore" type="button"><i class="ico plus"></i>more comments (<em>20</em>/<em>59</em>)</button>
+        </div>
+		
+		
+        <!-- 댓글 플로팅 영역 ver.0 기본 -->
+        <div class="cmntFloat on">
+            <div class="reply">
+                <p>홍길동님에게 답글 작성하기</p>
+                <button type="button" class="btnClose">
+                    <i class="ico close"></i>
+                </button>
+            </div>
+            <div class="inner">
+                <span class="pic"><img src="../../img/temp/profile_80_px.png" alt=""></span>
+                <div class="field">                    
+                    <textarea rows="1" placeholder="여기에 의견을 남겨주세요."></textarea>
+                </div>        
+                <button type="button" class="enterButton">
+                    <i class="ico submit"></i>
+                </button>        
+            </div>
+            <div class="buttons">
+                <div class="leftButtons">
+                    <button class="emojiButton" type="button">
+                        <i class="ico emoji"></i>
+                    </button>                
+                </div>
+                <div class="rightButtons">
+                    <button type="button" class="enterButton">
+                        <i class="ico submit"></i>
+                    </button>
+                </div>
+            </div>
+            @@include('emoji_popup.html')
+        </div>
+		
 	</div>
 	<!-- //comment -->
 
