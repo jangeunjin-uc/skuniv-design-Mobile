@@ -3932,3 +3932,8 @@ section.content.fullscreen{height:100vh; overflow-y: hidden;}
 .taInfo .opCnt {color: #fff;}
 .taInfo .taDate {display: inline-block; position: relative; padding-left: 10.5px; color:#fff;}
 .taInfo .taDate:after{content:''; display:inline-block; width: 1px; height: 8px; background-color:#969dac; position : absolute; top:6.5px; left: 5px;}
+
+/* survey 필수 */
+.question-wrap > li .q .impt_img {display: none;}
+.question-wrap > li .q.impt .impt_img {display: inline-block; margin-left: 4px;}
+.question-wrap > li .q.impt .impt_img img {vertical-align: top;}
