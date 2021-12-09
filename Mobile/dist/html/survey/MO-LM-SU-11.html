@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>mySUNI</title>
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <script src="../../js/Chart.min.js"></script>
+    <script src="../../js/ui.js"></script>
+</head>
+
+<body>
+
+    <!-- .content -->
+
+    <section class="content">
+    </section>
+    <!-- // .content -->
+    <!-- layer -->
+    <section class="popWrap full">
+        <form>
+            <div class="popBox">
+                <div class="popTitle">
+                    <p>Survey</p>
+                    <a href="#" target="_blank" class="btnClose">닫기</a>
+                </div>
+                <div class="popCont">
+                    <div class="pop-q-form-inner">
+                        <div class="statusBox">
+                            <p class="sv_status black">참여완료</p>
+                        </div>
+                        <div class="title_text">
+                            <h3>과정 공통설문</h3>
+                        </div>
+                        <ul class="question-wrap pop-servey">
+                            <li>
+                                <div class="q impt">1. 이 과정은 다른 사람에게도 추천하고 싶다.</div>
+                                <div class="a">
+                                    <ul>
+                                        <li>
+                                            <span class="inpD">
+                                                <label>
+                                                    <input type="radio" name="q1">
+                                                    <i class="ico radio"></i>
+                                                    <span class="txt">전혀 아니다</span>
+                                            </label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="inpD">
+                                                <label>
+                                                    <input type="radio" name="q1">
+                                                    <i class="ico radio"></i>
+                                                    <span class="txt">아니다</span>
+                                            </label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="inpD">
+                                                <label>
+                                                    <input type="radio" name="q1">
+                                                    <i class="ico radio"></i>
+                                                    <span class="txt">보통이다</span>
+                                            </label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="inpD">
+                                                <label>
+                                                    <input type="radio" name="q1">
+                                                    <i class="ico radio"></i>
+                                                    <span class="txt">그렇다</span>
+                                            </label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="inpD">
+                                                <label>
+                                                    <input type="radio" name="q1" checked>
+                                                    <i class="ico radio"></i>
+                                                    <span class="txt">매우 그렇다</span>
+                                            </label>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <textarea placeholder="어떤 점이 특별히 좋았나요? 자세한 학습 후기를 남겨주세요." class="a-text"></textarea>
+                                    <div class="area">
+                                        <span class="byte"><em class="left">0</em>/<em class="total">200</em></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="q impt">2. 이 과정을 통해 새롭게 알게 되거나 느낀 것이 있다.</div>
+                                <div class="a">
+                                    <ul>
+                                        <li>
+                                            <span class="inpD">
+                                                <label>
+                                                    <input type="radio" name="q2">
+                                                    <i class="ico radio"></i>
+                                                    <span class="txt">전혀 아니다</span>
+                                            </label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="inpD">
+                                                <label>
+                                                    <input type="radio" name="q2">
+                                                    <i class="ico radio"></i>
+                                                    <span class="txt">아니다</span>
+                                            </label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="inpD">
+                                                <label>
+                                                    <input type="radio" name="q2">
+                                                    <i class="ico radio"></i>
+                                                    <span class="txt">보통이다</span>
+                                            </label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="inpD">
+                                                <label>
+                                                    <input type="radio" name="q2">
+                                                    <i class="ico radio"></i>
+                                                    <span class="txt">그렇다</span>
+                                            </label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="inpD">
+                                                <label>
+                                                    <input type="radio" name="q2" checked>
+                                                    <i class="ico radio"></i>
+                                                    <span class="txt">매우 그렇다</span>
+                                            </label>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="q impt">3. 이 과정의 내용은 업무나 일상에서 활용 가능하다.​</div>
+                                <div class="a">
+                                    <ul>
+                                        <li>
+                                            <span class="inpD">
+                                                <label>
+                                                    <input type="radio" name="q3">
+                                                    <i class="ico radio"></i>
+                                                    <span class="txt">전혀 아니다</span>
+                                            </label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="inpD">
+                                                <label>
+                                                    <input type="radio" name="q3">
+                                                    <i class="ico radio"></i>
+                                                    <span class="txt">아니다</span>
+                                            </label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="inpD">
+                                                <label>
+                                                    <input type="radio" name="q3">
+                                                    <i class="ico radio"></i>
+                                                    <span class="txt">보통이다</span>
+                                            </label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="inpD">
+                                                <label>
+                                                    <input type="radio" name="q3">
+                                                    <i class="ico radio"></i>
+                                                    <span class="txt">그렇다</span>
+                                            </label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="inpD">
+                                                <label>
+                                                    <input type="radio" name="q3" checked>
+                                                    <i class="ico radio"></i>
+                                                    <span class="txt">매우 그렇다</span>
+                                            </label>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="BtmBtn floating">
+                        <div class="btnGroup">
+                            <button type="button" class="btnBlack" disabled>저장</button>
+                            <button type="button" class="btnOrange" disabled>제출</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+    <!-- alert -->
+    <section class="popWrap center">
+        <div class="popBox">
+            <div class="popCont">
+                <strong class="title">Survey 안내</strong>
+                <div class="scrollArea">
+                    <p class="txt">필수 항목을 입력하세요.등 입력항목 체크</p>
+                </div>
+            </div>
+            <div class="popBtm">
+                <button type="button">확인</button>
+            </div>
+        </div>
+    </section>
+    <!-- // alert-->
+    <!-- //layer -->
+    <script>
+        if ($('.popWrap.center').is('.on')) {
+            $('.popWrap.center').show();
+        } else {
+            $('.popWrap.center').hide();
+        };
+
+        $('.radio-toggle input').click(function() {
+            $('.radio-switch').removeClass('init')
+        });
+    </script>
+</body>
+
+</html>

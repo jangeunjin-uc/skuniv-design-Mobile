@@ -574,3 +574,13 @@ $('.cmntFloat.up').on('blur',function(){
 	$(this).find('textarea').attr({inputMode : 'none'});
 });
 
+/* survey textarea placeholder 변경 */
+$(document).on('change', '.q.impt + .a input[name="q1"]',function(){
+	var idx = $(this).parents('li').index();	
+	if(idx <3 ) {
+		$('.a-text').attr('placeholder', '어떤 점을 개선하면 좋을까요? 개선 포인트를 남겨주세요.');
+	}else{
+		$('.a-text').attr('placeholder', '어떤 점이 특별히 좋았나요? 자세한 학습 후기를 남겨주세요.');
+	}
+})
+
