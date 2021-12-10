@@ -3943,3 +3943,5 @@ section.content.fullscreen{height:100vh; overflow-y: hidden;}
 .card .topRight > .state.ing{color :#ff664d}
 .card .topRight > .date{color :#222}
 
+.sortArea .inpD label .txt{max-width: 95%;}
+
