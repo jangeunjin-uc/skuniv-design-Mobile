@@ -1019,3 +1019,9 @@ section.content.fullscreen{height:100vh; overflow-y: hidden;}
 .question-wrap > li .q .impt_img {display: none;}
 .question-wrap > li .q.impt .impt_img {display: inline-block; margin-left: 4px;}
 .question-wrap > li .q.impt .impt_img img {vertical-align: top;}
+
+/* 학습카드 상태 */
+.card .topRight > .state{color :#999}
+.card .topRight > .state.ing{color :#ff664d}
+.card .topRight > .date{color :#222}
+
