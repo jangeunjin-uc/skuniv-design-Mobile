@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>mySUNI</title>
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <script src="../../js/Chart.min.js"></script>
+    <script src="../../js/ui.js"></script>
+</head>
+
+<body class="pgLogin">
+    <section class="content">
+        <div class="pgLoginWrap">
+            <div class="logo w90"><img src="../../img/logo_gnb_login_90px.svg" alt="mySUNI" /></div>
+            <div class="regiForm">
+                <h2>Sign up</h2>
+                <form>
+                    <div class="inputBox h44 white">
+                        <strong class="input-tit">E-mail</strong>
+                        <input id="inputEmail" type="text" class="inp white" placeholder="E-mail">
+                        <button type="button" class="btn inpReset">reset</button>
+                    </div>
+                    <div class="inputBox h44 white mt30">
+                        <strong class="input-tit" placeholder="Code number">Code number</strong>
+                        <input id="inputCode" type="password" class="inp white" maxlength="6" placeholder="Code number">
+                        <button type="button" class="btn inpReset">reset</button>
+                    </div>
+                    <div class="ckWrap">
+                        <!--
+                               <span class="inpD">회원가입코드의 유효기간이 만료되었나요?</span>
+                               <a href="#" class="inpD codereq">회원가입코드 재 요청</a>
+                             -->
+                    </div>
+                    <button type="submit" class="btn h44 orange">Verify</button>
+                </form>
+
+            </div>
+
+            <!-- <div class="globalSelect">
+                <i><img src="../../img/icon-mypage-menu-note.svg" alt="지구본이미지"></i>
+                <ul>
+                    <li class="active"><button type="button">한국어</button></li>
+                    <li><button type="button">中文(简体)</button></li>
+                    <li><button type="button">English</button></li>
+                </ul>
+            </div> -->
+        </div>
+    </section>
+    <section id="authSuccessModal" class="popWrap center" style="display: none">
+        <div class="popBox">
+            <div class="popCont">
+                <strong class="title">Verification complete</strong>
+                <div class="scrollArea">
+                    <p class="txt"><span>Verification is complete.</span> <br><span>Moving on to the next page.</span></p>
+                </div>
+            </div>
+            <div class="popBtm">
+                <button type="button">Confirm</button>
+            </div>
+        </div>
+    </section>
+    <section id="authFailModal" class="popWrap center" style="display: none">
+        <div class="popBox">
+            <div class="popCont">
+                <strong class="title">Verification complete</strong>
+                <div class="scrollArea">
+                    <p class="txt"><span>The verification number is not recognized.</span> <br/><span>Please try entering it correctly again.</span></p>
+                </div>
+            </div>
+            <div class="popBtm">
+                <button type="button">Confirm</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
