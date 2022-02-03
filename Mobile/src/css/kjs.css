@@ -395,9 +395,10 @@ nav.on {left:0;}
 .ltList > li.ty8:before {border-bottom:5px solid #28b4ac;}
 .ltList > li.ty9:before {border-bottom:5px solid #4b5dcc;}
 .ltList > li.ty10:before {border-bottom:5px solid #009abd;}
-.ltList > li.ty11:before {border-bottom:5px solid #ea6957;}
-.ltList > li.ty12:before {border-bottom:5px solid #01297a;}
+.ltList > li.ty11:before {border-bottom:5px solid #bd38a5;}
+.ltList > li.ty12:before {border-bottom:5px solid #ea6957;}
 .ltList > li.ty13:before {border-bottom:5px solid #01297a;}
+.ltList > li.ty14:before {border-bottom:5px solid #01297a;}
 
 .ltClass {display:table; width:100%; table-layout:fixed;}
 .ltClass > dt, .ltClass > dd {display:table-cell; vertical-align:middle;}
