@@ -909,6 +909,21 @@ i.icon_emoji_8{background-image: url('../img/btn_emoji_8.svg');}
 .overlay-button.caption.on { background-image: url(../img/baseline_closed_caption_white_24dp.png);}
 .overlay-button.fullscreen { background-image: url(../img/baseline_fullscreen_white_24dp.png);}
 .overlay-button.fullscreen.exit { background-image: url(../img/baseline_fullscreen_exit_white_24dp.png);}
+
+/* 22-02-04 nav-button 추가 */
+.nav-button.forward,
+.nav-button.backward {position:absolute; left:50%; top:50%; z-index:2; width:clamp(24px, 7.8vw, 28px); height:clamp(24px, 7.8vw, 28px); background: no-repeat center center / 100% 100%; transform:translate(-50%, -50%);}
+.nav-button.play,
+.nav-button.pause {position:absolute; left:50%; top:50%; z-index:2; width:clamp(30px, 1.06vw, 38px); height:clamp(30px, 1.06vw, 38px); background: no-repeat center center / 100% 100%; transform:translate(-50%, -50%);}
+.nav-button.forward {left:calc(50% - 45px - 28px); background-image:url('../img/vod_forward.png');}
+.nav-button.backward {left:calc(50% + 45px + 28px); background-image:url('../img/vod_backwards.png');}
+.nav-button.play {background-image:url('../img/vod_play.png')}
+.nav-button.pause {background-image:url('../img/vod_pause.png')}
+.video-container.full .nav-button.forward,
+.video-container.full .nav-button.backward,
+.video-container.full .nav-button.play,
+.video-container.full .nav-button.pause {top:50%;}
+
 .selector-container { display: none; background: rgba(0,0,0,0.6); color: #ccc; position: absolute; bottom: 108%; border-radius: 4px; padding: clamp(3px, 1vw, 10px);}
 .caption-language-selector-container { width: clamp(75px, 27vw, 100px); left:0}
 .playspeed-selector-container { width: clamp(75px, 20vw, 100px); right:0}
