@@ -90,6 +90,10 @@ $(function(){
 	var swiperH = new Swiper('.badgeSlider2', {
 		slidesPerView:3,
 	});
+	var swiperH = new Swiper('.topicSliider', {
+		width : 230,
+		spaceBetween : 15
+	});
 	
 	if ( $('.recCourse2').find('.swiper-slide').length > 1 )
 	{
