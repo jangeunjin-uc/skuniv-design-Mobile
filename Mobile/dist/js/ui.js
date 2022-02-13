@@ -91,7 +91,7 @@ $(function(){
 		slidesPerView:3,
 	});
 	var swiperH = new Swiper('.topicSliider', {
-		width : 230,
+		slidesPerView:'auto',
 		spaceBetween : 15
 	});
 	
