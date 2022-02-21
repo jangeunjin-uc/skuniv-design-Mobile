@@ -1035,7 +1035,7 @@ section.content.fullscreen{height:100vh; overflow-y: hidden;}
 
 /* survey 필수 */
 .question-wrap > li .q .impt_img {display: none;}
-.question-wrap > li .q.impt .impt_img {display: inline-block; margin-left: 4px;}
+.question-wrap > li .q.impt .impt_img {display: inline-block; margin-left: 4px;} 
 .question-wrap > li .q.impt .impt_img img {vertical-align: top;}
 
 /* 학습카드 상태 */
@@ -1047,8 +1047,8 @@ section.content.fullscreen{height:100vh; overflow-y: hidden;}
 
 /* main > hottopic */
 .topicSliider {padding-left:15px}
-.topicSliider .swiper-slide {width:230px;}
-.topic-card-wrap { display: block; width: 220px; height: 275px;}
+.topicSliider .swiper-slide {width:220px;}
+.topic-card-wrap { display: block; width: 100%; height: 275px;}
 .topic-card-wrap .topic-item { display: block; width: 100%; height: 100%; position: relative;}
 .thumb-img-area { position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; background-color: #ccc;}
 .thumb-img-area .thumb-img { width: 100%; height: 100%;}
