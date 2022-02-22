@@ -1035,7 +1035,7 @@ section.content.fullscreen{height:100vh; overflow-y: hidden;}
 
 /* survey 필수 */
 .question-wrap > li .q .impt_img {display: none;}
-.question-wrap > li .q.impt .impt_img {display: inline-block; margin-left: 4px;}
+.question-wrap > li .q.impt .impt_img {display: inline-block; margin-left: 4px;} 
 .question-wrap > li .q.impt .impt_img img {vertical-align: top;}
 
 /* 학습카드 상태 */
