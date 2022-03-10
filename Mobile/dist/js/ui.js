@@ -270,7 +270,7 @@ $(function(){
 		$('.BtmBtn.floating').removeClass('on');
 	});
 
-	/* Category 채널2Depth */
+	/* 22-03-10 Category 2Depth */
 	if ($('.recNav').length) {
 		const scrollEl = document.querySelector('.recNav');
 		const areaEl = scrollEl.parentNode;
