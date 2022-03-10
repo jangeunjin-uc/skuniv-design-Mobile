@@ -278,6 +278,7 @@ $(function(){
 		let linkPos = [];
 		setTimeout(function(){
 			linkEl.forEach(function(item,index,arr){
+				item.setAttribute('data', index);
 				linkPos.push(item.offsetLeft);
 			})
 		}, 100)
@@ -290,7 +291,7 @@ $(function(){
 			e.target.classList.add('active');
 
 			// Active Scroll
-			const idx = $(e.target.parentNode).index();
+			const idx = Number(e.target.getAttribute('data'));
 			scrollEl.scrollLeft = linkPos[idx];
 		})
 
@@ -302,7 +303,7 @@ $(function(){
 				let leftover = scrollEl.scrollWidth - scrollEl.scrollLeft - document.body.clientWidth;
 				leftover < 10 ? areaEl.classList.add('isEnd') : areaEl.classList.remove('isEnd');
 				scrollEl.scrollLeft < 10 ? areaEl.classList.add('isStart') : areaEl.classList.remove('isStart');
-				console.log('start:',scrollEl.scrollLeft, 'end:', leftover);
+				// console.log('start:',scrollEl.scrollLeft, 'end:', leftover);
 			},50)
 		}
 		scrollInit()
