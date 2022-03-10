@@ -91,8 +91,7 @@ $(function(){
 		slidesPerView:3,
 	});
 	var swiperH = new Swiper('.topicSliider', {
-		// slidesPerView:'auto',
-		slidesPerView:1.6,
+		slidesPerView:'auto',
 		spaceBetween : 15
 	});
 	
@@ -271,6 +270,44 @@ $(function(){
 		$('.BtmBtn.floating').removeClass('on');
 	});
 
+	/* Category 채널2Depth */
+	if ($('.recNav').length) {
+		const scrollEl = document.querySelector('.recNav');
+		const areaEl = scrollEl.parentNode;
+		const linkEl = scrollEl.querySelectorAll('.navLink');
+		let linkPos = [];
+		setTimeout(function(){
+			linkEl.forEach(function(item,index,arr){
+				linkPos.push(item.offsetLeft);
+			})
+		}, 100)
+		
+		$(linkEl).on('click', function(e){
+			// Active Class
+			linkEl.forEach(function(item,index,arr){
+				item.classList.remove('active');
+			})
+			e.target.classList.add('active');
+
+			// Active Scroll
+			const idx = $(e.target.parentNode).index();
+			scrollEl.scrollLeft = linkPos[idx];
+		})
+
+		// 처음렌더링, 스크롤시
+		const scrollInit = function(){
+			clearTimeout(scrTime);
+			var scrTime = setTimeout(function(){
+				// 좌우 쉐도우효과
+				let leftover = scrollEl.scrollWidth - scrollEl.scrollLeft - document.body.clientWidth;
+				leftover < 10 ? areaEl.classList.add('isEnd') : areaEl.classList.remove('isEnd');
+				scrollEl.scrollLeft < 10 ? areaEl.classList.add('isStart') : areaEl.classList.remove('isStart');
+				console.log('start:',scrollEl.scrollLeft, 'end:', leftover);
+			},50)
+		}
+		scrollInit()
+		$(scrollEl).on('scroll', function(){ scrollInit() });
+	}
 	// mobile script
 });
 
@@ -589,6 +626,26 @@ $(document).on('change', '.q.impt + .a input[name="q1"]',function(){
 	}
 })
 
+/* Category 2Depth Navgation */
+// $(document).on('click', '.recNav .navLink', function(e){
+// 	// Active
+// 	var scrollEl = e.target.parentNode;
+// 	var posLeft = e.target.offsetLeft;
+// 	var navLinks = document.querySelectorAll('.navLink');
+// 	// console.log(posLeft)
+// 	scrollEl.scrollLeft = posLeft;
+// 	navLinks.forEach(function(item,index,arr){
+// 		item.classList.remove('active');
+// 	})
+// 	e.target.classList.add('active');
+
+// 	// Shadow
+// 	// if (e.target.parentNode.scrollWidth - scrollEl.scrollLeft - window.outerWidth)
+// 	// var gapLeftover = scrollEl.scrollWidth - scrollEl.scrollLeft - window.outerWidth;
+// 	// gapLeftover < 10 ? scrollEl.classList.add('isEnd') : scrollEl.classList.remove('isEnd');
+// 	// scrollEl.scrollLeft < 10 ? scrollEl.classList.add('isStart') : scrollEl.classList.remove('isStart');
+// 	// console.log(scrollEl.scroll)
+// })
 
 
 

@@ -3978,3 +3978,39 @@ section.content.fullscreen{height:100vh; overflow-y: hidden;}
 .topic-info strong { font-weight: bold;}
 .topic-info .icon{margin : 2px 2px 0 0}
 .icon.list{display:inline-block; width : 18px; height : 18px; background: url('../img/icon_coreses.svg') 0 0/100% no-repeat; vertical-align: top;}
+
+/* 22-03-10 Category 2Depth */
+.recHead .titleArea {padding:25px 15px 25px 15px; background-color: #fff;}
+.recHead .titleArea h1 {padding:0; margin:0; font-size: 18px; color:#222; font-weight: 700;}
+.recHead .titleArea h1 a {position:relative; display:inline-block; padding-right:21px; font-size: 18px; color:#222; font-weight: 700;}
+.recHead .titleArea h1 a::after {content: '';position: absolute;bottom: 3px;right: 0; display:block;width: 18px;height: 18px;background: url(../img/icon_arrow_black_28_px.svg) center center no-repeat;background-size: contain;}
+
+.recViews .recHead {position:relative; margin-bottom:30px;}
+.recViews .recHead .titleArea {padding:0 15px 25px 15px; margin-top:-5px;}
+.recViews .recHead::after {content:''; display:block; position:absolute; left:15px; right:15px; bottom:0; height:1px; background:#c8d0e0;}
+
+.recNavArea {position:relative; margin-top:-10px; overflow:hidden; background-color:#fff; height:54px; border-bottom:1px solid #c8d0e0;}
+.recNavArea .recNav {display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex; -webkit-flex-wrap: nowrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; width:100%; overflow: hidden; overflow-x:auto; height:66px; scroll-behavior: smooth;}
+.recNavArea .recNav li {-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none;margin-right:5px;}
+.recNavArea .recNav li:last-child {margin-right:0;}
+.recNavArea .recNav .navLink {position:relative; -webkit-box-flex:0; -webkit-flex:none; -ms-flex:none; flex:none; display:block; height:20px; padding:17px 15px; font-weight:400; line-height:20px;}
+.recNavArea .recNav .navLink.active {font-weight:700;}
+.recNavArea .recNav .navLink.active::after {content:''; display:block; position:absolute; left:17px; right:17px; bottom:1px; height:3px; background-color:#e1002a;}
+.recNavArea::before,.recNavArea::after {content:''; visibility: visible; display:block; width:36px; height:100%; position:absolute; top:0; z-index:10; pointer-events: none; opacity: 1; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease;}
+.recNavArea::before {left:0; background-image: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,1)), to(rgba(255,255,255,0))); background-image: -webkit-linear-gradient(left, rgba(255,255,255,1), rgba(255,255,255,0)); background-image: -o-linear-gradient(left, rgba(255,255,255,1), rgba(255,255,255,0)); background-image: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));}
+.recNavArea::after {right:0; background-image: -webkit-gradient(linear, right top, left top, from(rgba(255,255,255,1)), to(rgba(255,255,255,0))); background-image: -webkit-linear-gradient(right, rgba(255,255,255,1), rgba(255,255,255,0)); background-image: -o-linear-gradient(right, rgba(255,255,255,1), rgba(255,255,255,0)); background-image: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));}
+.recNavArea.isStart::before,.recNavArea.isEnd::after {visibility: hidden; opacity: 0;}
+
+.recSubNavArea {padding:30px 15px; background-color: #fff; border-bottom:1px solid #c8d0e0;}
+.recSubNavArea .recSubNav {margin:-3px -5px; display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap;}
+.recSubNavArea .recSubNav li {margin:3px 5px;}
+.recSubNavArea .recSubNav .navLink {display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; height:25px; padding:0 12px 2px; border:1px solid #3e8ae9; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 16px; font-size: 14px;}
+.recSubNavArea .recSubNav .navLink.active {background-color:#3e8ae9; color:#fff;}
+
+.recList > li .recTit {display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex; -webkit-box-pack:justify; -webkit-justify-content:space-between; -ms-flex-pack:justify; justify-content:space-between; -webkit-box-align:center; -webkit-align-items:center; -ms-flex-align:center; align-items:center; padding-bottom:15px;}
+.recList > li .recTit a {font-weight: 400;}
+.recList > li .recTit .txt small {font-weight: 700;}
+.recList > li .recTit .nolink {pointer-events: none;}
+.recList > li .recTit .nolink .txtEnd:after {display:none;}
+.recList > li .recTit .btn.sort.ty2 {display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex; -webkit-box-align:center; -webkit-align-items:center; -ms-flex-align:center; align-items:center; height:30px; padding:10px; border:1px solid #6c788f; border-radius: 4px;}
+/* // 22-03-10 Category 2Depth */
