@@ -1114,3 +1114,4 @@ section.content.fullscreen{height:100vh; overflow-y: hidden;}
 .introList + .tutor_info {margin-top: 30px;}
 .courseTable + .badgeSlider1, .courseTable + .mainSlider {padding: 30px 0; margin-top:10px; border-top: 1px solid #c8d0e0;}
 .badgeSlider1 + .mainSlider{padding: 30px 0; margin-top:10px; border-top:1px solid #c8d0e0;}
+.inpD.num label .txt {text-overflow: inherit;}
