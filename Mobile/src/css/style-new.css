@@ -1094,3 +1094,23 @@ section.content.fullscreen{height:100vh; overflow-y: hidden;}
 .recList > li .recTit .nolink .txtEnd:after {display:none;}
 .recList > li .recTit .btn.sort.ty2 {display:inline-flex; align-items:center; height:30px; padding:10px; border:1px solid #6c788f; border-radius: 4px;}
 /* // 22-03-10 Category 2Depth */
+
+/* course 차수정보 */
+.class-top-tit {display: flex;justify-content: space-between;}
+.class-top-tit .titleDot {margin-bottom: 0;vertical-align: top;}
+.class-top-tit .topRight.sub {float: none;display: block;}
+.class-top-tit .topRight.sub a {display: inline-block;vertical-align: top;}
+.classTable.courseTable {margin: 10px 0 0;padding: 30px 0;}
+.classTable.courseTable table.borderTable th:nth-child(2),
+.classTable.courseTable table.borderTable td:nth-child(2){text-align: center;}
+.penaltyText{margin-top:6px}
+.penaltyText strong {display: inline-block; line-height:1.3; font-size: 12px; color: #e10831;font-weight: 700; padding-right: 6px}
+.penaltyText strong + span {display: inline; line-height:1.3; font-size: 12px; word-break: break-all; letter-spacing: -0.3px;}
+.badgeSlider3.bor{ margin-bottom:30px; padding-bottom:30px; border-bottom: 1px solid #c8d0e0;}
+.classTableWrap.sub3 .line {justify-content: space-between;}
+.classTableWrap.sub3 .line > .state {text-align: center;min-width: 23%;}
+.classTableWrap.sub3 .line > .date {text-align: center;margin: 0;}
+.speech-bubble.ty2::before {content: '';display: block;width: 7px;height: 7px;background: #fff;border-left: 1px solid #536280;position: absolute;top: 0;left: 50%;transform: translate(-50%, -50%) rotate(45deg);border-top: 1px solid #536280;}
+.introList + .tutor_info {margin-top: 30px;}
+.courseTable + .badgeSlider1, .courseTable + .mainSlider {padding: 30px 0; margin-top:10px; border-top: 1px solid #c8d0e0;}
+.badgeSlider1 + .mainSlider{padding: 30px 0; margin-top:10px; border-top:1px solid #c8d0e0;}
