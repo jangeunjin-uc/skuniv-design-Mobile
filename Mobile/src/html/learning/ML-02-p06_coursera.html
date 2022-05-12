@@ -1,0 +1,100 @@
+@@include("head.html")
+<body style="overflow: hidden;">
+@@include('listheader.html',{
+	"title" : "Learning"
+})
+<!-- .content -->
+<section class="content">
+</section>
+<!-- // .content -->
+
+<!-- layer -->
+<section class="popWrap full">
+	<div class="popBox">
+		<div class="popTitle">
+			<p>Coursera 접속을 통한 학습 방법 안내</p>
+			<a href="#" class="btnClose">닫기</a>
+		</div>
+		<div class="popCont">
+            <div class="coursera-cont">
+                <ul class="txt-box">
+                    <li>
+                        <div class="text1"><span class="num">1.</span> 과정 학습자 개인별로 mySUNI × Coursera Invitation 메일이 발송됩니다.</div>
+                        <div class="text2">수신 받으신 Invitaion 메일 하단의 <strong class="red">[①Join Now]</strong>버튼 클릭 시에 해당 과정 사이트로 접속됩니다.</div>
+                    </li>
+                    <li>
+                        <div class="text1"><span class="num">2.</span>사이트 접속 후, 아래 두가지 옵션 중 하나를 선택해 주세요.</div>
+                        <div class="text2">A.  '학습 프로그램에 참여하기' 팝업 창 <strong class="red">[②프로그램 가입]</strong> 클릭</div>
+                        <div class="text2">B.  사이트 상단 배너 <strong class="red">[③가입]</strong> 클릭</div>
+                    </li>
+                    <li>
+                        <div class="text1"><span class="num">3.</span>로그인 창이 뜰 경우, <strong class="red">[④ mySUNI로 로그인하십시오]</strong> 버튼을 클릭하세요.</div>
+                        <div class="text2">개인별 mySUNI 계정으로 자동 로그인 처리가 되며, 프로그램 가입 이후 정상적으로 과정 학습이 가능합니다.</div>
+                    </li>
+                </ul>
+                <div class="img-box">
+                    <ul>
+                        <li>
+                            <div class="title">초대 메일 내 Join Now 클릭</div>
+                            <div class="img"><img src="../../img/popup-img-coursera-01.png" alt="초대 메일 내 Join Now 클릭" /></div>
+                        </li>
+                        <li>
+                            <div class="title">프로그램 가입하기</div>
+                            <div class="img"><img src="../../img/popup-img-coursera-02.png" alt="프로그램 가입하기" /></div>
+                        </li>
+                        <li>
+                            <div class="title">Coursera 내 mySUNI 로그인</div>
+                            <div class="img"><img src="../../img/popup-img-coursera-03.png" alt="Coursera 내 mySUNI 로그인" /></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="txt-box">
+                    <div class="text1"><i class="icon document"></i><strong>Coursera 관련 FAQ</strong></div>
+                    <div class="ph">
+                        <p class="text3">Q. 과정을 신청했는데  mySUNI × Coursera Invitation 메일이 오지 않았습니다.</p>
+                        <p class="text3"><strong>A. 해당 메일을 수신하지 못하신 분들께서는 학습 카드에 명시된 담당자분께 문의 부탁드립니다.</strong></p>
+                    </div>
+                    <div class="ph">   
+                        <p class="text3">Q. “mySUNI(으)로 로그인하십시오” 버튼을 눌러도 로그인이 되질 않습니다.</p>
+                        <p class="text3"><strong>A. 접속중이신 Chrome, Internet Explorer/Edge 창을 모두 닫으신 후, 다시 접속하시기 바랍니다.</strong></p>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="BtmBtn floating">
+			<div class="btnGroup popupClose">
+				<div class="left">
+                    <div>
+                        <span class="inpD">
+                            <label>
+                                <input type="checkbox">
+                                <span class="txt">오늘 하루 보지않기</span>
+                                <i class="ico checkBox"></i>
+                            </label>
+                        </span>
+                    </div>
+                </div>
+                <div class="right">
+                    <button class="button close">Close</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //layer -->
+
+<script>
+
+if(fXGetCookie('linkedin')){ 
+    $('.popWrap').addClass('hide');
+}
+$('.popWrap .popupClose .right button').bind('click', function(){
+    if($('.popWrap .popupClose .left input[type=checkbox]').prop('checked')){ // 오늘 하루 보지 않기 선택시
+        fXSetCookie('linkedin', true, 1);
+    }
+    $('.popWrap').addClass('hide');
+})
+</script>
+
+</body>
+</html>
